@@ -1,0 +1,900 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dp: <https://knowledge.c-innovationhub.com/dspa#> .
+
+# DataProduct Shape
+dp:DataProductShape
+    a sh:NodeShape ;
+    sh:targetClass dp:DataProduct ;
+    sh:property [
+        sh:path dp:hasDataset ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "A data product must have exactly one dataset" ;
+    ] ;
+    sh:property [
+        sh:path dp:hasDataHolder ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class dp:DataHolder ;
+        sh:message "A data product must have exactly one data holder" ;
+    ] ;
+    sh:property [
+        sh:path dp:hasDataQuality ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "A data product must have exactly one data quality specification" ;
+    ] ;
+    sh:property [
+        sh:path dp:hasPricingPlan ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "A data product must have exactly one pricing specification" ;
+    ] ;
+    sh:property [
+        sh:path dp:hasServiceLevelAgreement ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "A data product must have exactly one service level agreement" ;
+    ] ;
+    sh:property [
+        sh:path dp:hasDataProductLicense ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "A data product must have exactly one license" ;
+    ] .
+
+# DataQuality Shape
+dp:DataQualityShape
+    a sh:NodeShape ;
+    sh:targetClass dp:DataQuality ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Data quality specification must have a label" ;
+    ] ;
+    sh:property [
+        sh:path dp:hasDataQualityTerm ;
+        sh:minCount 1 ;
+        sh:message "A data quality specification must have at least one term" ;
+    ] .
+
+# Dataset Shape
+dp:DatasetShape
+    a sh:NodeShape ;
+    sh:targetClass dp:Dataset ;
+    sh:property [
+        sh:path dp:updateFrequency ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "A dataset must have an update frequency specified" ;
+    ] ;
+    sh:property [
+        sh:path dp:dataFormat ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "A dataset must have a data format specified" ;
+    ] .
+
+# Pricing Plan Shape
+dp:PricingPlanShape
+    a sh:NodeShape ;
+    sh:targetClass dp:PricingPlan .
+
+# Executable Pricing Plan Shape
+dp:ExecutablePricingPlanShape
+    a sh:NodeShape ;
+    sh:targetClass dp:ExecutablePricingPlan ;
+    sh:property [
+        sh:path dp:monitoringSystemName ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Monitoring system name must be specified" ;
+    ] ;
+    sh:property [
+        sh:path dp:monitoringSystemReference ;
+        sh:minCount 1 ;
+        sh:datatype xsd:anyURI ;
+        sh:message "Monitoring system reference URL must be provided" ;
+    ] ;
+    sh:property [
+        sh:path dp:monitoringSystemTermSpecification ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Monitoring system term specification must be provided" ;
+    ] ;
+    sh:property [
+        sh:path dp:priceCurrency ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Price currency must be specified" ;
+    ] ;
+    sh:property [
+        sh:path dp:billingDuration ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:in ( "instant" "day" "week" "month" "year" ) ;
+        sh:message "Billing duration must be one of: instant, day, week, month, year" ;
+    ] ;
+    sh:property [
+        sh:path dp:unit ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:in ( "One-time-payment" "Pay-per-use" "Recurring" "Revenue-sharing" "Data-volume" "Pay-what-you-want" "Freemium" "Open-data" "Value-based" "On-request" "Trial" ) ;
+        sh:message "Unit must be one of the valid pricing units" ;
+    ] ;
+    sh:property [
+        sh:path dp:version ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Version of the payment gateway tool must be specified" ;
+    ] ;
+    sh:property [
+        sh:path dp:reference ;
+        sh:minCount 1 ;
+        sh:datatype xsd:anyURI ;
+        sh:message "Reference documentation URL must be provided" ;
+    ] ;
+    sh:property [
+        sh:path dp:action ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class dp:PricingPlansAsCodeAction ;
+        sh:message "An executable pricing plan must have exactly one action specified" ;
+    ] .
+
+# Stripe Based Pricing Plan Shape
+dp:StripeBasedPricingPlanShape
+    a sh:NodeShape ;
+    sh:targetClass dp:StripeBasedPricingPlan ;
+    sh:property [
+        sh:path dp:stripeAccountId ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:pattern "^acct_[A-Za-z0-9]+$" ;
+        sh:message "Stripe account ID must be provided in the correct format" ;
+    ] ;
+    sh:property [
+        sh:path dp:stripeApiKey ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:pattern "^sk_(test|live)_[A-Za-z0-9]+$" ;
+        sh:message "Stripe API key must be provided in the correct format" ;
+    ] .
+
+# Checkout Based Pricing Plan Shape
+dp:CheckoutBasedPricingPlanShape
+    a sh:NodeShape ;
+    sh:targetClass dp:CheckoutBasedPricingPlan ;
+    sh:property [
+        sh:path dp:checkoutPublicKey ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:pattern "^pk_(test|live)_[A-Za-z0-9]+$" ;
+        sh:message "Checkout public key must be provided in the correct format" ;
+    ] ;
+    sh:property [
+        sh:path dp:checkoutSecretKey ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:pattern "^sk_(test|live)_[A-Za-z0-9]+$" ;
+        sh:message "Checkout secret key must be provided in the correct format" ;
+    ] .
+
+# Square Based Pricing Plan Shape
+dp:SquareBasedPricingPlanShape
+    a sh:NodeShape ;
+    sh:targetClass dp:SquareBasedPricingPlan ;
+    sh:property [
+        sh:path dp:squareApplicationId ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:pattern "^sq0idp-[A-Za-z0-9]+$" ;
+        sh:message "Square application ID must be provided in the correct format" ;
+    ] ;
+    sh:property [
+        sh:path dp:squareAccessToken ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:pattern "^EAAA[A-Za-z0-9]+$" ;
+        sh:message "Square access token must be provided in the correct format" ;
+    ] .
+
+# PayPal Based Pricing Plan Shape
+dp:PaypalBasedPricingPlanShape
+    a sh:NodeShape ;
+    sh:targetClass dp:PaypalBasedPricingPlan ;
+    sh:property [
+        sh:path dp:paypalClientId ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:pattern "^[A-Za-z0-9]+$" ;
+        sh:message "PayPal client ID must be provided" ;
+    ] ;
+    sh:property [
+        sh:path dp:paypalSecret ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:pattern "^[A-Za-z0-9]+$" ;
+        sh:message "PayPal secret must be provided" ;
+    ] .
+
+# Service Level Agreement Shape
+dp:SLAShape
+    a sh:NodeShape ;
+    sh:targetClass dp:ServiceLevelAgreement ;
+    # Mandatory properties
+    sh:property [
+        sh:path dp:hasLatencyTerms ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "A service level agreement must have exactly one set of latency terms" ;
+    ] ;
+    sh:property [
+        sh:path dp:hasUptimeTerms ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "A service level agreement must have exactly one set of uptime terms" ;
+    ] ;
+    sh:property [
+        sh:path dp:hasResponseTimeTerms ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "A service level agreement must have exactly one set of response time terms" ;
+    ] ;
+    sh:property [
+        sh:path dp:hasErrorRateTerms ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "A service level agreement must have exactly one set of error rate terms" ;
+    ] ;
+    sh:property [
+        sh:path dp:hasEndOfSupportTerms ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "A service level agreement must have exactly one set of end of support terms" ;
+    ] ;
+    sh:property [
+        sh:path dp:hasEndOfLifeTerms ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "A service level agreement must have exactly one set of end of life terms" ;
+    ] ;
+    sh:property [
+        sh:path dp:hasTimeToDetectTerms ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "A service level agreement must have exactly one set of time to detect terms" ;
+    ] ;
+    sh:property [
+        sh:path dp:hasTimeToNotifyTerms ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "A service level agreement must have exactly one set of time to notify terms" ;
+    ] ;
+    sh:property [
+        sh:path dp:hasTimeToRepairTerms ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "A service level agreement must have exactly one set of time to repair terms" ;
+    ] ;
+    sh:property [
+        sh:path dp:hasEmailResponseTimeTerms ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "A service level agreement must have exactly one set of email response time terms" ;
+    ] ;
+    sh:property [
+        sh:path dp:hasProductSupport ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "A service level agreement must have exactly one product support specification" ;
+    ] ;
+    sh:property [
+        sh:path dp:hasServiceLevelAgreementTerms ;
+        sh:minCount 1 ;
+        sh:message "A service level agreement must have at least one set of terms" ;
+    ] .
+
+# Service Level Agreement Term Shape
+dp:ServiceLevelAgreementTermShape
+    a sh:NodeShape ;
+    sh:targetClass dp:ServiceLevelAgreementTerm ;
+    sh:property [
+        sh:path dp:serviceLevelAgreementDimension ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class dp:ServiceLevelAgreementDimension ;
+        sh:message "A service level agreement term must have exactly one dimension" ;
+    ] .
+
+# Declarative Term Shape
+dp:DeclarativeTermShape
+    a sh:NodeShape ;
+    sh:targetClass dp:DeclarativeTerm ;
+    sh:property [
+        sh:path dp:value ;
+        sh:minCount 1 ;
+        sh:message "A declarative term must have a value" ;
+    ] ;
+    sh:property [
+        sh:path dp:objective ;
+        sh:minCount 1 ;
+        sh:message "A declarative term must have an objective" ;
+    ] ;
+    sh:property [
+        sh:path dp:unit ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:in ( "milliseconds" "seconds" "minutes" "days" "weeks" "months" "years" "never" "date" ) ;
+        sh:message "A declarative term must have a valid unit" ;
+    ] .
+
+# Declarative Service Level Agreement Term Shape
+dp:DeclarativeServiceLevelAgreementTermShape
+    a sh:NodeShape ;
+    sh:targetClass dp:DeclarativeServiceLevelAgreementTerm .
+
+# Executable Term Shape
+dp:ExecutableTermShape
+    a sh:NodeShape ;
+    sh:targetClass dp:ExecutableTerm ;
+    sh:property [
+        sh:path dp:type ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:in ("Prometheus" "Custom") ;
+        sh:message "Type must be either Prometheus or Custom" ;
+    ] ;
+    sh:property [
+        sh:path dp:spec ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Executable specification must be provided" ;
+    ] ;
+    sh:property [
+        sh:path dp:reference ;
+        sh:minCount 1 ;
+        sh:datatype xsd:anyURI ;
+        sh:message "Reference documentation URL must be provided" ;
+    ] ;
+    sh:property [
+        sh:path dp:monitoringSystemName ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Monitoring system name must be specified" ;
+    ] ;
+    sh:property [
+        sh:path dp:monitoringSystemReference ;
+        sh:minCount 1 ;
+        sh:datatype xsd:anyURI ;
+        sh:message "Monitoring system reference URL must be provided" ;
+    ] ;
+    sh:property [
+        sh:path dp:monitoringSystemTermSpecification ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Monitoring system term specification must be provided" ;
+    ] .
+
+# Product Support Shape
+dp:ProductSupportShape
+    a sh:NodeShape ;
+    sh:targetClass dp:ProductSupport ;
+    sh:property [
+        sh:path dp:phoneNumber ;
+        sh:datatype xsd:string ;
+        sh:pattern "^\\+[1-9]\\d{1,14}$" ;
+        sh:message "Phone number must be in E.164 format" ;
+    ] ;
+    sh:property [
+        sh:path dp:phoneServiceHours ;
+        sh:datatype xsd:string ;
+        sh:message "Phone service hours must be specified" ;
+    ] ;
+    sh:property [
+        sh:path dp:email ;
+        sh:datatype xsd:string ;
+        sh:pattern "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$" ;
+        sh:message "Email must be a valid email address" ;
+    ] ;
+    sh:property [
+        sh:path dp:emailServiceHours ;
+        sh:datatype xsd:string ;
+        sh:message "Email service hours must be specified" ;
+    ] ;
+    sh:property [
+        sh:path dp:documentationURL ;
+        sh:datatype xsd:anyURI ;
+        sh:message "Documentation URL must be a valid URL" ;
+    ] .
+
+# Executable Service Agreement Term Shape
+dp:ExecutableServiceAgreementTermShape
+    a sh:NodeShape ;
+    sh:targetClass dp:ExecutableServiceAgreementTerm ;
+    sh:property [
+        sh:path dp:type ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:in ("Prometheus" "Custom") ;
+        sh:message "Type must be either Prometheus or Custom" ;
+    ] ;
+    sh:property [
+        sh:path dp:spec ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Executable specification must be provided" ;
+    ] ;
+    sh:property [
+        sh:path dp:reference ;
+        sh:minCount 1 ;
+        sh:datatype xsd:anyURI ;
+        sh:message "Reference documentation URL must be provided" ;
+    ] ;
+    sh:property [
+        sh:path dp:monitoringSystemName ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Monitoring system name must be specified" ;
+    ] ;
+    sh:property [
+        sh:path dp:monitoringSystemReference ;
+        sh:minCount 1 ;
+        sh:datatype xsd:anyURI ;
+        sh:message "Monitoring system reference URL must be provided" ;
+    ] ;
+    sh:property [
+        sh:path dp:monitoringSystemTermSpecification ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Monitoring system term specification must be provided" ;
+    ] .
+
+# Data Quality Dimension Shape
+dp:DataQualityDimensionShape
+    a sh:NodeShape ;
+    sh:targetClass dp:DataQualityDimension ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "A data quality dimension must have a label" ;
+    ] ;
+    sh:property [
+        sh:path rdfs:comment ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "A data quality dimension must have a description" ;
+    ] .
+
+# Data Quality Term Shape
+dp:DataQualityTermShape
+    a sh:NodeShape ;
+    sh:targetClass dp:DataQualityTerm ;
+    sh:property [
+        sh:path dp:dataQualityDimension ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class dp:DataQualityDimension ;
+        sh:message "A data quality term must have exactly one dimension" ;
+    ] .
+
+# Executable Data Quality Term Shape
+dp:ExecutableDataQualityTermShape
+    a sh:NodeShape ;
+    sh:targetClass dp:ExecutableDataQualityTerm ;
+    sh:property [
+        sh:path dp:monitoringSystemName ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Monitoring system name must be specified" ;
+    ] ;
+    sh:property [
+        sh:path dp:monitoringSystemReference ;
+        sh:minCount 1 ;
+        sh:datatype xsd:anyURI ;
+        sh:message "Monitoring system reference URL must be provided" ;
+    ] ;
+    sh:property [
+        sh:path dp:monitoringSystemTermSpecification ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Monitoring system term specification must be provided" ;
+    ] .
+
+# Declarative Data Quality Term Shape
+dp:DeclarativeDataQualityTermShape
+    a sh:NodeShape ;
+    sh:targetClass dp:DeclarativeDataQualityTerm ;
+    sh:property [
+        sh:path dp:value ;
+        sh:minCount 1 ;
+        sh:message "A declarative data quality term must have a value" ;
+    ] ;
+    sh:property [
+        sh:path dp:objective ;
+        sh:minCount 1 ;
+        sh:message "A declarative data quality term must have an objective" ;
+    ] ;
+    sh:property [
+        sh:path dp:unit ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:in ( "milliseconds" "seconds" "minutes" "days" "weeks" "months" "years" "never" "date" ) ;
+        sh:message "A declarative data quality term must have a valid unit" ;
+    ] .
+
+# Declarative Pricing Plan Shape
+dp:DeclarativePricingPlanShape
+    a sh:NodeShape ;
+    sh:targetClass dp:DeclarativePricingPlan ;
+    sh:property [
+        sh:path dp:priceCurrency ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Price currency must be specified" ;
+    ] ;
+    sh:property [
+        sh:path dp:price ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:pattern "^[0-9]+(\\.[0-9]+)?$" ;
+        sh:message "Price must be a valid decimal number" ;
+    ] ;
+    sh:property [
+        sh:path dp:billingDuration ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:in ( "instant" "day" "week" "month" "year" ) ;
+        sh:message "Billing duration must be one of: instant, day, week, month, year" ;
+    ] ;
+    sh:property [
+        sh:path dp:unit ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:in ( "One-time-payment" "Pay-per-use" "Recurring" "Revenue-sharing" "Data-volume" "Pay-what-you-want" "Freemium" "Open-data" "Value-based" "On-request" "Trial" ) ;
+        sh:message "Unit must be one of the valid pricing units" ;
+    ] ;
+    sh:property [
+        sh:path dp:maxTransactionQuantity ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 0 ;
+        sh:message "Max transaction quantity must be a non-negative integer" ;
+    ] ;
+    sh:property [
+        sh:path dp:offering ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Offering must be specified" ;
+    ] ;
+    sh:property [
+        sh:path dp:minPrice ;
+        sh:datatype xsd:string ;
+        sh:pattern "^[0-9]+(\\.[0-9]+)?$" ;
+        sh:message "Min price must be a valid decimal number" ;
+    ] ;
+    sh:property [
+        sh:path dp:maxPrice ;
+        sh:datatype xsd:string ;
+        sh:pattern "^[0-9]+(\\.[0-9]+)?$" ;
+        sh:message "Max price must be a valid decimal number" ;
+    ] ;
+    sh:property [
+        sh:path dp:valueAddedTaxIncluded ;
+        sh:datatype xsd:boolean ;
+        sh:message "Value added tax included must be a boolean" ;
+    ] ;
+    sh:property [
+        sh:path dp:valueAddedTaxPercentage ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 0 ;
+        sh:maxInclusive 100 ;
+        sh:message "Value added tax percentage must be between 0 and 100" ;
+    ] ;
+    sh:property [
+        sh:path dp:validFrom ;
+        sh:datatype xsd:dateTime ;
+        sh:message "Valid from must be a valid date-time" ;
+    ] ;
+    sh:property [
+        sh:path dp:validTo ;
+        sh:datatype xsd:dateTime ;
+        sh:message "Valid to must be a valid date-time" ;
+    ] ;
+    sh:property [
+        sh:path dp:additionalPrice ;
+        sh:datatype xsd:string ;
+        sh:pattern "^[0-9]+(\\.[0-9]+)?$" ;
+        sh:message "Additional price must be a valid decimal number" ;
+    ] ;
+    sh:property [
+        sh:path dp:maxDataQuantity ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 0 ;
+        sh:message "Max data quantity must be a non-negative integer" ;
+    ] ;
+    sh:property [
+        sh:path dp:valueSimulator ;
+        sh:datatype xsd:anyURI ;
+        sh:message "Value simulator must be a valid URL" ;
+    ] .
+
+# Data Product License Shape
+dp:DataProductLicenseShape
+    a sh:NodeShape ;
+    sh:targetClass dp:DataProductLicense ;
+    sh:property [
+        sh:path dp:hasTerminationCondition ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class dp:TerminationCondition ;
+        sh:message "A data product license must have exactly one termination condition" ;
+    ] ;
+    sh:property [
+        sh:path dp:hasLicenseScope ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class dp:LicenseScope ;
+        sh:message "A data product license must have exactly one license scope" ;
+    ] ;
+    sh:property [
+        sh:path dp:hasLicenseGovernance ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class dp:LicenseGovernance ;
+        sh:message "A data product license must have exactly one license governance" ;
+    ] .
+
+# License Scope Shape
+dp:LicenseScopeShape
+    a sh:NodeShape ;
+    sh:targetClass dp:LicenseScope ;
+    sh:property [
+        sh:path dp:definition ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:maxLength 512 ;
+        sh:message "Definition must be provided and cannot exceed 512 characters" ;
+    ] ;
+    sh:property [
+        sh:path dp:restrictions ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:maxLength 512 ;
+        sh:message "Restrictions must be provided and cannot exceed 512 characters" ;
+    ] ;
+    sh:property [
+        sh:path dp:geographicalArea ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:pattern "^[A-Z]{2}$" ;
+        sh:message "Geographical area must be a valid ISO 3166-1 alpha-2 code" ;
+    ] ;
+    sh:property [
+        sh:path dp:permanent ;
+        sh:minCount 1 ;
+        sh:datatype xsd:boolean ;
+        sh:message "Permanent status must be specified as true or false" ;
+    ] ;
+    sh:property [
+        sh:path dp:exclusive ;
+        sh:minCount 1 ;
+        sh:datatype xsd:boolean ;
+        sh:message "Exclusive status must be specified as true or false" ;
+    ] ;
+    sh:property [
+        sh:path dp:rights ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:in ( "Reproduction" "Display" "Distribution" "Adaptation" "Reselling" "Transferring" "Sublicensing" ) ;
+        sh:message "Rights must be one of: Reproduction, Display, Distribution, Adaptation, Reselling, Transferring, Sublicensing" ;
+    ] .
+
+# Termination Condition Shape
+dp:TerminationConditionShape
+    a sh:NodeShape ;
+    sh:targetClass dp:TerminationCondition ;
+    sh:property [
+        sh:path dp:noticePeriod ;
+        sh:minCount 1 ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 0 ;
+        sh:message "Notice period must be a non-negative integer" ;
+    ] ;
+    sh:property [
+        sh:path dp:terminationConditions ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:maxLength 512 ;
+        sh:message "Termination conditions must be provided and cannot exceed 512 characters" ;
+    ] ;
+    sh:property [
+        sh:path dp:continuityConditions ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:maxLength 512 ;
+        sh:message "Continuity conditions must be provided and cannot exceed 512 characters" ;
+    ] .
+
+# License Governance Shape
+dp:LicenseGovernanceShape
+    a sh:NodeShape ;
+    sh:targetClass dp:LicenseGovernance ;
+    sh:property [
+        sh:path dp:ownership ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:maxLength 512 ;
+        sh:message "Ownership must be provided and cannot exceed 512 characters" ;
+    ] ;
+    sh:property [
+        sh:path dp:audit ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:maxLength 512 ;
+        sh:message "Audit terms must be provided and cannot exceed 512 characters" ;
+    ] ;
+    sh:property [
+        sh:path dp:warranties ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:maxLength 512 ;
+        sh:message "Warranties must be provided and cannot exceed 512 characters" ;
+    ] ;
+    sh:property [
+        sh:path dp:damages ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:maxLength 512 ;
+        sh:message "Damages must be provided and cannot exceed 512 characters" ;
+    ] ;
+    sh:property [
+        sh:path dp:confidentiality ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:maxLength 512 ;
+        sh:message "Confidentiality terms must be provided and cannot exceed 512 characters" ;
+    ] ;
+    sh:property [
+        sh:path dp:applicableLaws ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:maxLength 512 ;
+        sh:message "Applicable laws must be provided and cannot exceed 512 characters" ;
+    ] ;
+    sh:property [
+        sh:path dp:forceMajeure ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:maxLength 512 ;
+        sh:message "Force majeure clause must be provided and cannot exceed 512 characters" ;
+    ] .
+
+# DataHolder Shape
+dp:DataHolderShape
+    a sh:NodeShape ;
+    sh:targetClass dp:DataHolder ;
+    sh:property [
+        sh:path dp:legalName ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:maxLength 256 ;
+        sh:message "Legal name is required and cannot exceed 256 characters" ;
+    ] ;
+    sh:property [
+        sh:path dp:businessID ;
+        sh:datatype xsd:string ;
+        sh:pattern "^[A-Z0-9]{6,12}$" ;
+        sh:message "Business ID must be a valid business identifier code" ;
+    ] ;
+    sh:property [
+        sh:path dp:contactName ;
+        sh:datatype xsd:string ;
+        sh:message "Contact name must be a valid string" ;
+    ] ;
+    sh:property [
+        sh:path dp:email ;
+        sh:datatype xsd:string ;
+        sh:pattern "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$" ;
+        sh:message "Email must be a valid email address" ;
+    ] ;
+    sh:property [
+        sh:path dp:taxID ;
+        sh:datatype xsd:string ;
+        sh:message "Tax ID must be a valid string" ;
+    ] ;
+    sh:property [
+        sh:path dp:vatID ;
+        sh:datatype xsd:string ;
+        sh:message "VAT ID must be a valid string" ;
+    ] ;
+    sh:property [
+        sh:path dp:businessDomain ;
+        sh:datatype xsd:string ;
+        sh:message "Business domain must be a valid string" ;
+    ] ;
+    sh:property [
+        sh:path dp:logoURL ;
+        sh:datatype xsd:anyURI ;
+        sh:message "Logo URL must be a valid URL" ;
+    ] ;
+    sh:property [
+        sh:path dp:description ;
+        sh:datatype xsd:string ;
+        sh:maxLength 512 ;
+        sh:message "Description cannot exceed 512 characters" ;
+    ] ;
+    sh:property [
+        sh:path dp:URL ;
+        sh:datatype xsd:anyURI ;
+        sh:message "URL must be a valid URL" ;
+    ] ;
+    sh:property [
+        sh:path dp:telephone ;
+        sh:datatype xsd:string ;
+        sh:pattern "^\\+[1-9]\\d{1,14}$" ;
+        sh:message "Telephone must be in E.164 format" ;
+    ] ;
+    sh:property [
+        sh:path dp:streetAddress ;
+        sh:datatype xsd:string ;
+        sh:message "Street address must be a valid string" ;
+    ] ;
+    sh:property [
+        sh:path dp:postalCode ;
+        sh:datatype xsd:string ;
+        sh:message "Postal code must be a valid string" ;
+    ] ;
+    sh:property [
+        sh:path dp:addressRegion ;
+        sh:datatype xsd:string ;
+        sh:message "Address region must be a valid string" ;
+    ] ;
+    sh:property [
+        sh:path dp:addressLocality ;
+        sh:datatype xsd:string ;
+        sh:message "Address locality must be a valid string" ;
+    ] ;
+    sh:property [
+        sh:path dp:addressCountry ;
+        sh:datatype xsd:string ;
+        sh:pattern "^[A-Z]{2}$" ;
+        sh:message "Address country must be a valid ISO 3166-1 alpha-2 code" ;
+    ] ;
+    sh:property [
+        sh:path dp:aggregateRating ;
+        sh:datatype xsd:string ;
+        sh:message "Aggregate rating must be a valid string" ;
+    ] ;
+    sh:property [
+        sh:path dp:ratingCount ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 0 ;
+        sh:message "Rating count must be a non-negative integer" ;
+    ] ;
+    sh:property [
+        sh:path dp:slogan ;
+        sh:datatype xsd:string ;
+        sh:maxLength 256 ;
+        sh:message "Slogan cannot exceed 256 characters" ;
+    ] ;
+    sh:property [
+        sh:path dp:parentOrganization ;
+        sh:datatype xsd:string ;
+        sh:message "Parent organization must be a valid string" ;
+    ] .
+
+# Pricing Plans As Code Action Shape
+dp:PricingPlansAsCodeActionShape
+    a sh:NodeShape ;
+    sh:targetClass dp:PricingPlansAsCodeAction ;
+    sh:property [
+        sh:path dp:specs ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "Specifications must be provided for the pricing plan action" ;
+    ] . 
