@@ -1,10 +1,10 @@
-# Template repository for an ontology
+# DSPA - Dataspace vocabulary
 
-Repository for My Ontology.
+A metadata schema to represent Data Product Offerings in dataspaces, aligned with Open Data Product Specifications, DCAT-AP and EDC metadata schema.
 
 | Prefix    | IRI |
 | -- | ------- |
-| my-prefix:  | [https://knowledge.c-innovationhub.com/my-ontology#](https://knowledge.c-innovationhub.com/my-ontology#)  |
+| my-prefix:  | [https://knowledge.c-innovationhub.com/dspa#](https://knowledge.c-innovationhub.com/dspa#)  |
 
 ## How to
 
