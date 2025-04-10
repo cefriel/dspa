@@ -1,0 +1,1049 @@
+<https://knowledge.c-innovationhub.com/dspa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://knowledge.c-innovationhub.com/dspa> <http://www.w3.org/2002/07/owl#versionIRI> <https://knowledge.c-innovationhub.com/dspa/1.0.0> .
+<https://knowledge.c-innovationhub.com/dspa> <http://purl.org/dc/terms/creator> "Alessio Carenini (Cefriel)"@en .
+<https://knowledge.c-innovationhub.com/dspa> <http://purl.org/dc/terms/creator> "Mario Scrocca (Cefriel)"@en .
+<https://knowledge.c-innovationhub.com/dspa> <http://purl.org/dc/terms/description> "A metadata schema to represent Data Product Offerings in dataspaces, aligned with Open Data Product Specifications, DCAT-AP and EDC metadata schema."@en .
+<https://knowledge.c-innovationhub.com/dspa> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://knowledge.c-innovationhub.com/dspa> <http://purl.org/dc/terms/publisher> "Cefriel"@en .
+<https://knowledge.c-innovationhub.com/dspa> <http://purl.org/dc/terms/title> "DSPA Dataspace vocabulary"@en .
+<https://knowledge.c-innovationhub.com/dspa> <http://purl.org/ontology/bibo/status> "Published Ontology"@en .
+<https://knowledge.c-innovationhub.com/dspa> <http://www.w3.org/2000/01/rdf-schema#comment> "A metadata schema to represent Data Product Offerings in dataspaces, aligned with Open Data Product Specifications, DCAT-AP and EDC metadata schema." .
+<https://knowledge.c-innovationhub.com/dspa> <http://www.w3.org/2000/01/rdf-schema#label> "DSPA  Dataspace vocabulary" .
+<https://knowledge.c-innovationhub.com/dspa> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0"@en .
+<https://knowledge.c-innovationhub.com/dspa> <https://schema.org/funding> <https://doi.org/CORDIS_DOI> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://knowledge.c-innovationhub.com/dspa#value
+<https://knowledge.c-innovationhub.com/dspa#value> <http://www.w3.org/2000/01/rdf-schema#comment> "The actual value of the term." .
+<https://knowledge.c-innovationhub.com/dspa#value> <http://www.w3.org/2000/01/rdf-schema#label> "value" .
+<https://knowledge.c-innovationhub.com/dspa#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://knowledge.c-innovationhub.com/dspa#value> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DeclarativeTerm> .
+# 
+# https://schema.org/funding
+<https://schema.org/funding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://knowledge.c-innovationhub.com/dspa#action
+<https://knowledge.c-innovationhub.com/dspa#action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/dspa#action> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#ExecutablePricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#action> <http://www.w3.org/2000/01/rdf-schema#range> <https://knowledge.c-innovationhub.com/dspa#PricingPlansAsCodeAction> .
+<https://knowledge.c-innovationhub.com/dspa#action> <http://www.w3.org/2000/01/rdf-schema#comment> "The action to be performed on the pricing plan." .
+<https://knowledge.c-innovationhub.com/dspa#action> <http://www.w3.org/2000/01/rdf-schema#label> "action" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#dataQualityDimension
+<https://knowledge.c-innovationhub.com/dspa#dataQualityDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/dspa#dataQualityDimension> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataQualityTerm> .
+<https://knowledge.c-innovationhub.com/dspa#dataQualityDimension> <http://www.w3.org/2000/01/rdf-schema#range> <https://knowledge.c-innovationhub.com/dspa#DataQualityDimension> .
+<https://knowledge.c-innovationhub.com/dspa#dataQualityDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a data quality term to its dimension." .
+<https://knowledge.c-innovationhub.com/dspa#dataQualityDimension> <http://www.w3.org/2000/01/rdf-schema#label> "data quality dimension" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#hasDataHolder
+<https://knowledge.c-innovationhub.com/dspa#hasDataHolder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/dspa#hasDataHolder> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataProduct> .
+<https://knowledge.c-innovationhub.com/dspa#hasDataHolder> <http://www.w3.org/2000/01/rdf-schema#range> <https://knowledge.c-innovationhub.com/dspa#DataHolder> .
+<https://knowledge.c-innovationhub.com/dspa#hasDataHolder> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a data product to its data holder." .
+<https://knowledge.c-innovationhub.com/dspa#hasDataHolder> <http://www.w3.org/2000/01/rdf-schema#label> "has data holder" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#hasDataProductLicense
+<https://knowledge.c-innovationhub.com/dspa#hasDataProductLicense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/dspa#hasDataProductLicense> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataProduct> .
+<https://knowledge.c-innovationhub.com/dspa#hasDataProductLicense> <http://www.w3.org/2000/01/rdf-schema#range> <https://knowledge.c-innovationhub.com/dspa#DataProductLicense> .
+<https://knowledge.c-innovationhub.com/dspa#hasDataProductLicense> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a data product to its license information." .
+<https://knowledge.c-innovationhub.com/dspa#hasDataProductLicense> <http://www.w3.org/2000/01/rdf-schema#label> "has data product license" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#hasDataQuality
+<https://knowledge.c-innovationhub.com/dspa#hasDataQuality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/dspa#hasDataQuality> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataProduct> .
+<https://knowledge.c-innovationhub.com/dspa#hasDataQuality> <http://www.w3.org/2000/01/rdf-schema#range> <https://knowledge.c-innovationhub.com/dspa#DataQuality> .
+<https://knowledge.c-innovationhub.com/dspa#hasDataQuality> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a data product to its data quality specifications." .
+<https://knowledge.c-innovationhub.com/dspa#hasDataQuality> <http://www.w3.org/2000/01/rdf-schema#label> "has data quality" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#hasDataQualityTerm
+<https://knowledge.c-innovationhub.com/dspa#hasDataQualityTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/dspa#hasDataQualityTerm> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataQuality> .
+<https://knowledge.c-innovationhub.com/dspa#hasDataQualityTerm> <http://www.w3.org/2000/01/rdf-schema#range> <https://knowledge.c-innovationhub.com/dspa#DataQualityTerm> .
+<https://knowledge.c-innovationhub.com/dspa#hasDataQualityTerm> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a data quality specification to its terms." .
+<https://knowledge.c-innovationhub.com/dspa#hasDataQualityTerm> <http://www.w3.org/2000/01/rdf-schema#label> "has data quality term" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#hasDataset
+<https://knowledge.c-innovationhub.com/dspa#hasDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/dspa#hasDataset> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataProduct> .
+<https://knowledge.c-innovationhub.com/dspa#hasDataset> <http://www.w3.org/2000/01/rdf-schema#range> <https://knowledge.c-innovationhub.com/dspa#Dataset> .
+<https://knowledge.c-innovationhub.com/dspa#hasDataset> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a data product to its underlying dataset." .
+<https://knowledge.c-innovationhub.com/dspa#hasDataset> <http://www.w3.org/2000/01/rdf-schema#label> "has dataset" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#hasLicenseGovernance
+<https://knowledge.c-innovationhub.com/dspa#hasLicenseGovernance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/dspa#hasLicenseGovernance> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataProductLicense> .
+<https://knowledge.c-innovationhub.com/dspa#hasLicenseGovernance> <http://www.w3.org/2000/01/rdf-schema#range> <https://knowledge.c-innovationhub.com/dspa#LicenseGovernance> .
+<https://knowledge.c-innovationhub.com/dspa#hasLicenseGovernance> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a data product license to its governance rules and policies." .
+<https://knowledge.c-innovationhub.com/dspa#hasLicenseGovernance> <http://www.w3.org/2000/01/rdf-schema#label> "has license governance" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#hasLicenseScope
+<https://knowledge.c-innovationhub.com/dspa#hasLicenseScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/dspa#hasLicenseScope> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataProductLicense> .
+<https://knowledge.c-innovationhub.com/dspa#hasLicenseScope> <http://www.w3.org/2000/01/rdf-schema#range> <https://knowledge.c-innovationhub.com/dspa#LicenseScope> .
+<https://knowledge.c-innovationhub.com/dspa#hasLicenseScope> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a data product license to its scope and permitted uses." .
+<https://knowledge.c-innovationhub.com/dspa#hasLicenseScope> <http://www.w3.org/2000/01/rdf-schema#label> "has license scope" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#hasPricingPlan
+<https://knowledge.c-innovationhub.com/dspa#hasPricingPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/dspa#hasPricingPlan> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataProduct> .
+<https://knowledge.c-innovationhub.com/dspa#hasPricingPlan> <http://www.w3.org/2000/01/rdf-schema#range> <https://knowledge.c-innovationhub.com/dspa#PricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#hasPricingPlan> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a data product to its pricing information." .
+<https://knowledge.c-innovationhub.com/dspa#hasPricingPlan> <http://www.w3.org/2000/01/rdf-schema#label> "has pricing plan" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#hasProductSupport
+<https://knowledge.c-innovationhub.com/dspa#hasProductSupport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/dspa#hasProductSupport> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreement> .
+<https://knowledge.c-innovationhub.com/dspa#hasProductSupport> <http://www.w3.org/2000/01/rdf-schema#range> <https://knowledge.c-innovationhub.com/dspa#ProductSupport> .
+<https://knowledge.c-innovationhub.com/dspa#hasProductSupport> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a service level agreement to its support information." .
+<https://knowledge.c-innovationhub.com/dspa#hasProductSupport> <http://www.w3.org/2000/01/rdf-schema#label> "has product support" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#hasServiceLevelAgreement
+<https://knowledge.c-innovationhub.com/dspa#hasServiceLevelAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/dspa#hasServiceLevelAgreement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataProduct> .
+<https://knowledge.c-innovationhub.com/dspa#hasServiceLevelAgreement> <http://www.w3.org/2000/01/rdf-schema#range> <https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreement> .
+<https://knowledge.c-innovationhub.com/dspa#hasServiceLevelAgreement> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a data product to its service level agreement." .
+<https://knowledge.c-innovationhub.com/dspa#hasServiceLevelAgreement> <http://www.w3.org/2000/01/rdf-schema#label> "has service level agreement" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#hasServiceLevelAgreementTerms
+<https://knowledge.c-innovationhub.com/dspa#hasServiceLevelAgreementTerms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/dspa#hasServiceLevelAgreementTerms> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreement> .
+<https://knowledge.c-innovationhub.com/dspa#hasServiceLevelAgreementTerms> <http://www.w3.org/2000/01/rdf-schema#range> <https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreementTerm> .
+<https://knowledge.c-innovationhub.com/dspa#hasServiceLevelAgreementTerms> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a service level agreement to its terms, which can be either executable or declarative." .
+<https://knowledge.c-innovationhub.com/dspa#hasServiceLevelAgreementTerms> <http://www.w3.org/2000/01/rdf-schema#label> "has service level agreement terms" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#hasTerminationCondition
+<https://knowledge.c-innovationhub.com/dspa#hasTerminationCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/dspa#hasTerminationCondition> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataProductLicense> .
+<https://knowledge.c-innovationhub.com/dspa#hasTerminationCondition> <http://www.w3.org/2000/01/rdf-schema#range> <https://knowledge.c-innovationhub.com/dspa#TerminationCondition> .
+<https://knowledge.c-innovationhub.com/dspa#hasTerminationCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a data product license to its termination conditions." .
+<https://knowledge.c-innovationhub.com/dspa#hasTerminationCondition> <http://www.w3.org/2000/01/rdf-schema#label> "has termination condition" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#serviceLevelAgreementDimension
+<https://knowledge.c-innovationhub.com/dspa#serviceLevelAgreementDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/dspa#serviceLevelAgreementDimension> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreementTerm> .
+<https://knowledge.c-innovationhub.com/dspa#serviceLevelAgreementDimension> <http://www.w3.org/2000/01/rdf-schema#range> <https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreementDimension> .
+<https://knowledge.c-innovationhub.com/dspa#serviceLevelAgreementDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a service level agreement term to its dimension." .
+<https://knowledge.c-innovationhub.com/dspa#serviceLevelAgreementDimension> <http://www.w3.org/2000/01/rdf-schema#label> "service level agreement dimension" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://knowledge.c-innovationhub.com/dspa#URL
+<https://knowledge.c-innovationhub.com/dspa#URL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#URL> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataHolder> .
+<https://knowledge.c-innovationhub.com/dspa#URL> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://knowledge.c-innovationhub.com/dspa#URL> <http://www.w3.org/2000/01/rdf-schema#comment> "The URL of the organization's website." .
+<https://knowledge.c-innovationhub.com/dspa#URL> <http://www.w3.org/2000/01/rdf-schema#label> "URL" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#additionalPrice
+<https://knowledge.c-innovationhub.com/dspa#additionalPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#additionalPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DeclarativePricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#additionalPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#additionalPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "This is used to define fees for usage which exceeds the defined max transaction quantity. This value is for each additional transaction." .
+<https://knowledge.c-innovationhub.com/dspa#additionalPrice> <http://www.w3.org/2000/01/rdf-schema#label> "additional price" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#addressCountry
+<https://knowledge.c-innovationhub.com/dspa#addressCountry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#addressCountry> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataHolder> .
+<https://knowledge.c-innovationhub.com/dspa#addressCountry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#addressCountry> <http://www.w3.org/2000/01/rdf-schema#comment> "The country." .
+<https://knowledge.c-innovationhub.com/dspa#addressCountry> <http://www.w3.org/2000/01/rdf-schema#label> "address country" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#addressLocality
+<https://knowledge.c-innovationhub.com/dspa#addressLocality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#addressLocality> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataHolder> .
+<https://knowledge.c-innovationhub.com/dspa#addressLocality> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#addressLocality> <http://www.w3.org/2000/01/rdf-schema#comment> "The locality in which the street address is, and which is in the region. For example, Mountain View." .
+<https://knowledge.c-innovationhub.com/dspa#addressLocality> <http://www.w3.org/2000/01/rdf-schema#label> "address locality" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#addressRegion
+<https://knowledge.c-innovationhub.com/dspa#addressRegion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#addressRegion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataHolder> .
+<https://knowledge.c-innovationhub.com/dspa#addressRegion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#addressRegion> <http://www.w3.org/2000/01/rdf-schema#comment> "The region in which the locality is, and which is in the country. For example, California or another appropriate first-level Administrative division" .
+<https://knowledge.c-innovationhub.com/dspa#addressRegion> <http://www.w3.org/2000/01/rdf-schema#label> "address region" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#aggregateRating
+<https://knowledge.c-innovationhub.com/dspa#aggregateRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#aggregateRating> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataHolder> .
+<https://knowledge.c-innovationhub.com/dspa#aggregateRating> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#aggregateRating> <http://www.w3.org/2000/01/rdf-schema#comment> "The average rating based on multiple ratings or reviews." .
+<https://knowledge.c-innovationhub.com/dspa#aggregateRating> <http://www.w3.org/2000/01/rdf-schema#label> "aggregate rating" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#applicableLaws
+<https://knowledge.c-innovationhub.com/dspa#applicableLaws> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#applicableLaws> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#LicenseGovernance> .
+<https://knowledge.c-innovationhub.com/dspa#applicableLaws> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#applicableLaws> <http://www.w3.org/2000/01/rdf-schema#comment> "Applicable laws, i.e local acts, degrees or law." .
+<https://knowledge.c-innovationhub.com/dspa#applicableLaws> <http://www.w3.org/2000/01/rdf-schema#label> "applicable laws" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#audit
+<https://knowledge.c-innovationhub.com/dspa#audit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#audit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#LicenseGovernance> .
+<https://knowledge.c-innovationhub.com/dspa#audit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#audit> <http://www.w3.org/2000/01/rdf-schema#comment> "License auditing terms." .
+<https://knowledge.c-innovationhub.com/dspa#audit> <http://www.w3.org/2000/01/rdf-schema#label> "audit" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#billingDuration
+<https://knowledge.c-innovationhub.com/dspa#billingDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#billingDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DeclarativePricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#billingDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#billingDuration> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies for how long this price (or price component) will be billed. Can be used, for example, to model the contractual duration of a subscription or payment plan." .
+<https://knowledge.c-innovationhub.com/dspa#billingDuration> <http://www.w3.org/2000/01/rdf-schema#label> "billing duration" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#businessDomain
+<https://knowledge.c-innovationhub.com/dspa#businessDomain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#businessDomain> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataHolder> .
+<https://knowledge.c-innovationhub.com/dspa#businessDomain> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#businessDomain> <http://www.w3.org/2000/01/rdf-schema#comment> "In a data mesh architecture, data (or data product) ownership and management are distributed across self-contained business domains." .
+<https://knowledge.c-innovationhub.com/dspa#businessDomain> <http://www.w3.org/2000/01/rdf-schema#label> "business domain" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#businessID
+<https://knowledge.c-innovationhub.com/dspa#businessID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#businessID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataHolder> .
+<https://knowledge.c-innovationhub.com/dspa#businessID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#businessID> <http://www.w3.org/2000/01/rdf-schema#comment> "The business identifier code of the company. Often this is given to the company by authorized public sector organization managing register of businesses." .
+<https://knowledge.c-innovationhub.com/dspa#businessID> <http://www.w3.org/2000/01/rdf-schema#label> "business ID" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#checkoutPublicKey
+<https://knowledge.c-innovationhub.com/dspa#checkoutPublicKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#checkoutPublicKey> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#CheckoutBasedPricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#checkoutPublicKey> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#checkoutPublicKey> <http://www.w3.org/2000/01/rdf-schema#comment> "The public key used for Checkout.com integration." .
+<https://knowledge.c-innovationhub.com/dspa#checkoutPublicKey> <http://www.w3.org/2000/01/rdf-schema#label> "Checkout Public Key" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#checkoutSecretKey
+<https://knowledge.c-innovationhub.com/dspa#checkoutSecretKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#checkoutSecretKey> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#CheckoutBasedPricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#checkoutSecretKey> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#checkoutSecretKey> <http://www.w3.org/2000/01/rdf-schema#comment> "The secret key used for Checkout.com integration." .
+<https://knowledge.c-innovationhub.com/dspa#checkoutSecretKey> <http://www.w3.org/2000/01/rdf-schema#label> "Checkout Secret Key" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#confidentiality
+<https://knowledge.c-innovationhub.com/dspa#confidentiality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#confidentiality> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#LicenseGovernance> .
+<https://knowledge.c-innovationhub.com/dspa#confidentiality> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#confidentiality> <http://www.w3.org/2000/01/rdf-schema#comment> "Restrictions and requirements imposed on the Data User regarding e.g. the use and disclosure of the Data Holder's confidential information." .
+<https://knowledge.c-innovationhub.com/dspa#confidentiality> <http://www.w3.org/2000/01/rdf-schema#label> "confidentiality" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#contactName
+<https://knowledge.c-innovationhub.com/dspa#contactName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#contactName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataHolder> .
+<https://knowledge.c-innovationhub.com/dspa#contactName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#contactName> <http://www.w3.org/2000/01/rdf-schema#comment> "Contact person name" .
+<https://knowledge.c-innovationhub.com/dspa#contactName> <http://www.w3.org/2000/01/rdf-schema#label> "contact name" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#continuityConditions
+<https://knowledge.c-innovationhub.com/dspa#continuityConditions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#continuityConditions> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#TerminationCondition> .
+<https://knowledge.c-innovationhub.com/dspa#continuityConditions> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#continuityConditions> <http://www.w3.org/2000/01/rdf-schema#comment> "Continuity conditions of the license." .
+<https://knowledge.c-innovationhub.com/dspa#continuityConditions> <http://www.w3.org/2000/01/rdf-schema#label> "continuity conditions" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#damages
+<https://knowledge.c-innovationhub.com/dspa#damages> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#damages> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#LicenseGovernance> .
+<https://knowledge.c-innovationhub.com/dspa#damages> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#damages> <http://www.w3.org/2000/01/rdf-schema#comment> "Damages refers to the sum of money (i.e. indemnifications) for a breach of some duty or violation of license right." .
+<https://knowledge.c-innovationhub.com/dspa#damages> <http://www.w3.org/2000/01/rdf-schema#label> "damages" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#dataFormat
+<https://knowledge.c-innovationhub.com/dspa#dataFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#dataFormat> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#Dataset> .
+<https://knowledge.c-innovationhub.com/dspa#dataFormat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#dataFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "The format in which the data is provided." .
+<https://knowledge.c-innovationhub.com/dspa#dataFormat> <http://www.w3.org/2000/01/rdf-schema#label> "data format" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#definition
+<https://knowledge.c-innovationhub.com/dspa#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#definition> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#LicenseScope> .
+<https://knowledge.c-innovationhub.com/dspa#definition> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#definition> <http://www.w3.org/2000/01/rdf-schema#comment> "Background and purpose of the license." .
+<https://knowledge.c-innovationhub.com/dspa#definition> <http://www.w3.org/2000/01/rdf-schema#label> "definition" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#description
+<https://knowledge.c-innovationhub.com/dspa#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#description> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataHolder> .
+<https://knowledge.c-innovationhub.com/dspa#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#description> <http://www.w3.org/2000/01/rdf-schema#comment> "The introduction to the organization. Often contains information of what the organisation does and focuses on." .
+<https://knowledge.c-innovationhub.com/dspa#description> <http://www.w3.org/2000/01/rdf-schema#label> "description" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#documentationURL
+<https://knowledge.c-innovationhub.com/dspa#documentationURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#documentationURL> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#ProductSupport> .
+<https://knowledge.c-innovationhub.com/dspa#documentationURL> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://knowledge.c-innovationhub.com/dspa#documentationURL> <http://www.w3.org/2000/01/rdf-schema#comment> "URL to documentation" .
+<https://knowledge.c-innovationhub.com/dspa#documentationURL> <http://www.w3.org/2000/01/rdf-schema#label> "documentation URL" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#email
+<https://knowledge.c-innovationhub.com/dspa#email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#email> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataHolder> .
+<https://knowledge.c-innovationhub.com/dspa#email> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#ProductSupport> .
+<https://knowledge.c-innovationhub.com/dspa#email> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#email> <http://www.w3.org/2000/01/rdf-schema#comment> "Email information for support requests. Use RFC2822" .
+<https://knowledge.c-innovationhub.com/dspa#email> <http://www.w3.org/2000/01/rdf-schema#comment> "Email to be used in contacting the organization." .
+<https://knowledge.c-innovationhub.com/dspa#email> <http://www.w3.org/2000/01/rdf-schema#label> "email" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#emailServiceHours
+<https://knowledge.c-innovationhub.com/dspa#emailServiceHours> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#emailServiceHours> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#ProductSupport> .
+<https://knowledge.c-innovationhub.com/dspa#emailServiceHours> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#emailServiceHours> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the email service hours company provides. Contains information often in week level eg Mon-Fri at 8am - 4pm." .
+<https://knowledge.c-innovationhub.com/dspa#emailServiceHours> <http://www.w3.org/2000/01/rdf-schema#label> "email service hours" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#exclusive
+<https://knowledge.c-innovationhub.com/dspa#exclusive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#exclusive> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#LicenseScope> .
+<https://knowledge.c-innovationhub.com/dspa#exclusive> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://knowledge.c-innovationhub.com/dspa#exclusive> <http://www.w3.org/2000/01/rdf-schema#comment> "The exclusive license holder is given complete control over the use of the data product, and no other person or organization is allowed to use it during the term of the license agreement." .
+<https://knowledge.c-innovationhub.com/dspa#exclusive> <http://www.w3.org/2000/01/rdf-schema#label> "exclusive" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#forceMajeure
+<https://knowledge.c-innovationhub.com/dspa#forceMajeure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#forceMajeure> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#LicenseGovernance> .
+<https://knowledge.c-innovationhub.com/dspa#forceMajeure> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#forceMajeure> <http://www.w3.org/2000/01/rdf-schema#comment> "Force majeure is a clause that is included in contracts to remove liability for unforeseeable and unavoidable catastrophes that interrupt the expected course of events and prevent participants from fulfilling obligations. These clauses generally cover both natural disasters and catastrophes created by humans." .
+<https://knowledge.c-innovationhub.com/dspa#forceMajeure> <http://www.w3.org/2000/01/rdf-schema#label> "force majeure" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#geographicalArea
+<https://knowledge.c-innovationhub.com/dspa#geographicalArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#geographicalArea> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#LicenseScope> .
+<https://knowledge.c-innovationhub.com/dspa#geographicalArea> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#geographicalArea> <http://www.w3.org/2000/01/rdf-schema#comment> "License right restricted to the geographical area." .
+<https://knowledge.c-innovationhub.com/dspa#geographicalArea> <http://www.w3.org/2000/01/rdf-schema#label> "geographical area" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#legalName
+<https://knowledge.c-innovationhub.com/dspa#legalName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#legalName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataHolder> .
+<https://knowledge.c-innovationhub.com/dspa#legalName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#legalName> <http://www.w3.org/2000/01/rdf-schema#comment> "REQUIRED The official name of the organization, e.g. the registered company name." .
+<https://knowledge.c-innovationhub.com/dspa#legalName> <http://www.w3.org/2000/01/rdf-schema#label> "legal name" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#logoURL
+<https://knowledge.c-innovationhub.com/dspa#logoURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#logoURL> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataHolder> .
+<https://knowledge.c-innovationhub.com/dspa#logoURL> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://knowledge.c-innovationhub.com/dspa#logoURL> <http://www.w3.org/2000/01/rdf-schema#comment> "The URL pointing to organisation logo." .
+<https://knowledge.c-innovationhub.com/dspa#logoURL> <http://www.w3.org/2000/01/rdf-schema#label> "logo URL" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#maxDataQuantity
+<https://knowledge.c-innovationhub.com/dspa#maxDataQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#maxDataQuantity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DeclarativePricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#maxDataQuantity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://knowledge.c-innovationhub.com/dspa#maxDataQuantity> <http://www.w3.org/2000/01/rdf-schema#comment> "The maximum amount of data transferred during the billing duration. Unit is GB." .
+<https://knowledge.c-innovationhub.com/dspa#maxDataQuantity> <http://www.w3.org/2000/01/rdf-schema#label> "max data quantity" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#maxPrice
+<https://knowledge.c-innovationhub.com/dspa#maxPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#maxPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DeclarativePricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#maxPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#maxPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "The highest price if the price is a range. If dynamic pricing is used with this product, this is the highest price allowed." .
+<https://knowledge.c-innovationhub.com/dspa#maxPrice> <http://www.w3.org/2000/01/rdf-schema#label> "max price" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#maxTransactionQuantity
+<https://knowledge.c-innovationhub.com/dspa#maxTransactionQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#maxTransactionQuantity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DeclarativePricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#maxTransactionQuantity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://knowledge.c-innovationhub.com/dspa#maxTransactionQuantity> <http://www.w3.org/2000/01/rdf-schema#comment> "The maximum transaction quantity for the given billing duration. Use this to define for example monthly (or any other period) request limit to the data product. Note! If you want to set unlimited use, value must be 0 (zero)." .
+<https://knowledge.c-innovationhub.com/dspa#maxTransactionQuantity> <http://www.w3.org/2000/01/rdf-schema#label> "max transaction quantity" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#minPrice
+<https://knowledge.c-innovationhub.com/dspa#minPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#minPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DeclarativePricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#minPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#minPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "The lowest price if the price is a range. If dynamic pricing is used with this product, this is the lowest price allowed. In dynamic pricing businesses are able to change prices based on algorithms that take into account competitor pricing, supply and demand, and other external factors in the market." .
+<https://knowledge.c-innovationhub.com/dspa#minPrice> <http://www.w3.org/2000/01/rdf-schema#label> "min price" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#monitoringSystemName
+<https://knowledge.c-innovationhub.com/dspa#monitoringSystemName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#monitoringSystemName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#ExecutableTerm> .
+<https://knowledge.c-innovationhub.com/dspa#monitoringSystemName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#monitoringSystemName> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the monitoring system used for this SLA term." .
+<https://knowledge.c-innovationhub.com/dspa#monitoringSystemName> <http://www.w3.org/2000/01/rdf-schema#label> "monitoring system name" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#monitoringSystemReference
+<https://knowledge.c-innovationhub.com/dspa#monitoringSystemReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#monitoringSystemReference> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#ExecutableTerm> .
+<https://knowledge.c-innovationhub.com/dspa#monitoringSystemReference> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://knowledge.c-innovationhub.com/dspa#monitoringSystemReference> <http://www.w3.org/2000/01/rdf-schema#comment> "A reference URL to the monitoring system documentation." .
+<https://knowledge.c-innovationhub.com/dspa#monitoringSystemReference> <http://www.w3.org/2000/01/rdf-schema#label> "monitoring system reference" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#monitoringSystemTermSpecification
+<https://knowledge.c-innovationhub.com/dspa#monitoringSystemTermSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#monitoringSystemTermSpecification> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#ExecutableTerm> .
+<https://knowledge.c-innovationhub.com/dspa#monitoringSystemTermSpecification> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#monitoringSystemTermSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "The specification of how this SLA term is monitored in the monitoring system." .
+<https://knowledge.c-innovationhub.com/dspa#monitoringSystemTermSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "monitoring system term specification" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#noticePeriod
+<https://knowledge.c-innovationhub.com/dspa#noticePeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#noticePeriod> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#TerminationCondition> .
+<https://knowledge.c-innovationhub.com/dspa#noticePeriod> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://knowledge.c-innovationhub.com/dspa#noticePeriod> <http://www.w3.org/2000/01/rdf-schema#comment> "The notice period is a particular time that an data product provider or consumer must give before ending the contract. This time window allows both sides to make the necessary preparations, guaranteeing an unhindered transfer." .
+<https://knowledge.c-innovationhub.com/dspa#noticePeriod> <http://www.w3.org/2000/01/rdf-schema#label> "notice period" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#objective
+<https://knowledge.c-innovationhub.com/dspa#objective> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#objective> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DeclarativeTerm> .
+<https://knowledge.c-innovationhub.com/dspa#objective> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://knowledge.c-innovationhub.com/dspa#objective> <http://www.w3.org/2000/01/rdf-schema#comment> "The target value that should be achieved for the term." .
+<https://knowledge.c-innovationhub.com/dspa#objective> <http://www.w3.org/2000/01/rdf-schema#label> "objective" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#offering
+<https://knowledge.c-innovationhub.com/dspa#offering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#offering> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DeclarativePricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#offering> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#offering> <http://www.w3.org/2000/01/rdf-schema#comment> "The element that contains pricing plan content as array of strings. Think of this as the list of what is included in the pricing plan and what you offer in return to the price asked. Use the language defined in the plan" .
+<https://knowledge.c-innovationhub.com/dspa#offering> <http://www.w3.org/2000/01/rdf-schema#label> "offering" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#ownership
+<https://knowledge.c-innovationhub.com/dspa#ownership> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#ownership> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#LicenseGovernance> .
+<https://knowledge.c-innovationhub.com/dspa#ownership> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#ownership> <http://www.w3.org/2000/01/rdf-schema#comment> "Data product licensing ownership." .
+<https://knowledge.c-innovationhub.com/dspa#ownership> <http://www.w3.org/2000/01/rdf-schema#label> "ownership" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#parentOrganization
+<https://knowledge.c-innovationhub.com/dspa#parentOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#parentOrganization> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataHolder> .
+<https://knowledge.c-innovationhub.com/dspa#parentOrganization> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#parentOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "The larger organization that this organization is a subOrganization of, if any." .
+<https://knowledge.c-innovationhub.com/dspa#parentOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "parent organization" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#paypalClientId
+<https://knowledge.c-innovationhub.com/dspa#paypalClientId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#paypalClientId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#PaypalBasedPricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#paypalClientId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#paypalClientId> <http://www.w3.org/2000/01/rdf-schema#comment> "The client ID used for PayPal integration." .
+<https://knowledge.c-innovationhub.com/dspa#paypalClientId> <http://www.w3.org/2000/01/rdf-schema#label> "PayPal Client ID" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#paypalSecret
+<https://knowledge.c-innovationhub.com/dspa#paypalSecret> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#paypalSecret> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#PaypalBasedPricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#paypalSecret> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#paypalSecret> <http://www.w3.org/2000/01/rdf-schema#comment> "The secret key used for PayPal integration." .
+<https://knowledge.c-innovationhub.com/dspa#paypalSecret> <http://www.w3.org/2000/01/rdf-schema#label> "PayPal Secret" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#permanent
+<https://knowledge.c-innovationhub.com/dspa#permanent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#permanent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#LicenseScope> .
+<https://knowledge.c-innovationhub.com/dspa#permanent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://knowledge.c-innovationhub.com/dspa#permanent> <http://www.w3.org/2000/01/rdf-schema#comment> "License with no expiration date." .
+<https://knowledge.c-innovationhub.com/dspa#permanent> <http://www.w3.org/2000/01/rdf-schema#label> "permanent" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#phoneNumber
+<https://knowledge.c-innovationhub.com/dspa#phoneNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#phoneNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#ProductSupport> .
+<https://knowledge.c-innovationhub.com/dspa#phoneNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#phoneNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "The support phone number. Use E.164" .
+<https://knowledge.c-innovationhub.com/dspa#phoneNumber> <http://www.w3.org/2000/01/rdf-schema#label> "phone number" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#phoneServiceHours
+<https://knowledge.c-innovationhub.com/dspa#phoneServiceHours> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#phoneServiceHours> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#ProductSupport> .
+<https://knowledge.c-innovationhub.com/dspa#phoneServiceHours> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#phoneServiceHours> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the service hours company provides. Contains information often in week level eg Mon-Fri at 8am - 4pm." .
+<https://knowledge.c-innovationhub.com/dspa#phoneServiceHours> <http://www.w3.org/2000/01/rdf-schema#label> "phone service hours" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#postalCode
+<https://knowledge.c-innovationhub.com/dspa#postalCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#postalCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataHolder> .
+<https://knowledge.c-innovationhub.com/dspa#postalCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#postalCode> <http://www.w3.org/2000/01/rdf-schema#comment> "The postal code. For example, 94043." .
+<https://knowledge.c-innovationhub.com/dspa#postalCode> <http://www.w3.org/2000/01/rdf-schema#label> "postal code" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#price
+<https://knowledge.c-innovationhub.com/dspa#price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#price> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DeclarativePricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#price> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#price> <http://www.w3.org/2000/01/rdf-schema#comment> "The offer price of a product, or of a price component, or revenue-sharing percentage. If the unit of pricing is revenue-sharing, then this price attribute value is percentage value. Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator. Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols. With data-volume the price is for each 1GB of data." .
+<https://knowledge.c-innovationhub.com/dspa#price> <http://www.w3.org/2000/01/rdf-schema#label> "price" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#priceCurrency
+<https://knowledge.c-innovationhub.com/dspa#priceCurrency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#priceCurrency> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DeclarativePricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#priceCurrency> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#priceCurrency> <http://www.w3.org/2000/01/rdf-schema#comment> "The primary currency used in pricing. Platforms are assumed to use this as primary currency if currency conversions are used to display product pricing in different locations for various currencies. If the unit is revenue-sharing, then this attribute value MUST be percentage." .
+<https://knowledge.c-innovationhub.com/dspa#priceCurrency> <http://www.w3.org/2000/01/rdf-schema#label> "price currency" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#ratingCount
+<https://knowledge.c-innovationhub.com/dspa#ratingCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#ratingCount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataHolder> .
+<https://knowledge.c-innovationhub.com/dspa#ratingCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://knowledge.c-innovationhub.com/dspa#ratingCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The amount of ratings and reviews used in calculating the aggregateRating." .
+<https://knowledge.c-innovationhub.com/dspa#ratingCount> <http://www.w3.org/2000/01/rdf-schema#label> "rating count" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#reference
+<https://knowledge.c-innovationhub.com/dspa#reference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#reference> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#ExecutablePricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#reference> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://knowledge.c-innovationhub.com/dspa#reference> <http://www.w3.org/2000/01/rdf-schema#comment> "Provide URL pointing to the reference documentation" .
+<https://knowledge.c-innovationhub.com/dspa#reference> <http://www.w3.org/2000/01/rdf-schema#label> "reference" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#restrictions
+<https://knowledge.c-innovationhub.com/dspa#restrictions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#restrictions> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#LicenseScope> .
+<https://knowledge.c-innovationhub.com/dspa#restrictions> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#restrictions> <http://www.w3.org/2000/01/rdf-schema#comment> "Restrictions of the license." .
+<https://knowledge.c-innovationhub.com/dspa#restrictions> <http://www.w3.org/2000/01/rdf-schema#label> "restrictions" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#rights
+<https://knowledge.c-innovationhub.com/dspa#rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#rights> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#LicenseScope> .
+<https://knowledge.c-innovationhub.com/dspa#rights> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#rights> <http://www.w3.org/2000/01/rdf-schema#comment> "Rights granted by the licence. The texts in brackets and italic are intended to describe rights." .
+<https://knowledge.c-innovationhub.com/dspa#rights> <http://www.w3.org/2000/01/rdf-schema#label> "rights" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#slogan
+<https://knowledge.c-innovationhub.com/dspa#slogan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#slogan> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataHolder> .
+<https://knowledge.c-innovationhub.com/dspa#slogan> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#slogan> <http://www.w3.org/2000/01/rdf-schema#comment> "The slogan of the organization. This is often related to showing the brand" .
+<https://knowledge.c-innovationhub.com/dspa#slogan> <http://www.w3.org/2000/01/rdf-schema#label> "slogan" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#specs
+<https://knowledge.c-innovationhub.com/dspa#specs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#specs> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#PricingPlansAsCodeAction> .
+<https://knowledge.c-innovationhub.com/dspa#specs> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#specs> <http://www.w3.org/2000/01/rdf-schema#comment> "The specifications for the pricing plan action." .
+<https://knowledge.c-innovationhub.com/dspa#specs> <http://www.w3.org/2000/01/rdf-schema#label> "specs" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#squareAccessToken
+<https://knowledge.c-innovationhub.com/dspa#squareAccessToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#squareAccessToken> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#SquareBasedPricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#squareAccessToken> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#squareAccessToken> <http://www.w3.org/2000/01/rdf-schema#comment> "The access token used to authenticate with Square's services." .
+<https://knowledge.c-innovationhub.com/dspa#squareAccessToken> <http://www.w3.org/2000/01/rdf-schema#label> "Square Access Token" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#squareApplicationId
+<https://knowledge.c-innovationhub.com/dspa#squareApplicationId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#squareApplicationId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#SquareBasedPricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#squareApplicationId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#squareApplicationId> <http://www.w3.org/2000/01/rdf-schema#comment> "The unique identifier for a Square application." .
+<https://knowledge.c-innovationhub.com/dspa#squareApplicationId> <http://www.w3.org/2000/01/rdf-schema#label> "Square Application ID" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#streetAddress
+<https://knowledge.c-innovationhub.com/dspa#streetAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#streetAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataHolder> .
+<https://knowledge.c-innovationhub.com/dspa#streetAddress> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#streetAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "The street address. For example, 1600 Amphitheatre Pkwy." .
+<https://knowledge.c-innovationhub.com/dspa#streetAddress> <http://www.w3.org/2000/01/rdf-schema#label> "street address" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#stripeAccountId
+<https://knowledge.c-innovationhub.com/dspa#stripeAccountId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#stripeAccountId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#StripeBasedPricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#stripeAccountId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#stripeAccountId> <http://www.w3.org/2000/01/rdf-schema#comment> "The unique identifier for a Stripe account." .
+<https://knowledge.c-innovationhub.com/dspa#stripeAccountId> <http://www.w3.org/2000/01/rdf-schema#label> "Stripe Account ID" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#stripeApiKey
+<https://knowledge.c-innovationhub.com/dspa#stripeApiKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#stripeApiKey> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#StripeBasedPricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#stripeApiKey> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#stripeApiKey> <http://www.w3.org/2000/01/rdf-schema#comment> "The API key used to authenticate with Stripe's services." .
+<https://knowledge.c-innovationhub.com/dspa#stripeApiKey> <http://www.w3.org/2000/01/rdf-schema#label> "Stripe API Key" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#taxID
+<https://knowledge.c-innovationhub.com/dspa#taxID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#taxID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataHolder> .
+<https://knowledge.c-innovationhub.com/dspa#taxID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#taxID> <http://www.w3.org/2000/01/rdf-schema#comment> "The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain." .
+<https://knowledge.c-innovationhub.com/dspa#taxID> <http://www.w3.org/2000/01/rdf-schema#label> "tax ID" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#telephone
+<https://knowledge.c-innovationhub.com/dspa#telephone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#telephone> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataHolder> .
+<https://knowledge.c-innovationhub.com/dspa#telephone> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#telephone> <http://www.w3.org/2000/01/rdf-schema#comment> "The telephone number. Use E.164 standard." .
+<https://knowledge.c-innovationhub.com/dspa#telephone> <http://www.w3.org/2000/01/rdf-schema#label> "telephone" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#terminationConditions
+<https://knowledge.c-innovationhub.com/dspa#terminationConditions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#terminationConditions> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#TerminationCondition> .
+<https://knowledge.c-innovationhub.com/dspa#terminationConditions> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#terminationConditions> <http://www.w3.org/2000/01/rdf-schema#comment> "Cancellation conditions of the license." .
+<https://knowledge.c-innovationhub.com/dspa#terminationConditions> <http://www.w3.org/2000/01/rdf-schema#label> "termination conditions" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#unit
+<https://knowledge.c-innovationhub.com/dspa#unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#unit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DeclarativeTerm> .
+<https://knowledge.c-innovationhub.com/dspa#unit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#unit> <http://www.w3.org/2000/01/rdf-schema#comment> "The unit of measurement for the term." .
+<https://knowledge.c-innovationhub.com/dspa#unit> <http://www.w3.org/2000/01/rdf-schema#label> "unit" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#updateFrequency
+<https://knowledge.c-innovationhub.com/dspa#updateFrequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#updateFrequency> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#Dataset> .
+<https://knowledge.c-innovationhub.com/dspa#updateFrequency> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#updateFrequency> <http://www.w3.org/2000/01/rdf-schema#comment> "How frequently the dataset is updated." .
+<https://knowledge.c-innovationhub.com/dspa#updateFrequency> <http://www.w3.org/2000/01/rdf-schema#label> "update frequency" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#validFrom
+<https://knowledge.c-innovationhub.com/dspa#validFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#validFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DeclarativePricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#validFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://knowledge.c-innovationhub.com/dspa#validFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "The date when the item becomes valid." .
+<https://knowledge.c-innovationhub.com/dspa#validFrom> <http://www.w3.org/2000/01/rdf-schema#label> "valid from" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#validTo
+<https://knowledge.c-innovationhub.com/dspa#validTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#validTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DeclarativePricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#validTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://knowledge.c-innovationhub.com/dspa#validTo> <http://www.w3.org/2000/01/rdf-schema#comment> "The date after when the item is not valid." .
+<https://knowledge.c-innovationhub.com/dspa#validTo> <http://www.w3.org/2000/01/rdf-schema#label> "valid to" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#valueAddedTaxIncluded
+<https://knowledge.c-innovationhub.com/dspa#valueAddedTaxIncluded> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#valueAddedTaxIncluded> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DeclarativePricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#valueAddedTaxIncluded> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://knowledge.c-innovationhub.com/dspa#valueAddedTaxIncluded> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies whether the applicable value-added tax (VAT) is included in the price specification or not." .
+<https://knowledge.c-innovationhub.com/dspa#valueAddedTaxIncluded> <http://www.w3.org/2000/01/rdf-schema#label> "value added tax included" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#valueAddedTaxPercentage
+<https://knowledge.c-innovationhub.com/dspa#valueAddedTaxPercentage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#valueAddedTaxPercentage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DeclarativePricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#valueAddedTaxPercentage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://knowledge.c-innovationhub.com/dspa#valueAddedTaxPercentage> <http://www.w3.org/2000/01/rdf-schema#comment> "Number percentage value, range 0-100" .
+<https://knowledge.c-innovationhub.com/dspa#valueAddedTaxPercentage> <http://www.w3.org/2000/01/rdf-schema#label> "value added tax percentage" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#valueSimulator
+<https://knowledge.c-innovationhub.com/dspa#valueSimulator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#valueSimulator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DeclarativePricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#valueSimulator> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://knowledge.c-innovationhub.com/dspa#valueSimulator> <http://www.w3.org/2000/01/rdf-schema#comment> "Intended to be used with value-based pricing plan. Provide url to value simulator in which customer can see the value in various cases. In the simulator customer might be able to input own variables to match their exact case and see the gained value." .
+<https://knowledge.c-innovationhub.com/dspa#valueSimulator> <http://www.w3.org/2000/01/rdf-schema#label> "value simulator" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#vatID
+<https://knowledge.c-innovationhub.com/dspa#vatID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#vatID> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataHolder> .
+<https://knowledge.c-innovationhub.com/dspa#vatID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#vatID> <http://www.w3.org/2000/01/rdf-schema#comment> "The Value-added Tax ID of the organization or person." .
+<https://knowledge.c-innovationhub.com/dspa#vatID> <http://www.w3.org/2000/01/rdf-schema#label> "VAT ID" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#version
+<https://knowledge.c-innovationhub.com/dspa#version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#version> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#ExecutablePricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#version> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#version> <http://www.w3.org/2000/01/rdf-schema#comment> "The version of the payment gateway tool used." .
+<https://knowledge.c-innovationhub.com/dspa#version> <http://www.w3.org/2000/01/rdf-schema#label> "version" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#warranties
+<https://knowledge.c-innovationhub.com/dspa#warranties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://knowledge.c-innovationhub.com/dspa#warranties> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#LicenseGovernance> .
+<https://knowledge.c-innovationhub.com/dspa#warranties> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://knowledge.c-innovationhub.com/dspa#warranties> <http://www.w3.org/2000/01/rdf-schema#comment> "License warranties." .
+<https://knowledge.c-innovationhub.com/dspa#warranties> <http://www.w3.org/2000/01/rdf-schema#label> "warranties" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://knowledge.c-innovationhub.com/dspa#CheckoutBasedPricingPlan
+<https://knowledge.c-innovationhub.com/dspa#CheckoutBasedPricingPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#CheckoutBasedPricingPlan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://knowledge.c-innovationhub.com/dspa#ExecutablePricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#CheckoutBasedPricingPlan> <http://www.w3.org/2000/01/rdf-schema#comment> "A pricing plan that uses Checkout.com as the payment processor." .
+<https://knowledge.c-innovationhub.com/dspa#CheckoutBasedPricingPlan> <http://www.w3.org/2000/01/rdf-schema#label> "Checkout Based Pricing Plan" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#CreateAction
+<https://knowledge.c-innovationhub.com/dspa#CreateAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#CreateAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://knowledge.c-innovationhub.com/dspa#PricingPlansAsCodeAction> .
+<https://knowledge.c-innovationhub.com/dspa#CreateAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Action to create a new pricing plan." .
+<https://knowledge.c-innovationhub.com/dspa#CreateAction> <http://www.w3.org/2000/01/rdf-schema#label> "Create Action" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#DataHolder
+<https://knowledge.c-innovationhub.com/dspa#DataHolder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#DataHolder> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity that owns, controls, or is responsible for a data product." .
+<https://knowledge.c-innovationhub.com/dspa#DataHolder> <http://www.w3.org/2000/01/rdf-schema#label> "Data Holder" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#DataProduct
+<https://knowledge.c-innovationhub.com/dspa#DataProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#DataProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "A data product is a packaged data asset that is ready for distribution and consumption." .
+<https://knowledge.c-innovationhub.com/dspa#DataProduct> <http://www.w3.org/2000/01/rdf-schema#label> "Data Product" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#DataProductLicense
+<https://knowledge.c-innovationhub.com/dspa#DataProductLicense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#DataProductLicense> <http://www.w3.org/2000/01/rdf-schema#comment> "The license governing the use, distribution, and modification of a data product." .
+<https://knowledge.c-innovationhub.com/dspa#DataProductLicense> <http://www.w3.org/2000/01/rdf-schema#label> "Data Product License" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#DataQuality
+<https://knowledge.c-innovationhub.com/dspa#DataQuality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#DataQuality> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the quality characteristics and metrics of a data product." .
+<https://knowledge.c-innovationhub.com/dspa#DataQuality> <http://www.w3.org/2000/01/rdf-schema#label> "Data Quality" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#DataQualityDimension
+<https://knowledge.c-innovationhub.com/dspa#DataQualityDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#DataQualityDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "A dimension or aspect of data quality that can be measured or monitored." .
+<https://knowledge.c-innovationhub.com/dspa#DataQualityDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Data Quality Dimension" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#DataQualityTerm
+<https://knowledge.c-innovationhub.com/dspa#DataQualityTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#DataQualityTerm> <http://www.w3.org/2000/01/rdf-schema#comment> "A term that specifies a data quality requirement for a data product." .
+<https://knowledge.c-innovationhub.com/dspa#DataQualityTerm> <http://www.w3.org/2000/01/rdf-schema#label> "Data Quality Term" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#Dataset
+<https://knowledge.c-innovationhub.com/dspa#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#Dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of data that forms the core content of a data product." .
+<https://knowledge.c-innovationhub.com/dspa#Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#DeclarativeDataQualityTerm
+<https://knowledge.c-innovationhub.com/dspa#DeclarativeDataQualityTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#DeclarativeDataQualityTerm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://knowledge.c-innovationhub.com/dspa#DataQualityTerm> .
+<https://knowledge.c-innovationhub.com/dspa#DeclarativeDataQualityTerm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://knowledge.c-innovationhub.com/dspa#DeclarativeTerm> .
+<https://knowledge.c-innovationhub.com/dspa#DeclarativeDataQualityTerm> <http://www.w3.org/2000/01/rdf-schema#comment> "Data quality terms that are defined in a declarative format." .
+<https://knowledge.c-innovationhub.com/dspa#DeclarativeDataQualityTerm> <http://www.w3.org/2000/01/rdf-schema#label> "Declarative Data Quality Term" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#DeclarativePricingPlan
+<https://knowledge.c-innovationhub.com/dspa#DeclarativePricingPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#DeclarativePricingPlan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://knowledge.c-innovationhub.com/dspa#PricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#DeclarativePricingPlan> <http://www.w3.org/2000/01/rdf-schema#comment> "A pricing plan defined in a declarative format." .
+<https://knowledge.c-innovationhub.com/dspa#DeclarativePricingPlan> <http://www.w3.org/2000/01/rdf-schema#label> "Declarative Pricing Plan" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#DeclarativeServiceLevelAgreementTerm
+<https://knowledge.c-innovationhub.com/dspa#DeclarativeServiceLevelAgreementTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#DeclarativeServiceLevelAgreementTerm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://knowledge.c-innovationhub.com/dspa#DeclarativeTerm> .
+<https://knowledge.c-innovationhub.com/dspa#DeclarativeServiceLevelAgreementTerm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreementTerm> .
+<https://knowledge.c-innovationhub.com/dspa#DeclarativeServiceLevelAgreementTerm> <http://www.w3.org/2000/01/rdf-schema#comment> "Service level agreement terms that are defined in a declarative format." .
+<https://knowledge.c-innovationhub.com/dspa#DeclarativeServiceLevelAgreementTerm> <http://www.w3.org/2000/01/rdf-schema#label> "Declarative Service Level Agreement Term" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#DeclarativeTerm
+<https://knowledge.c-innovationhub.com/dspa#DeclarativeTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#DeclarativeTerm> <http://www.w3.org/2000/01/rdf-schema#comment> "Terms that are defined in a declarative format." .
+<https://knowledge.c-innovationhub.com/dspa#DeclarativeTerm> <http://www.w3.org/2000/01/rdf-schema#label> "Declarative Term" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#ExecutableDataQualityTerm
+<https://knowledge.c-innovationhub.com/dspa#ExecutableDataQualityTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#ExecutableDataQualityTerm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://knowledge.c-innovationhub.com/dspa#DataQualityTerm> .
+<https://knowledge.c-innovationhub.com/dspa#ExecutableDataQualityTerm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://knowledge.c-innovationhub.com/dspa#ExecutableTerm> .
+<https://knowledge.c-innovationhub.com/dspa#ExecutableDataQualityTerm> <http://www.w3.org/2000/01/rdf-schema#comment> "Data quality terms that are defined in an executable format for monitoring." .
+<https://knowledge.c-innovationhub.com/dspa#ExecutableDataQualityTerm> <http://www.w3.org/2000/01/rdf-schema#label> "Executable Data Quality Term" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#ExecutablePricingPlan
+<https://knowledge.c-innovationhub.com/dspa#ExecutablePricingPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#ExecutablePricingPlan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://knowledge.c-innovationhub.com/dspa#PricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#ExecutablePricingPlan> <http://www.w3.org/2000/01/rdf-schema#comment> "A pricing plan defined in an executable format for dynamic pricing calculations." .
+<https://knowledge.c-innovationhub.com/dspa#ExecutablePricingPlan> <http://www.w3.org/2000/01/rdf-schema#label> "Executable Pricing Plan" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#ExecutableServiceAgreementTerm
+<https://knowledge.c-innovationhub.com/dspa#ExecutableServiceAgreementTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#ExecutableServiceAgreementTerm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://knowledge.c-innovationhub.com/dspa#ExecutableTerm> .
+<https://knowledge.c-innovationhub.com/dspa#ExecutableServiceAgreementTerm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreementTerm> .
+<https://knowledge.c-innovationhub.com/dspa#ExecutableServiceAgreementTerm> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific type of executable term used in service level agreements." .
+<https://knowledge.c-innovationhub.com/dspa#ExecutableServiceAgreementTerm> <http://www.w3.org/2000/01/rdf-schema#label> "Executable Service Agreement Term" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#ExecutableTerm
+<https://knowledge.c-innovationhub.com/dspa#ExecutableTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#ExecutableTerm> <http://www.w3.org/2000/01/rdf-schema#comment> "Terms that are defined in an executable format for monitoring." .
+<https://knowledge.c-innovationhub.com/dspa#ExecutableTerm> <http://www.w3.org/2000/01/rdf-schema#label> "Executable Term" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#LicenseGovernance
+<https://knowledge.c-innovationhub.com/dspa#LicenseGovernance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#LicenseGovernance> <http://www.w3.org/2000/01/rdf-schema#comment> "Rules and policies governing the enforcement and management of the license." .
+<https://knowledge.c-innovationhub.com/dspa#LicenseGovernance> <http://www.w3.org/2000/01/rdf-schema#label> "License Governance" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#LicenseScope
+<https://knowledge.c-innovationhub.com/dspa#LicenseScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#LicenseScope> <http://www.w3.org/2000/01/rdf-schema#comment> "The scope and extent of the license, including permitted uses and restrictions." .
+<https://knowledge.c-innovationhub.com/dspa#LicenseScope> <http://www.w3.org/2000/01/rdf-schema#label> "License Scope" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#PaypalBasedPricingPlan
+<https://knowledge.c-innovationhub.com/dspa#PaypalBasedPricingPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#PaypalBasedPricingPlan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://knowledge.c-innovationhub.com/dspa#ExecutablePricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#PaypalBasedPricingPlan> <http://www.w3.org/2000/01/rdf-schema#comment> "A pricing plan that uses PayPal as the payment processor." .
+<https://knowledge.c-innovationhub.com/dspa#PaypalBasedPricingPlan> <http://www.w3.org/2000/01/rdf-schema#label> "PayPal Based Pricing Plan" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#PricingPlan
+<https://knowledge.c-innovationhub.com/dspa#PricingPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#PricingPlan> <http://www.w3.org/2000/01/rdf-schema#comment> "The pricing model and details for a data product." .
+<https://knowledge.c-innovationhub.com/dspa#PricingPlan> <http://www.w3.org/2000/01/rdf-schema#label> "Pricing Plan" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#PricingPlansAsCodeAction
+<https://knowledge.c-innovationhub.com/dspa#PricingPlansAsCodeAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#PricingPlansAsCodeAction> <http://www.w3.org/2000/01/rdf-schema#comment> "An action that can be performed on a pricing plan defined as code." .
+<https://knowledge.c-innovationhub.com/dspa#PricingPlansAsCodeAction> <http://www.w3.org/2000/01/rdf-schema#label> "Pricing Plans As Code Action" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#ProductSupport
+<https://knowledge.c-innovationhub.com/dspa#ProductSupport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#ProductSupport> <http://www.w3.org/2000/01/rdf-schema#comment> "Support information for a data product, including contact details and documentation." .
+<https://knowledge.c-innovationhub.com/dspa#ProductSupport> <http://www.w3.org/2000/01/rdf-schema#label> "Product Support" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#PurchaseAction
+<https://knowledge.c-innovationhub.com/dspa#PurchaseAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#PurchaseAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://knowledge.c-innovationhub.com/dspa#PricingPlansAsCodeAction> .
+<https://knowledge.c-innovationhub.com/dspa#PurchaseAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Action to purchase a pricing plan." .
+<https://knowledge.c-innovationhub.com/dspa#PurchaseAction> <http://www.w3.org/2000/01/rdf-schema#label> "Purchase Action" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#RetireAction
+<https://knowledge.c-innovationhub.com/dspa#RetireAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#RetireAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://knowledge.c-innovationhub.com/dspa#PricingPlansAsCodeAction> .
+<https://knowledge.c-innovationhub.com/dspa#RetireAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Action to retire an existing pricing plan." .
+<https://knowledge.c-innovationhub.com/dspa#RetireAction> <http://www.w3.org/2000/01/rdf-schema#label> "Retire Action" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreement
+<https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreement> <http://www.w3.org/2000/01/rdf-schema#comment> "The service level agreement defining quality and performance guarantees for a data product." .
+<https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreement> <http://www.w3.org/2000/01/rdf-schema#label> "Service Level Agreement" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreementDimension
+<https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreementDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreementDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "A dimension or aspect of a service level agreement that can be measured or monitored." .
+<https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreementDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Service Level Agreement Dimension" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreementTerm
+<https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreementTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreementTerm> <http://www.w3.org/2000/01/rdf-schema#comment> "Base class for service level agreement terms, which can be either executable or declarative." .
+<https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreementTerm> <http://www.w3.org/2000/01/rdf-schema#label> "Service Level Agreement Term" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#SquareBasedPricingPlan
+<https://knowledge.c-innovationhub.com/dspa#SquareBasedPricingPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#SquareBasedPricingPlan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://knowledge.c-innovationhub.com/dspa#ExecutablePricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#SquareBasedPricingPlan> <http://www.w3.org/2000/01/rdf-schema#comment> "A pricing plan that uses Square as the payment processor." .
+<https://knowledge.c-innovationhub.com/dspa#SquareBasedPricingPlan> <http://www.w3.org/2000/01/rdf-schema#label> "Square Based Pricing Plan" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#StripeBasedPricingPlan
+<https://knowledge.c-innovationhub.com/dspa#StripeBasedPricingPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#StripeBasedPricingPlan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://knowledge.c-innovationhub.com/dspa#ExecutablePricingPlan> .
+<https://knowledge.c-innovationhub.com/dspa#StripeBasedPricingPlan> <http://www.w3.org/2000/01/rdf-schema#comment> "A pricing plan that uses Stripe as the payment processor." .
+<https://knowledge.c-innovationhub.com/dspa#StripeBasedPricingPlan> <http://www.w3.org/2000/01/rdf-schema#label> "Stripe Based Pricing Plan" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#TerminationCondition
+<https://knowledge.c-innovationhub.com/dspa#TerminationCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#TerminationCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "Conditions under which the license can be terminated." .
+<https://knowledge.c-innovationhub.com/dspa#TerminationCondition> <http://www.w3.org/2000/01/rdf-schema#label> "Termination Condition" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#UpdateAction
+<https://knowledge.c-innovationhub.com/dspa#UpdateAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#UpdateAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://knowledge.c-innovationhub.com/dspa#PricingPlansAsCodeAction> .
+<https://knowledge.c-innovationhub.com/dspa#UpdateAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Action to update an existing pricing plan." .
+<https://knowledge.c-innovationhub.com/dspa#UpdateAction> <http://www.w3.org/2000/01/rdf-schema#label> "Update Action" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://knowledge.c-innovationhub.com/dspa#AccessibilityDimension
+<https://knowledge.c-innovationhub.com/dspa#AccessibilityDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/dspa#AccessibilityDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/dspa#DataQualityDimension> .
+<https://knowledge.c-innovationhub.com/dspa#AccessibilityDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "The degree to which data is available and can be accessed when needed." .
+<https://knowledge.c-innovationhub.com/dspa#AccessibilityDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Accessibility" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#AccuracyDimension
+<https://knowledge.c-innovationhub.com/dspa#AccuracyDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/dspa#AccuracyDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/dspa#DataQualityDimension> .
+<https://knowledge.c-innovationhub.com/dspa#AccuracyDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "The degree to which data correctly describes the real-world object or event being described." .
+<https://knowledge.c-innovationhub.com/dspa#AccuracyDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Accuracy" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#CompletenessDimension
+<https://knowledge.c-innovationhub.com/dspa#CompletenessDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/dspa#CompletenessDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/dspa#DataQualityDimension> .
+<https://knowledge.c-innovationhub.com/dspa#CompletenessDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "The degree to which all required data is present in the dataset." .
+<https://knowledge.c-innovationhub.com/dspa#CompletenessDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Completeness" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#ConfidentialityDimension
+<https://knowledge.c-innovationhub.com/dspa#ConfidentialityDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/dspa#ConfidentialityDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/dspa#DataQualityDimension> .
+<https://knowledge.c-innovationhub.com/dspa#ConfidentialityDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "The degree to which data is protected from unauthorized access." .
+<https://knowledge.c-innovationhub.com/dspa#ConfidentialityDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Confidentiality" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#ConsistencyDimension
+<https://knowledge.c-innovationhub.com/dspa#ConsistencyDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/dspa#ConsistencyDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/dspa#DataQualityDimension> .
+<https://knowledge.c-innovationhub.com/dspa#ConsistencyDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "The degree to which data is consistent across different sources or systems." .
+<https://knowledge.c-innovationhub.com/dspa#ConsistencyDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Consistency" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#EfficiencyDimension
+<https://knowledge.c-innovationhub.com/dspa#EfficiencyDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/dspa#EfficiencyDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/dspa#DataQualityDimension> .
+<https://knowledge.c-innovationhub.com/dspa#EfficiencyDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "The degree to which data can be processed and used efficiently." .
+<https://knowledge.c-innovationhub.com/dspa#EfficiencyDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Efficiency" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#EmailResponseTimeDimension
+<https://knowledge.c-innovationhub.com/dspa#EmailResponseTimeDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/dspa#EmailResponseTimeDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreementDimension> .
+<https://knowledge.c-innovationhub.com/dspa#EmailResponseTimeDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "How long it takes to respond to email support requests." .
+<https://knowledge.c-innovationhub.com/dspa#EmailResponseTimeDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Email Response Time" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#EndOfLifeDimension
+<https://knowledge.c-innovationhub.com/dspa#EndOfLifeDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/dspa#EndOfLifeDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreementDimension> .
+<https://knowledge.c-innovationhub.com/dspa#EndOfLifeDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "The date at which the product will not be available anymore." .
+<https://knowledge.c-innovationhub.com/dspa#EndOfLifeDimension> <http://www.w3.org/2000/01/rdf-schema#label> "End of Life" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#EndOfSupportDimension
+<https://knowledge.c-innovationhub.com/dspa#EndOfSupportDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/dspa#EndOfSupportDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreementDimension> .
+<https://knowledge.c-innovationhub.com/dspa#EndOfSupportDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "The date at which the product will not have support anymore." .
+<https://knowledge.c-innovationhub.com/dspa#EndOfSupportDimension> <http://www.w3.org/2000/01/rdf-schema#label> "End of Support" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#ErrorRateDimension
+<https://knowledge.c-innovationhub.com/dspa#ErrorRateDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/dspa#ErrorRateDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreementDimension> .
+<https://knowledge.c-innovationhub.com/dspa#ErrorRateDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "The maximum tolerated errors in data, as a percentage." .
+<https://knowledge.c-innovationhub.com/dspa#ErrorRateDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Error Rate" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#FlexibilityDimension
+<https://knowledge.c-innovationhub.com/dspa#FlexibilityDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/dspa#FlexibilityDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/dspa#DataQualityDimension> .
+<https://knowledge.c-innovationhub.com/dspa#FlexibilityDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "The degree to which data can be adapted to different uses and requirements." .
+<https://knowledge.c-innovationhub.com/dspa#FlexibilityDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Flexibility" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#IntegrityDimension
+<https://knowledge.c-innovationhub.com/dspa#IntegrityDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/dspa#IntegrityDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/dspa#DataQualityDimension> .
+<https://knowledge.c-innovationhub.com/dspa#IntegrityDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "The degree to which data maintains its accuracy and consistency over its lifecycle." .
+<https://knowledge.c-innovationhub.com/dspa#IntegrityDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Integrity" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#InterpretabilityDimension
+<https://knowledge.c-innovationhub.com/dspa#InterpretabilityDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/dspa#InterpretabilityDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/dspa#DataQualityDimension> .
+<https://knowledge.c-innovationhub.com/dspa#InterpretabilityDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "The degree to which data is clear and can be understood by its users." .
+<https://knowledge.c-innovationhub.com/dspa#InterpretabilityDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Interpretability" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#LatencyDimension
+<https://knowledge.c-innovationhub.com/dspa#LatencyDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/dspa#LatencyDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreementDimension> .
+<https://knowledge.c-innovationhub.com/dspa#LatencyDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "The minimal amount of time before getting any response." .
+<https://knowledge.c-innovationhub.com/dspa#LatencyDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Latency" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#PortabilityDimension
+<https://knowledge.c-innovationhub.com/dspa#PortabilityDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/dspa#PortabilityDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/dspa#DataQualityDimension> .
+<https://knowledge.c-innovationhub.com/dspa#PortabilityDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "The degree to which data can be moved and used across different systems and platforms." .
+<https://knowledge.c-innovationhub.com/dspa#PortabilityDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Portability" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#PrecisionDimension
+<https://knowledge.c-innovationhub.com/dspa#PrecisionDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/dspa#PrecisionDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/dspa#DataQualityDimension> .
+<https://knowledge.c-innovationhub.com/dspa#PrecisionDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "The degree of exactness with which data is measured or recorded." .
+<https://knowledge.c-innovationhub.com/dspa#PrecisionDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Precision" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#RecoverabilityDimension
+<https://knowledge.c-innovationhub.com/dspa#RecoverabilityDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/dspa#RecoverabilityDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/dspa#DataQualityDimension> .
+<https://knowledge.c-innovationhub.com/dspa#RecoverabilityDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "The degree to which data can be recovered in case of loss or corruption." .
+<https://knowledge.c-innovationhub.com/dspa#RecoverabilityDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Recoverability" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#RelevanceDimension
+<https://knowledge.c-innovationhub.com/dspa#RelevanceDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/dspa#RelevanceDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/dspa#DataQualityDimension> .
+<https://knowledge.c-innovationhub.com/dspa#RelevanceDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "The degree to which data is relevant and useful for the intended purpose." .
+<https://knowledge.c-innovationhub.com/dspa#RelevanceDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Relevance" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#ReliabilityDimension
+<https://knowledge.c-innovationhub.com/dspa#ReliabilityDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/dspa#ReliabilityDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/dspa#DataQualityDimension> .
+<https://knowledge.c-innovationhub.com/dspa#ReliabilityDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "The degree to which data can be depended upon to be accurate and consistent." .
+<https://knowledge.c-innovationhub.com/dspa#ReliabilityDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Reliability" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#ResponseTimeDimension
+<https://knowledge.c-innovationhub.com/dspa#ResponseTimeDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/dspa#ResponseTimeDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreementDimension> .
+<https://knowledge.c-innovationhub.com/dspa#ResponseTimeDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "The amount of time to process external request." .
+<https://knowledge.c-innovationhub.com/dspa#ResponseTimeDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Response Time" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#TimeToDetectDimension
+<https://knowledge.c-innovationhub.com/dspa#TimeToDetectDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/dspa#TimeToDetectDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreementDimension> .
+<https://knowledge.c-innovationhub.com/dspa#TimeToDetectDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "How fast a problem can be detected." .
+<https://knowledge.c-innovationhub.com/dspa#TimeToDetectDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Time to Detect" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#TimeToNotifyDimension
+<https://knowledge.c-innovationhub.com/dspa#TimeToNotifyDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/dspa#TimeToNotifyDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreementDimension> .
+<https://knowledge.c-innovationhub.com/dspa#TimeToNotifyDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "How much time is needed to notify users after seeing a problem." .
+<https://knowledge.c-innovationhub.com/dspa#TimeToNotifyDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Time to Notify" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#TimeToRepairDimension
+<https://knowledge.c-innovationhub.com/dspa#TimeToRepairDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/dspa#TimeToRepairDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreementDimension> .
+<https://knowledge.c-innovationhub.com/dspa#TimeToRepairDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "How long it takes to fix an issue once detected." .
+<https://knowledge.c-innovationhub.com/dspa#TimeToRepairDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Time to Repair" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#TimelinessDimension
+<https://knowledge.c-innovationhub.com/dspa#TimelinessDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/dspa#TimelinessDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/dspa#DataQualityDimension> .
+<https://knowledge.c-innovationhub.com/dspa#TimelinessDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "The degree to which data is up-to-date and available when needed." .
+<https://knowledge.c-innovationhub.com/dspa#TimelinessDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Timeliness" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#TraceabilityDimension
+<https://knowledge.c-innovationhub.com/dspa#TraceabilityDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/dspa#TraceabilityDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/dspa#DataQualityDimension> .
+<https://knowledge.c-innovationhub.com/dspa#TraceabilityDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "The degree to which data can be traced back to its source and history." .
+<https://knowledge.c-innovationhub.com/dspa#TraceabilityDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Traceability" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#UniquenessDimension
+<https://knowledge.c-innovationhub.com/dspa#UniquenessDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/dspa#UniquenessDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/dspa#DataQualityDimension> .
+<https://knowledge.c-innovationhub.com/dspa#UniquenessDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "The degree to which data is free from duplicates." .
+<https://knowledge.c-innovationhub.com/dspa#UniquenessDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Uniqueness" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#UptimeDimension
+<https://knowledge.c-innovationhub.com/dspa#UptimeDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/dspa#UptimeDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreementDimension> .
+<https://knowledge.c-innovationhub.com/dspa#UptimeDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "The system reliability as a percentage of time the machine has been working and available." .
+<https://knowledge.c-innovationhub.com/dspa#UptimeDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Uptime" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#UsabilityDimension
+<https://knowledge.c-innovationhub.com/dspa#UsabilityDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/dspa#UsabilityDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/dspa#DataQualityDimension> .
+<https://knowledge.c-innovationhub.com/dspa#UsabilityDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "The degree to which data is easy to use and understand for its intended purpose." .
+<https://knowledge.c-innovationhub.com/dspa#UsabilityDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Usability" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#ValidityDimension
+<https://knowledge.c-innovationhub.com/dspa#ValidityDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://knowledge.c-innovationhub.com/dspa#ValidityDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://knowledge.c-innovationhub.com/dspa#DataQualityDimension> .
+<https://knowledge.c-innovationhub.com/dspa#ValidityDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "The degree to which data conforms to the defined business rules and constraints." .
+<https://knowledge.c-innovationhub.com/dspa#ValidityDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Validity" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

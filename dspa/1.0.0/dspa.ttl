@@ -1,0 +1,1189 @@
+@prefix : <https://knowledge.c-innovationhub.com/dspa#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://knowledge.c-innovationhub.com/dspa#> .
+
+<https://knowledge.c-innovationhub.com/dspa> rdf:type owl:Ontology ;
+                                              owl:versionIRI <https://knowledge.c-innovationhub.com/dspa/1.0.0> ;
+                                              <http://purl.org/dc/terms/creator> "Alessio Carenini (Cefriel)"@en ,
+                                                                                 "Mario Scrocca (Cefriel)"@en ;
+                                              <http://purl.org/dc/terms/description> "A metadata schema to represent Data Product Offerings in dataspaces, aligned with Open Data Product Specifications, DCAT-AP and EDC metadata schema."@en ;
+                                              <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
+                                              <http://purl.org/dc/terms/publisher> "Cefriel"@en ;
+                                              <http://purl.org/dc/terms/title> "DSPA Dataspace vocabulary"@en ;
+                                              <http://purl.org/ontology/bibo/status> "Published Ontology"@en ;
+                                              rdfs:comment "A metadata schema to represent Data Product Offerings in dataspaces, aligned with Open Data Product Specifications, DCAT-AP and EDC metadata schema." ;
+                                              rdfs:label "DSPA  Dataspace vocabulary" ;
+                                              owl:versionInfo "1.0.0"@en ;
+                                              <https://schema.org/funding> <https://doi.org/CORDIS_DOI> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> rdf:type owl:AnnotationProperty .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#value
+:value rdfs:comment "The actual value of the term." ;
+       rdfs:label "value" ;
+       rdf:type owl:AnnotationProperty ;
+       rdfs:domain :DeclarativeTerm .
+
+
+###  https://schema.org/funding
+<https://schema.org/funding> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://knowledge.c-innovationhub.com/dspa#action
+:action rdf:type owl:ObjectProperty ;
+        rdfs:domain :ExecutablePricingPlan ;
+        rdfs:range :PricingPlansAsCodeAction ;
+        rdfs:comment "The action to be performed on the pricing plan." ;
+        rdfs:label "action" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#dataQualityDimension
+:dataQualityDimension rdf:type owl:ObjectProperty ;
+                      rdfs:domain :DataQualityTerm ;
+                      rdfs:range :DataQualityDimension ;
+                      rdfs:comment "Links a data quality term to its dimension." ;
+                      rdfs:label "data quality dimension" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#hasDataHolder
+:hasDataHolder rdf:type owl:ObjectProperty ;
+               rdfs:domain :DataProduct ;
+               rdfs:range :DataHolder ;
+               rdfs:comment "Links a data product to its data holder." ;
+               rdfs:label "has data holder" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#hasDataProductLicense
+:hasDataProductLicense rdf:type owl:ObjectProperty ;
+                       rdfs:domain :DataProduct ;
+                       rdfs:range :DataProductLicense ;
+                       rdfs:comment "Links a data product to its license information." ;
+                       rdfs:label "has data product license" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#hasDataQuality
+:hasDataQuality rdf:type owl:ObjectProperty ;
+                rdfs:domain :DataProduct ;
+                rdfs:range :DataQuality ;
+                rdfs:comment "Links a data product to its data quality specifications." ;
+                rdfs:label "has data quality" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#hasDataQualityTerm
+:hasDataQualityTerm rdf:type owl:ObjectProperty ;
+                    rdfs:domain :DataQuality ;
+                    rdfs:range :DataQualityTerm ;
+                    rdfs:comment "Links a data quality specification to its terms." ;
+                    rdfs:label "has data quality term" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#hasDataset
+:hasDataset rdf:type owl:ObjectProperty ;
+            rdfs:domain :DataProduct ;
+            rdfs:range :Dataset ;
+            rdfs:comment "Links a data product to its underlying dataset." ;
+            rdfs:label "has dataset" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#hasLicenseGovernance
+:hasLicenseGovernance rdf:type owl:ObjectProperty ;
+                      rdfs:domain :DataProductLicense ;
+                      rdfs:range :LicenseGovernance ;
+                      rdfs:comment "Links a data product license to its governance rules and policies." ;
+                      rdfs:label "has license governance" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#hasLicenseScope
+:hasLicenseScope rdf:type owl:ObjectProperty ;
+                 rdfs:domain :DataProductLicense ;
+                 rdfs:range :LicenseScope ;
+                 rdfs:comment "Links a data product license to its scope and permitted uses." ;
+                 rdfs:label "has license scope" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#hasPricingPlan
+:hasPricingPlan rdf:type owl:ObjectProperty ;
+                rdfs:domain :DataProduct ;
+                rdfs:range :PricingPlan ;
+                rdfs:comment "Links a data product to its pricing information." ;
+                rdfs:label "has pricing plan" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#hasProductSupport
+:hasProductSupport rdf:type owl:ObjectProperty ;
+                   rdfs:domain :ServiceLevelAgreement ;
+                   rdfs:range :ProductSupport ;
+                   rdfs:comment "Links a service level agreement to its support information." ;
+                   rdfs:label "has product support" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#hasServiceLevelAgreement
+:hasServiceLevelAgreement rdf:type owl:ObjectProperty ;
+                          rdfs:domain :DataProduct ;
+                          rdfs:range :ServiceLevelAgreement ;
+                          rdfs:comment "Links a data product to its service level agreement." ;
+                          rdfs:label "has service level agreement" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#hasServiceLevelAgreementTerms
+:hasServiceLevelAgreementTerms rdf:type owl:ObjectProperty ;
+                               rdfs:domain :ServiceLevelAgreement ;
+                               rdfs:range :ServiceLevelAgreementTerm ;
+                               rdfs:comment "Links a service level agreement to its terms, which can be either executable or declarative." ;
+                               rdfs:label "has service level agreement terms" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#hasTerminationCondition
+:hasTerminationCondition rdf:type owl:ObjectProperty ;
+                         rdfs:domain :DataProductLicense ;
+                         rdfs:range :TerminationCondition ;
+                         rdfs:comment "Links a data product license to its termination conditions." ;
+                         rdfs:label "has termination condition" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#serviceLevelAgreementDimension
+:serviceLevelAgreementDimension rdf:type owl:ObjectProperty ;
+                                rdfs:domain :ServiceLevelAgreementTerm ;
+                                rdfs:range :ServiceLevelAgreementDimension ;
+                                rdfs:comment "Links a service level agreement term to its dimension." ;
+                                rdfs:label "service level agreement dimension" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://knowledge.c-innovationhub.com/dspa#URL
+:URL rdf:type owl:DatatypeProperty ;
+     rdfs:domain :DataHolder ;
+     rdfs:range xsd:anyURI ;
+     rdfs:comment "The URL of the organization's website." ;
+     rdfs:label "URL" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#additionalPrice
+:additionalPrice rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :DeclarativePricingPlan ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "This is used to define fees for usage which exceeds the defined max transaction quantity. This value is for each additional transaction." ;
+                 rdfs:label "additional price" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#addressCountry
+:addressCountry rdf:type owl:DatatypeProperty ;
+                rdfs:domain :DataHolder ;
+                rdfs:range xsd:string ;
+                rdfs:comment "The country." ;
+                rdfs:label "address country" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#addressLocality
+:addressLocality rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :DataHolder ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "The locality in which the street address is, and which is in the region. For example, Mountain View." ;
+                 rdfs:label "address locality" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#addressRegion
+:addressRegion rdf:type owl:DatatypeProperty ;
+               rdfs:domain :DataHolder ;
+               rdfs:range xsd:string ;
+               rdfs:comment "The region in which the locality is, and which is in the country. For example, California or another appropriate first-level Administrative division" ;
+               rdfs:label "address region" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#aggregateRating
+:aggregateRating rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :DataHolder ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "The average rating based on multiple ratings or reviews." ;
+                 rdfs:label "aggregate rating" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#applicableLaws
+:applicableLaws rdf:type owl:DatatypeProperty ;
+                rdfs:domain :LicenseGovernance ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Applicable laws, i.e local acts, degrees or law." ;
+                rdfs:label "applicable laws" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#audit
+:audit rdf:type owl:DatatypeProperty ;
+       rdfs:domain :LicenseGovernance ;
+       rdfs:range xsd:string ;
+       rdfs:comment "License auditing terms." ;
+       rdfs:label "audit" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#billingDuration
+:billingDuration rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :DeclarativePricingPlan ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Specifies for how long this price (or price component) will be billed. Can be used, for example, to model the contractual duration of a subscription or payment plan." ;
+                 rdfs:label "billing duration" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#businessDomain
+:businessDomain rdf:type owl:DatatypeProperty ;
+                rdfs:domain :DataHolder ;
+                rdfs:range xsd:string ;
+                rdfs:comment "In a data mesh architecture, data (or data product) ownership and management are distributed across self-contained business domains." ;
+                rdfs:label "business domain" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#businessID
+:businessID rdf:type owl:DatatypeProperty ;
+            rdfs:domain :DataHolder ;
+            rdfs:range xsd:string ;
+            rdfs:comment "The business identifier code of the company. Often this is given to the company by authorized public sector organization managing register of businesses." ;
+            rdfs:label "business ID" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#checkoutPublicKey
+:checkoutPublicKey rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :CheckoutBasedPricingPlan ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "The public key used for Checkout.com integration." ;
+                   rdfs:label "Checkout Public Key" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#checkoutSecretKey
+:checkoutSecretKey rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :CheckoutBasedPricingPlan ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "The secret key used for Checkout.com integration." ;
+                   rdfs:label "Checkout Secret Key" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#confidentiality
+:confidentiality rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :LicenseGovernance ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Restrictions and requirements imposed on the Data User regarding e.g. the use and disclosure of the Data Holder's confidential information." ;
+                 rdfs:label "confidentiality" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#contactName
+:contactName rdf:type owl:DatatypeProperty ;
+             rdfs:domain :DataHolder ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Contact person name" ;
+             rdfs:label "contact name" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#continuityConditions
+:continuityConditions rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :TerminationCondition ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "Continuity conditions of the license." ;
+                      rdfs:label "continuity conditions" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#damages
+:damages rdf:type owl:DatatypeProperty ;
+         rdfs:domain :LicenseGovernance ;
+         rdfs:range xsd:string ;
+         rdfs:comment "Damages refers to the sum of money (i.e. indemnifications) for a breach of some duty or violation of license right." ;
+         rdfs:label "damages" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#dataFormat
+:dataFormat rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Dataset ;
+            rdfs:range xsd:string ;
+            rdfs:comment "The format in which the data is provided." ;
+            rdfs:label "data format" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#definition
+:definition rdf:type owl:DatatypeProperty ;
+            rdfs:domain :LicenseScope ;
+            rdfs:range xsd:string ;
+            rdfs:comment "Background and purpose of the license." ;
+            rdfs:label "definition" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#description
+:description rdf:type owl:DatatypeProperty ;
+             rdfs:domain :DataHolder ;
+             rdfs:range xsd:string ;
+             rdfs:comment "The introduction to the organization. Often contains information of what the organisation does and focuses on." ;
+             rdfs:label "description" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#documentationURL
+:documentationURL rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :ProductSupport ;
+                  rdfs:range xsd:anyURI ;
+                  rdfs:comment "URL to documentation" ;
+                  rdfs:label "documentation URL" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#email
+:email rdf:type owl:DatatypeProperty ;
+       rdfs:domain :DataHolder ,
+                   :ProductSupport ;
+       rdfs:range xsd:string ;
+       rdfs:comment "Email information for support requests. Use RFC2822" ,
+                    "Email to be used in contacting the organization." ;
+       rdfs:label "email" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#emailServiceHours
+:emailServiceHours rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :ProductSupport ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Describes the email service hours company provides. Contains information often in week level eg Mon-Fri at 8am - 4pm." ;
+                   rdfs:label "email service hours" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#exclusive
+:exclusive rdf:type owl:DatatypeProperty ;
+           rdfs:domain :LicenseScope ;
+           rdfs:range xsd:boolean ;
+           rdfs:comment "The exclusive license holder is given complete control over the use of the data product, and no other person or organization is allowed to use it during the term of the license agreement." ;
+           rdfs:label "exclusive" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#forceMajeure
+:forceMajeure rdf:type owl:DatatypeProperty ;
+              rdfs:domain :LicenseGovernance ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Force majeure is a clause that is included in contracts to remove liability for unforeseeable and unavoidable catastrophes that interrupt the expected course of events and prevent participants from fulfilling obligations. These clauses generally cover both natural disasters and catastrophes created by humans." ;
+              rdfs:label "force majeure" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#geographicalArea
+:geographicalArea rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :LicenseScope ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "License right restricted to the geographical area." ;
+                  rdfs:label "geographical area" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#legalName
+:legalName rdf:type owl:DatatypeProperty ;
+           rdfs:domain :DataHolder ;
+           rdfs:range xsd:string ;
+           rdfs:comment "REQUIRED The official name of the organization, e.g. the registered company name." ;
+           rdfs:label "legal name" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#logoURL
+:logoURL rdf:type owl:DatatypeProperty ;
+         rdfs:domain :DataHolder ;
+         rdfs:range xsd:anyURI ;
+         rdfs:comment "The URL pointing to organisation logo." ;
+         rdfs:label "logo URL" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#maxDataQuantity
+:maxDataQuantity rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :DeclarativePricingPlan ;
+                 rdfs:range xsd:integer ;
+                 rdfs:comment "The maximum amount of data transferred during the billing duration. Unit is GB." ;
+                 rdfs:label "max data quantity" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#maxPrice
+:maxPrice rdf:type owl:DatatypeProperty ;
+          rdfs:domain :DeclarativePricingPlan ;
+          rdfs:range xsd:string ;
+          rdfs:comment "The highest price if the price is a range. If dynamic pricing is used with this product, this is the highest price allowed." ;
+          rdfs:label "max price" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#maxTransactionQuantity
+:maxTransactionQuantity rdf:type owl:DatatypeProperty ;
+                        rdfs:domain :DeclarativePricingPlan ;
+                        rdfs:range xsd:integer ;
+                        rdfs:comment "The maximum transaction quantity for the given billing duration. Use this to define for example monthly (or any other period) request limit to the data product. Note! If you want to set unlimited use, value must be 0 (zero)." ;
+                        rdfs:label "max transaction quantity" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#minPrice
+:minPrice rdf:type owl:DatatypeProperty ;
+          rdfs:domain :DeclarativePricingPlan ;
+          rdfs:range xsd:string ;
+          rdfs:comment "The lowest price if the price is a range. If dynamic pricing is used with this product, this is the lowest price allowed. In dynamic pricing businesses are able to change prices based on algorithms that take into account competitor pricing, supply and demand, and other external factors in the market." ;
+          rdfs:label "min price" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#monitoringSystemName
+:monitoringSystemName rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :ExecutableTerm ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "The name of the monitoring system used for this SLA term." ;
+                      rdfs:label "monitoring system name" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#monitoringSystemReference
+:monitoringSystemReference rdf:type owl:DatatypeProperty ;
+                           rdfs:domain :ExecutableTerm ;
+                           rdfs:range xsd:anyURI ;
+                           rdfs:comment "A reference URL to the monitoring system documentation." ;
+                           rdfs:label "monitoring system reference" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#monitoringSystemTermSpecification
+:monitoringSystemTermSpecification rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain :ExecutableTerm ;
+                                   rdfs:range xsd:string ;
+                                   rdfs:comment "The specification of how this SLA term is monitored in the monitoring system." ;
+                                   rdfs:label "monitoring system term specification" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#noticePeriod
+:noticePeriod rdf:type owl:DatatypeProperty ;
+              rdfs:domain :TerminationCondition ;
+              rdfs:range xsd:integer ;
+              rdfs:comment "The notice period is a particular time that an data product provider or consumer must give before ending the contract. This time window allows both sides to make the necessary preparations, guaranteeing an unhindered transfer." ;
+              rdfs:label "notice period" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#objective
+:objective rdf:type owl:DatatypeProperty ;
+           rdfs:domain :DeclarativeTerm ;
+           rdfs:range xsd:decimal ;
+           rdfs:comment "The target value that should be achieved for the term." ;
+           rdfs:label "objective" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#offering
+:offering rdf:type owl:DatatypeProperty ;
+          rdfs:domain :DeclarativePricingPlan ;
+          rdfs:range xsd:string ;
+          rdfs:comment "The element that contains pricing plan content as array of strings. Think of this as the list of what is included in the pricing plan and what you offer in return to the price asked. Use the language defined in the plan" ;
+          rdfs:label "offering" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#ownership
+:ownership rdf:type owl:DatatypeProperty ;
+           rdfs:domain :LicenseGovernance ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Data product licensing ownership." ;
+           rdfs:label "ownership" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#parentOrganization
+:parentOrganization rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :DataHolder ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "The larger organization that this organization is a subOrganization of, if any." ;
+                    rdfs:label "parent organization" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#paypalClientId
+:paypalClientId rdf:type owl:DatatypeProperty ;
+                rdfs:domain :PaypalBasedPricingPlan ;
+                rdfs:range xsd:string ;
+                rdfs:comment "The client ID used for PayPal integration." ;
+                rdfs:label "PayPal Client ID" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#paypalSecret
+:paypalSecret rdf:type owl:DatatypeProperty ;
+              rdfs:domain :PaypalBasedPricingPlan ;
+              rdfs:range xsd:string ;
+              rdfs:comment "The secret key used for PayPal integration." ;
+              rdfs:label "PayPal Secret" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#permanent
+:permanent rdf:type owl:DatatypeProperty ;
+           rdfs:domain :LicenseScope ;
+           rdfs:range xsd:boolean ;
+           rdfs:comment "License with no expiration date." ;
+           rdfs:label "permanent" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#phoneNumber
+:phoneNumber rdf:type owl:DatatypeProperty ;
+             rdfs:domain :ProductSupport ;
+             rdfs:range xsd:string ;
+             rdfs:comment "The support phone number. Use E.164" ;
+             rdfs:label "phone number" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#phoneServiceHours
+:phoneServiceHours rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :ProductSupport ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Describes the service hours company provides. Contains information often in week level eg Mon-Fri at 8am - 4pm." ;
+                   rdfs:label "phone service hours" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#postalCode
+:postalCode rdf:type owl:DatatypeProperty ;
+            rdfs:domain :DataHolder ;
+            rdfs:range xsd:string ;
+            rdfs:comment "The postal code. For example, 94043." ;
+            rdfs:label "postal code" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#price
+:price rdf:type owl:DatatypeProperty ;
+       rdfs:domain :DeclarativePricingPlan ;
+       rdfs:range xsd:string ;
+       rdfs:comment "The offer price of a product, or of a price component, or revenue-sharing percentage. If the unit of pricing is revenue-sharing, then this price attribute value is percentage value. Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator. Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols. With data-volume the price is for each 1GB of data." ;
+       rdfs:label "price" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#priceCurrency
+:priceCurrency rdf:type owl:DatatypeProperty ;
+               rdfs:domain :DeclarativePricingPlan ;
+               rdfs:range xsd:string ;
+               rdfs:comment "The primary currency used in pricing. Platforms are assumed to use this as primary currency if currency conversions are used to display product pricing in different locations for various currencies. If the unit is revenue-sharing, then this attribute value MUST be percentage." ;
+               rdfs:label "price currency" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#ratingCount
+:ratingCount rdf:type owl:DatatypeProperty ;
+             rdfs:domain :DataHolder ;
+             rdfs:range xsd:integer ;
+             rdfs:comment "The amount of ratings and reviews used in calculating the aggregateRating." ;
+             rdfs:label "rating count" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#reference
+:reference rdf:type owl:DatatypeProperty ;
+           rdfs:domain :ExecutablePricingPlan ;
+           rdfs:range xsd:anyURI ;
+           rdfs:comment "Provide URL pointing to the reference documentation" ;
+           rdfs:label "reference" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#restrictions
+:restrictions rdf:type owl:DatatypeProperty ;
+              rdfs:domain :LicenseScope ;
+              rdfs:range xsd:string ;
+              rdfs:comment "Restrictions of the license." ;
+              rdfs:label "restrictions" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#rights
+:rights rdf:type owl:DatatypeProperty ;
+        rdfs:domain :LicenseScope ;
+        rdfs:range xsd:string ;
+        rdfs:comment "Rights granted by the licence. The texts in brackets and italic are intended to describe rights." ;
+        rdfs:label "rights" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#slogan
+:slogan rdf:type owl:DatatypeProperty ;
+        rdfs:domain :DataHolder ;
+        rdfs:range xsd:string ;
+        rdfs:comment "The slogan of the organization. This is often related to showing the brand" ;
+        rdfs:label "slogan" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#specs
+:specs rdf:type owl:DatatypeProperty ;
+       rdfs:domain :PricingPlansAsCodeAction ;
+       rdfs:range xsd:string ;
+       rdfs:comment "The specifications for the pricing plan action." ;
+       rdfs:label "specs" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#squareAccessToken
+:squareAccessToken rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :SquareBasedPricingPlan ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "The access token used to authenticate with Square's services." ;
+                   rdfs:label "Square Access Token" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#squareApplicationId
+:squareApplicationId rdf:type owl:DatatypeProperty ;
+                     rdfs:domain :SquareBasedPricingPlan ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "The unique identifier for a Square application." ;
+                     rdfs:label "Square Application ID" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#streetAddress
+:streetAddress rdf:type owl:DatatypeProperty ;
+               rdfs:domain :DataHolder ;
+               rdfs:range xsd:string ;
+               rdfs:comment "The street address. For example, 1600 Amphitheatre Pkwy." ;
+               rdfs:label "street address" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#stripeAccountId
+:stripeAccountId rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :StripeBasedPricingPlan ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "The unique identifier for a Stripe account." ;
+                 rdfs:label "Stripe Account ID" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#stripeApiKey
+:stripeApiKey rdf:type owl:DatatypeProperty ;
+              rdfs:domain :StripeBasedPricingPlan ;
+              rdfs:range xsd:string ;
+              rdfs:comment "The API key used to authenticate with Stripe's services." ;
+              rdfs:label "Stripe API Key" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#taxID
+:taxID rdf:type owl:DatatypeProperty ;
+       rdfs:domain :DataHolder ;
+       rdfs:range xsd:string ;
+       rdfs:comment "The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain." ;
+       rdfs:label "tax ID" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#telephone
+:telephone rdf:type owl:DatatypeProperty ;
+           rdfs:domain :DataHolder ;
+           rdfs:range xsd:string ;
+           rdfs:comment "The telephone number. Use E.164 standard." ;
+           rdfs:label "telephone" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#terminationConditions
+:terminationConditions rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :TerminationCondition ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Cancellation conditions of the license." ;
+                       rdfs:label "termination conditions" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#unit
+:unit rdf:type owl:DatatypeProperty ;
+      rdfs:domain :DeclarativeTerm ;
+      rdfs:range xsd:string ;
+      rdfs:comment "The unit of measurement for the term." ;
+      rdfs:label "unit" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#updateFrequency
+:updateFrequency rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Dataset ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "How frequently the dataset is updated." ;
+                 rdfs:label "update frequency" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#validFrom
+:validFrom rdf:type owl:DatatypeProperty ;
+           rdfs:domain :DeclarativePricingPlan ;
+           rdfs:range xsd:dateTime ;
+           rdfs:comment "The date when the item becomes valid." ;
+           rdfs:label "valid from" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#validTo
+:validTo rdf:type owl:DatatypeProperty ;
+         rdfs:domain :DeclarativePricingPlan ;
+         rdfs:range xsd:dateTime ;
+         rdfs:comment "The date after when the item is not valid." ;
+         rdfs:label "valid to" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#valueAddedTaxIncluded
+:valueAddedTaxIncluded rdf:type owl:DatatypeProperty ;
+                       rdfs:domain :DeclarativePricingPlan ;
+                       rdfs:range xsd:boolean ;
+                       rdfs:comment "Specifies whether the applicable value-added tax (VAT) is included in the price specification or not." ;
+                       rdfs:label "value added tax included" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#valueAddedTaxPercentage
+:valueAddedTaxPercentage rdf:type owl:DatatypeProperty ;
+                         rdfs:domain :DeclarativePricingPlan ;
+                         rdfs:range xsd:integer ;
+                         rdfs:comment "Number percentage value, range 0-100" ;
+                         rdfs:label "value added tax percentage" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#valueSimulator
+:valueSimulator rdf:type owl:DatatypeProperty ;
+                rdfs:domain :DeclarativePricingPlan ;
+                rdfs:range xsd:anyURI ;
+                rdfs:comment "Intended to be used with value-based pricing plan. Provide url to value simulator in which customer can see the value in various cases. In the simulator customer might be able to input own variables to match their exact case and see the gained value." ;
+                rdfs:label "value simulator" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#vatID
+:vatID rdf:type owl:DatatypeProperty ;
+       rdfs:domain :DataHolder ;
+       rdfs:range xsd:string ;
+       rdfs:comment "The Value-added Tax ID of the organization or person." ;
+       rdfs:label "VAT ID" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#version
+:version rdf:type owl:DatatypeProperty ;
+         rdfs:domain :ExecutablePricingPlan ;
+         rdfs:range xsd:string ;
+         rdfs:comment "The version of the payment gateway tool used." ;
+         rdfs:label "version" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#warranties
+:warranties rdf:type owl:DatatypeProperty ;
+            rdfs:domain :LicenseGovernance ;
+            rdfs:range xsd:string ;
+            rdfs:comment "License warranties." ;
+            rdfs:label "warranties" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://knowledge.c-innovationhub.com/dspa#CheckoutBasedPricingPlan
+:CheckoutBasedPricingPlan rdf:type owl:Class ;
+                          rdfs:subClassOf :ExecutablePricingPlan ;
+                          rdfs:comment "A pricing plan that uses Checkout.com as the payment processor." ;
+                          rdfs:label "Checkout Based Pricing Plan" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#CreateAction
+:CreateAction rdf:type owl:Class ;
+              rdfs:subClassOf :PricingPlansAsCodeAction ;
+              rdfs:comment "Action to create a new pricing plan." ;
+              rdfs:label "Create Action" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#DataHolder
+:DataHolder rdf:type owl:Class ;
+            rdfs:comment "An entity that owns, controls, or is responsible for a data product." ;
+            rdfs:label "Data Holder" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#DataProduct
+:DataProduct rdf:type owl:Class ;
+             rdfs:comment "A data product is a packaged data asset that is ready for distribution and consumption." ;
+             rdfs:label "Data Product" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#DataProductLicense
+:DataProductLicense rdf:type owl:Class ;
+                    rdfs:comment "The license governing the use, distribution, and modification of a data product." ;
+                    rdfs:label "Data Product License" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#DataQuality
+:DataQuality rdf:type owl:Class ;
+             rdfs:comment "Specifies the quality characteristics and metrics of a data product." ;
+             rdfs:label "Data Quality" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#DataQualityDimension
+:DataQualityDimension rdf:type owl:Class ;
+                      rdfs:comment "A dimension or aspect of data quality that can be measured or monitored." ;
+                      rdfs:label "Data Quality Dimension" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#DataQualityTerm
+:DataQualityTerm rdf:type owl:Class ;
+                 rdfs:comment "A term that specifies a data quality requirement for a data product." ;
+                 rdfs:label "Data Quality Term" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#Dataset
+:Dataset rdf:type owl:Class ;
+         rdfs:comment "A collection of data that forms the core content of a data product." ;
+         rdfs:label "Dataset" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#DeclarativeDataQualityTerm
+:DeclarativeDataQualityTerm rdf:type owl:Class ;
+                            rdfs:subClassOf :DataQualityTerm ,
+                                            :DeclarativeTerm ;
+                            rdfs:comment "Data quality terms that are defined in a declarative format." ;
+                            rdfs:label "Declarative Data Quality Term" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#DeclarativePricingPlan
+:DeclarativePricingPlan rdf:type owl:Class ;
+                        rdfs:subClassOf :PricingPlan ;
+                        rdfs:comment "A pricing plan defined in a declarative format." ;
+                        rdfs:label "Declarative Pricing Plan" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#DeclarativeServiceLevelAgreementTerm
+:DeclarativeServiceLevelAgreementTerm rdf:type owl:Class ;
+                                      rdfs:subClassOf :DeclarativeTerm ,
+                                                      :ServiceLevelAgreementTerm ;
+                                      rdfs:comment "Service level agreement terms that are defined in a declarative format." ;
+                                      rdfs:label "Declarative Service Level Agreement Term" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#DeclarativeTerm
+:DeclarativeTerm rdf:type owl:Class ;
+                 rdfs:comment "Terms that are defined in a declarative format." ;
+                 rdfs:label "Declarative Term" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#ExecutableDataQualityTerm
+:ExecutableDataQualityTerm rdf:type owl:Class ;
+                           rdfs:subClassOf :DataQualityTerm ,
+                                           :ExecutableTerm ;
+                           rdfs:comment "Data quality terms that are defined in an executable format for monitoring." ;
+                           rdfs:label "Executable Data Quality Term" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#ExecutablePricingPlan
+:ExecutablePricingPlan rdf:type owl:Class ;
+                       rdfs:subClassOf :PricingPlan ;
+                       rdfs:comment "A pricing plan defined in an executable format for dynamic pricing calculations." ;
+                       rdfs:label "Executable Pricing Plan" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#ExecutableServiceAgreementTerm
+:ExecutableServiceAgreementTerm rdf:type owl:Class ;
+                                rdfs:subClassOf :ExecutableTerm ,
+                                                :ServiceLevelAgreementTerm ;
+                                rdfs:comment "A specific type of executable term used in service level agreements." ;
+                                rdfs:label "Executable Service Agreement Term" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#ExecutableTerm
+:ExecutableTerm rdf:type owl:Class ;
+                rdfs:comment "Terms that are defined in an executable format for monitoring." ;
+                rdfs:label "Executable Term" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#LicenseGovernance
+:LicenseGovernance rdf:type owl:Class ;
+                   rdfs:comment "Rules and policies governing the enforcement and management of the license." ;
+                   rdfs:label "License Governance" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#LicenseScope
+:LicenseScope rdf:type owl:Class ;
+              rdfs:comment "The scope and extent of the license, including permitted uses and restrictions." ;
+              rdfs:label "License Scope" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#PaypalBasedPricingPlan
+:PaypalBasedPricingPlan rdf:type owl:Class ;
+                        rdfs:subClassOf :ExecutablePricingPlan ;
+                        rdfs:comment "A pricing plan that uses PayPal as the payment processor." ;
+                        rdfs:label "PayPal Based Pricing Plan" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#PricingPlan
+:PricingPlan rdf:type owl:Class ;
+             rdfs:comment "The pricing model and details for a data product." ;
+             rdfs:label "Pricing Plan" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#PricingPlansAsCodeAction
+:PricingPlansAsCodeAction rdf:type owl:Class ;
+                          rdfs:comment "An action that can be performed on a pricing plan defined as code." ;
+                          rdfs:label "Pricing Plans As Code Action" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#ProductSupport
+:ProductSupport rdf:type owl:Class ;
+                rdfs:comment "Support information for a data product, including contact details and documentation." ;
+                rdfs:label "Product Support" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#PurchaseAction
+:PurchaseAction rdf:type owl:Class ;
+                rdfs:subClassOf :PricingPlansAsCodeAction ;
+                rdfs:comment "Action to purchase a pricing plan." ;
+                rdfs:label "Purchase Action" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#RetireAction
+:RetireAction rdf:type owl:Class ;
+              rdfs:subClassOf :PricingPlansAsCodeAction ;
+              rdfs:comment "Action to retire an existing pricing plan." ;
+              rdfs:label "Retire Action" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreement
+:ServiceLevelAgreement rdf:type owl:Class ;
+                       rdfs:comment "The service level agreement defining quality and performance guarantees for a data product." ;
+                       rdfs:label "Service Level Agreement" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreementDimension
+:ServiceLevelAgreementDimension rdf:type owl:Class ;
+                                rdfs:comment "A dimension or aspect of a service level agreement that can be measured or monitored." ;
+                                rdfs:label "Service Level Agreement Dimension" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#ServiceLevelAgreementTerm
+:ServiceLevelAgreementTerm rdf:type owl:Class ;
+                           rdfs:comment "Base class for service level agreement terms, which can be either executable or declarative." ;
+                           rdfs:label "Service Level Agreement Term" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#SquareBasedPricingPlan
+:SquareBasedPricingPlan rdf:type owl:Class ;
+                        rdfs:subClassOf :ExecutablePricingPlan ;
+                        rdfs:comment "A pricing plan that uses Square as the payment processor." ;
+                        rdfs:label "Square Based Pricing Plan" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#StripeBasedPricingPlan
+:StripeBasedPricingPlan rdf:type owl:Class ;
+                        rdfs:subClassOf :ExecutablePricingPlan ;
+                        rdfs:comment "A pricing plan that uses Stripe as the payment processor." ;
+                        rdfs:label "Stripe Based Pricing Plan" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#TerminationCondition
+:TerminationCondition rdf:type owl:Class ;
+                      rdfs:comment "Conditions under which the license can be terminated." ;
+                      rdfs:label "Termination Condition" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#UpdateAction
+:UpdateAction rdf:type owl:Class ;
+              rdfs:subClassOf :PricingPlansAsCodeAction ;
+              rdfs:comment "Action to update an existing pricing plan." ;
+              rdfs:label "Update Action" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://knowledge.c-innovationhub.com/dspa#AccessibilityDimension
+:AccessibilityDimension rdf:type owl:NamedIndividual ,
+                                 :DataQualityDimension ;
+                        rdfs:comment "The degree to which data is available and can be accessed when needed." ;
+                        rdfs:label "Accessibility" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#AccuracyDimension
+:AccuracyDimension rdf:type owl:NamedIndividual ,
+                            :DataQualityDimension ;
+                   rdfs:comment "The degree to which data correctly describes the real-world object or event being described." ;
+                   rdfs:label "Accuracy" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#CompletenessDimension
+:CompletenessDimension rdf:type owl:NamedIndividual ,
+                                :DataQualityDimension ;
+                       rdfs:comment "The degree to which all required data is present in the dataset." ;
+                       rdfs:label "Completeness" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#ConfidentialityDimension
+:ConfidentialityDimension rdf:type owl:NamedIndividual ,
+                                   :DataQualityDimension ;
+                          rdfs:comment "The degree to which data is protected from unauthorized access." ;
+                          rdfs:label "Confidentiality" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#ConsistencyDimension
+:ConsistencyDimension rdf:type owl:NamedIndividual ,
+                               :DataQualityDimension ;
+                      rdfs:comment "The degree to which data is consistent across different sources or systems." ;
+                      rdfs:label "Consistency" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#EfficiencyDimension
+:EfficiencyDimension rdf:type owl:NamedIndividual ,
+                              :DataQualityDimension ;
+                     rdfs:comment "The degree to which data can be processed and used efficiently." ;
+                     rdfs:label "Efficiency" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#EmailResponseTimeDimension
+:EmailResponseTimeDimension rdf:type owl:NamedIndividual ,
+                                     :ServiceLevelAgreementDimension ;
+                            rdfs:comment "How long it takes to respond to email support requests." ;
+                            rdfs:label "Email Response Time" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#EndOfLifeDimension
+:EndOfLifeDimension rdf:type owl:NamedIndividual ,
+                             :ServiceLevelAgreementDimension ;
+                    rdfs:comment "The date at which the product will not be available anymore." ;
+                    rdfs:label "End of Life" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#EndOfSupportDimension
+:EndOfSupportDimension rdf:type owl:NamedIndividual ,
+                                :ServiceLevelAgreementDimension ;
+                       rdfs:comment "The date at which the product will not have support anymore." ;
+                       rdfs:label "End of Support" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#ErrorRateDimension
+:ErrorRateDimension rdf:type owl:NamedIndividual ,
+                             :ServiceLevelAgreementDimension ;
+                    rdfs:comment "The maximum tolerated errors in data, as a percentage." ;
+                    rdfs:label "Error Rate" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#FlexibilityDimension
+:FlexibilityDimension rdf:type owl:NamedIndividual ,
+                               :DataQualityDimension ;
+                      rdfs:comment "The degree to which data can be adapted to different uses and requirements." ;
+                      rdfs:label "Flexibility" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#IntegrityDimension
+:IntegrityDimension rdf:type owl:NamedIndividual ,
+                             :DataQualityDimension ;
+                    rdfs:comment "The degree to which data maintains its accuracy and consistency over its lifecycle." ;
+                    rdfs:label "Integrity" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#InterpretabilityDimension
+:InterpretabilityDimension rdf:type owl:NamedIndividual ,
+                                    :DataQualityDimension ;
+                           rdfs:comment "The degree to which data is clear and can be understood by its users." ;
+                           rdfs:label "Interpretability" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#LatencyDimension
+:LatencyDimension rdf:type owl:NamedIndividual ,
+                           :ServiceLevelAgreementDimension ;
+                  rdfs:comment "The minimal amount of time before getting any response." ;
+                  rdfs:label "Latency" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#PortabilityDimension
+:PortabilityDimension rdf:type owl:NamedIndividual ,
+                               :DataQualityDimension ;
+                      rdfs:comment "The degree to which data can be moved and used across different systems and platforms." ;
+                      rdfs:label "Portability" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#PrecisionDimension
+:PrecisionDimension rdf:type owl:NamedIndividual ,
+                             :DataQualityDimension ;
+                    rdfs:comment "The degree of exactness with which data is measured or recorded." ;
+                    rdfs:label "Precision" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#RecoverabilityDimension
+:RecoverabilityDimension rdf:type owl:NamedIndividual ,
+                                  :DataQualityDimension ;
+                         rdfs:comment "The degree to which data can be recovered in case of loss or corruption." ;
+                         rdfs:label "Recoverability" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#RelevanceDimension
+:RelevanceDimension rdf:type owl:NamedIndividual ,
+                             :DataQualityDimension ;
+                    rdfs:comment "The degree to which data is relevant and useful for the intended purpose." ;
+                    rdfs:label "Relevance" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#ReliabilityDimension
+:ReliabilityDimension rdf:type owl:NamedIndividual ,
+                               :DataQualityDimension ;
+                      rdfs:comment "The degree to which data can be depended upon to be accurate and consistent." ;
+                      rdfs:label "Reliability" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#ResponseTimeDimension
+:ResponseTimeDimension rdf:type owl:NamedIndividual ,
+                                :ServiceLevelAgreementDimension ;
+                       rdfs:comment "The amount of time to process external request." ;
+                       rdfs:label "Response Time" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#TimeToDetectDimension
+:TimeToDetectDimension rdf:type owl:NamedIndividual ,
+                                :ServiceLevelAgreementDimension ;
+                       rdfs:comment "How fast a problem can be detected." ;
+                       rdfs:label "Time to Detect" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#TimeToNotifyDimension
+:TimeToNotifyDimension rdf:type owl:NamedIndividual ,
+                                :ServiceLevelAgreementDimension ;
+                       rdfs:comment "How much time is needed to notify users after seeing a problem." ;
+                       rdfs:label "Time to Notify" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#TimeToRepairDimension
+:TimeToRepairDimension rdf:type owl:NamedIndividual ,
+                                :ServiceLevelAgreementDimension ;
+                       rdfs:comment "How long it takes to fix an issue once detected." ;
+                       rdfs:label "Time to Repair" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#TimelinessDimension
+:TimelinessDimension rdf:type owl:NamedIndividual ,
+                              :DataQualityDimension ;
+                     rdfs:comment "The degree to which data is up-to-date and available when needed." ;
+                     rdfs:label "Timeliness" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#TraceabilityDimension
+:TraceabilityDimension rdf:type owl:NamedIndividual ,
+                                :DataQualityDimension ;
+                       rdfs:comment "The degree to which data can be traced back to its source and history." ;
+                       rdfs:label "Traceability" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#UniquenessDimension
+:UniquenessDimension rdf:type owl:NamedIndividual ,
+                              :DataQualityDimension ;
+                     rdfs:comment "The degree to which data is free from duplicates." ;
+                     rdfs:label "Uniqueness" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#UptimeDimension
+:UptimeDimension rdf:type owl:NamedIndividual ,
+                          :ServiceLevelAgreementDimension ;
+                 rdfs:comment "The system reliability as a percentage of time the machine has been working and available." ;
+                 rdfs:label "Uptime" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#UsabilityDimension
+:UsabilityDimension rdf:type owl:NamedIndividual ,
+                             :DataQualityDimension ;
+                    rdfs:comment "The degree to which data is easy to use and understand for its intended purpose." ;
+                    rdfs:label "Usability" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#ValidityDimension
+:ValidityDimension rdf:type owl:NamedIndividual ,
+                            :DataQualityDimension ;
+                   rdfs:comment "The degree to which data conforms to the defined business rules and constraints." ;
+                   rdfs:label "Validity" .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
