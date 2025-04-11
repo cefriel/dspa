@@ -3,16 +3,18 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dp: <https://knowledge.c-innovationhub.com/dspa#> .
+@prefix dcat: <https://www.w3.org/ns/dcat#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
 
 # DataProduct Shape
 dp:DataProductShape
     a sh:NodeShape ;
     sh:targetClass dp:DataProduct ;
     sh:property [
-        sh:path dp:hasDataset ;
+        sh:path dp:providesResource ;
         sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:message "A data product must have exactly one dataset" ;
+        sh:class dcat:Resource ;
+        sh:message "A data product must have at least one DCAT resource representation" ;
     ] ;
     sh:property [
         sh:path dp:hasDataHolder ;
@@ -60,23 +62,6 @@ dp:DataQualityShape
         sh:path dp:hasDataQualityTerm ;
         sh:minCount 1 ;
         sh:message "A data quality specification must have at least one term" ;
-    ] .
-
-# Dataset Shape
-dp:DatasetShape
-    a sh:NodeShape ;
-    sh:targetClass dp:Dataset ;
-    sh:property [
-        sh:path dp:updateFrequency ;
-        sh:minCount 1 ;
-        sh:datatype xsd:string ;
-        sh:message "A dataset must have an update frequency specified" ;
-    ] ;
-    sh:property [
-        sh:path dp:dataFormat ;
-        sh:minCount 1 ;
-        sh:datatype xsd:string ;
-        sh:message "A dataset must have a data format specified" ;
     ] .
 
 # Pricing Plan Shape
@@ -628,6 +613,11 @@ dp:DataProductLicenseShape
     a sh:NodeShape ;
     sh:targetClass dp:DataProductLicense ;
     sh:property [
+        sh:path dp:hasExecutableLicense ;
+        sh:class dp:ExecutableLicense ;
+        sh:message "If provided, executable license must be a valid ExecutableLicense instance" ;
+    ] ;
+    sh:property [
         sh:path dp:hasTerminationCondition ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
@@ -898,3 +888,36 @@ dp:PricingPlansAsCodeActionShape
         sh:datatype xsd:string ;
         sh:message "Specifications must be provided for the pricing plan action" ;
     ] . 
+# Executable License Shape
+dp:ExecutableLicenseShape
+    a sh:NodeShape ;
+    sh:targetClass dp:ExecutableLicense ;
+    sh:property [
+        sh:path dp:hasPolicy ;
+        sh:minCount 1 ;
+        sh:class odrl:Policy ;
+        sh:message "An executable license must have exactly one ODRL policy" ;
+    ] .
+
+# Access License Shape
+dp:AccessLicenseShape
+    a sh:NodeShape ;
+    sh:targetClass dp:AccessLicense ;
+    sh:property [
+        sh:path dp:hasPolicy ;
+        sh:minCount 1 ;
+        sh:class odrl:Policy ;
+        sh:message "An access license must have exactly one ODRL policy" ;
+    ] .
+
+# Usage License Shape
+dp:UsageLicenseShape
+    a sh:NodeShape ;
+    sh:targetClass dp:UsageLicense ;
+    sh:property [
+        sh:path dp:hasPolicy ;
+        sh:minCount 1 ;
+        sh:class odrl:Policy ;
+        sh:message "A usage license must have exactly one ODRL policy" ;
+    ] . 
+
