@@ -1,0 +1,841 @@
+@prefix : <https://knowledge.c-innovationhub.com/dspa#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix dp: <https://knowledge.c-innovationhub.com/dspa#> .
+@prefix dcat: <https://www.w3.org/ns/dcat#> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
+@base <https://knowledge.c-innovationhub.com/dspa#> .
+
+<https://knowledge.c-innovationhub.com/dspa> rdf:type owl:Ontology ;
+                                                        owl:versionIRI <https://knowledge.c-innovationhub.com/dspa/1.0.0> ;
+                                                        schema:funding <https://doi.org/CORDIS_DOI> ;
+                                                        dct:creator "Alessio Carenini (Cefriel)"@en ;
+                                                        dct:creator "Mario Scrocca (Cefriel)"@en ;
+                                                        dct:description "A metadata schema to represent Data Product Offerings in dataspaces, aligned with Open Data Product Specifications, DCAT-AP and EDC metadata schema."@en ;
+                                                        dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                                        dct:publisher "Cefriel"@en ;
+                                                        dct:title "DSPA Dataspace vocabulary"@en ;
+                                                        <http://purl.org/ontology/bibo/status> "Published Ontology"@en ;
+                                                        rdfs:comment "A metadata schema to represent Data Product Offerings in dataspaces, aligned with Open Data Product Specifications, DCAT-AP and EDC metadata schema." ;
+                                                        rdfs:label "DSPA  Dataspace vocabulary" ;
+                                                        owl:versionInfo "1.0.0"@en .
+
+
+
+
+# Classes
+dp:DataProduct a rdfs:Class ;
+    rdfs:label "Data Product" ;
+    rdfs:comment "A data product is a packaged data asset that is ready for distribution and consumption." .
+
+dp:DataQuality a rdfs:Class ;
+    rdfs:label "Data Quality" ;
+    rdfs:comment "Specifies the quality characteristics and metrics of a data product." .
+
+dp:PricingPlan a rdfs:Class ;
+    rdfs:label "Pricing Plan" ;
+    rdfs:comment "The pricing model and details for a data product." .
+
+dp:ServiceLevelAgreement a rdfs:Class ;
+    rdfs:label "Service Level Agreement" ;
+    rdfs:comment "The service level agreement defining quality and performance guarantees for a data product." .
+
+dp:ProductSupport a rdfs:Class ;
+    rdfs:label "Product Support" ;
+    rdfs:comment "Support information for a data product, including contact details and documentation." .
+
+dp:DataProductLicense a rdfs:Class ;
+    rdfs:label "Data Product License" ;
+    rdfs:comment "A license that governs the use of a data product." .
+
+dp:ExecutableLicense a rdfs:Class ;
+    rdfs:label "Executable License" ;
+    rdfs:comment "A license that can be executed programmatically." .
+
+dp:AccessLicense a rdfs:Class ;
+    rdfs:label "Access License" ;
+    rdfs:comment "A license that governs access to a data product." ;
+    rdfs:subClassOf dp:ExecutableLicense .
+
+dp:UsageLicense a rdfs:Class ;
+    rdfs:label "Usage License" ;
+    rdfs:comment "A license that governs the usage of a data product." ;
+    rdfs:subClassOf dp:ExecutableLicense .
+
+dp:TerminationCondition a rdfs:Class ;
+    rdfs:label "Termination Condition" ;
+    rdfs:comment "Conditions under which the license can be terminated." .
+
+dp:LicenseScope a rdfs:Class ;
+    rdfs:label "License Scope" ;
+    rdfs:comment "The scope and extent of the license, including permitted uses and restrictions." .
+
+dp:LicenseGovernance a rdfs:Class ;
+    rdfs:label "License Governance" ;
+    rdfs:comment "Rules and policies governing the enforcement and management of the license." .
+
+dp:ServiceLevelAgreementTerm a rdfs:Class ;
+    rdfs:label "Service Level Agreement Term" ;
+    rdfs:comment "Base class for service level agreement terms, which can be either executable or declarative." .
+
+dp:ExecutableTerm a rdfs:Class ;
+    rdfs:label "Executable Term" ;
+    rdfs:comment "Terms that are defined in an executable format for monitoring." .
+
+dp:ExecutableServiceAgreementTerm a rdfs:Class ;
+    rdfs:label "Executable Service Agreement Term" ;
+    rdfs:comment "A specific type of executable term used in service level agreements." ;
+    rdfs:subClassOf dp:ServiceLevelAgreementTerm ;
+    rdfs:subClassOf dp:ExecutableTerm .
+
+dp:DeclarativeTerm a rdfs:Class ;
+    rdfs:label "Declarative Term" ;
+    rdfs:comment "Terms that are defined in a declarative format." .
+
+dp:DeclarativeServiceLevelAgreementTerm a rdfs:Class ;
+    rdfs:label "Declarative Service Level Agreement Term" ;
+    rdfs:comment "Service level agreement terms that are defined in a declarative format." ;
+    rdfs:subClassOf dp:DeclarativeTerm ;
+    rdfs:subClassOf dp:ServiceLevelAgreementTerm .
+
+dp:ServiceLevelAgreementDimension a rdfs:Class ;
+    rdfs:label "Service Level Agreement Dimension" ;
+    rdfs:comment "A dimension or aspect of a service level agreement that can be measured or monitored." .
+
+dp:DataQualityDimension a rdfs:Class ;
+    rdfs:label "Data Quality Dimension" ;
+    rdfs:comment "A dimension or aspect of data quality that can be measured or monitored." .
+
+dp:DataQualityTerm a rdfs:Class ;
+    rdfs:label "Data Quality Term" ;
+    rdfs:comment "A term that specifies a data quality requirement for a data product." .
+
+dp:ExecutableDataQualityTerm a rdfs:Class ;
+    rdfs:label "Executable Data Quality Term" ;
+    rdfs:comment "Data quality terms that are defined in an executable format for monitoring." ;
+    rdfs:subClassOf dp:DataQualityTerm ;
+    rdfs:subClassOf dp:ExecutableTerm .
+
+dp:DeclarativeDataQualityTerm a rdfs:Class ;
+    rdfs:label "Declarative Data Quality Term" ;
+    rdfs:comment "Data quality terms that are defined in a declarative format." ;
+    rdfs:subClassOf dp:DataQualityTerm ;
+    rdfs:subClassOf dp:DeclarativeTerm .
+
+dp:DeclarativePricingPlan a rdfs:Class ;
+    rdfs:label "Declarative Pricing Plan" ;
+    rdfs:comment "A pricing plan defined in a declarative format." ;
+    rdfs:subClassOf dp:PricingPlan .
+
+dp:ExecutablePricingPlan a rdfs:Class ;
+    rdfs:label "Executable Pricing Plan" ;
+    rdfs:comment "A pricing plan defined in an executable format for dynamic pricing calculations." ;
+    rdfs:subClassOf dp:PricingPlan .
+
+dp:StripeBasedPricingPlan a rdfs:Class ;
+    rdfs:label "Stripe Based Pricing Plan" ;
+    rdfs:comment "A pricing plan that uses Stripe as the payment processor." ;
+    rdfs:subClassOf dp:ExecutablePricingPlan .
+
+dp:CheckoutBasedPricingPlan a rdfs:Class ;
+    rdfs:label "Checkout Based Pricing Plan" ;
+    rdfs:comment "A pricing plan that uses Checkout.com as the payment processor." ;
+    rdfs:subClassOf dp:ExecutablePricingPlan .
+
+dp:SquareBasedPricingPlan a rdfs:Class ;
+    rdfs:label "Square Based Pricing Plan" ;
+    rdfs:comment "A pricing plan that uses Square as the payment processor." ;
+    rdfs:subClassOf dp:ExecutablePricingPlan .
+
+dp:PaypalBasedPricingPlan a rdfs:Class ;
+    rdfs:label "PayPal Based Pricing Plan" ;
+    rdfs:comment "A pricing plan that uses PayPal as the payment processor." ;
+    rdfs:subClassOf dp:ExecutablePricingPlan .
+
+dp:DataHolder a rdfs:Class ;
+    rdfs:label "Data Holder" ;
+    rdfs:comment "An entity that owns, controls, or is responsible for a data product." .
+
+dp:PricingPlansAsCodeAction a rdfs:Class ;
+    rdfs:label "Pricing Plans As Code Action" ;
+    rdfs:comment "An action that can be performed on a pricing plan defined as code." .
+
+dp:CreateAction a rdfs:Class ;
+    rdfs:label "Create Action" ;
+    rdfs:comment "Action to create a new pricing plan." ;
+    rdfs:subClassOf dp:PricingPlansAsCodeAction .
+
+dp:RetireAction a rdfs:Class ;
+    rdfs:label "Retire Action" ;
+    rdfs:comment "Action to retire an existing pricing plan." ;
+    rdfs:subClassOf dp:PricingPlansAsCodeAction .
+
+dp:UpdateAction a rdfs:Class ;
+    rdfs:label "Update Action" ;
+    rdfs:comment "Action to update an existing pricing plan." ;
+    rdfs:subClassOf dp:PricingPlansAsCodeAction .
+
+dp:PurchaseAction a rdfs:Class ;
+    rdfs:label "Purchase Action" ;
+    rdfs:comment "Action to purchase a pricing plan." ;
+    rdfs:subClassOf dp:PricingPlansAsCodeAction .
+
+# Properties
+dp:hasDataQuality a rdf:Property ;
+    rdfs:label "has data quality" ;
+    rdfs:domain dp:DataProduct ;
+    rdfs:range dp:DataQuality ;
+    rdfs:comment "Links a data product to its data quality specifications." .
+
+dp:hasPricingPlan a rdf:Property ;
+    rdfs:label "has pricing plan" ;
+    rdfs:domain dp:DataProduct ;
+    rdfs:range dp:PricingPlan ;
+    rdfs:comment "Links a data product to its pricing information." .
+
+dp:hasServiceLevelAgreement a rdf:Property ;
+    rdfs:label "has service level agreement" ;
+    rdfs:domain dp:DataProduct ;
+    rdfs:range dp:ServiceLevelAgreement ;
+    rdfs:comment "Links a data product to its service level agreement." .
+
+dp:hasDataProductLicense a rdf:Property ;
+    rdfs:label "has data product license" ;
+    rdfs:domain dp:DataProduct ;
+    rdfs:range dp:DataProductLicense ;
+    rdfs:comment "Links a data product to its license information." .
+dp:hasExecutableLicense a rdf:Property ;
+    rdfs:label "has executable license" ;
+    rdfs:domain dp:DataProductLicense ;
+    rdfs:range dp:ExecutableLicense ;
+    rdfs:comment "Links a data product license to its executable representation." .
+
+dp:hasTerminationCondition a rdf:Property ;
+    rdfs:label "has termination condition" ;
+    rdfs:domain dp:DataProductLicense ;
+    rdfs:range dp:TerminationCondition ;
+    rdfs:comment "Links a data product license to its termination conditions." .
+
+dp:hasLicenseScope a rdf:Property ;
+    rdfs:label "has license scope" ;
+    rdfs:domain dp:DataProductLicense ;
+    rdfs:range dp:LicenseScope ;
+    rdfs:comment "Links a data product license to its scope and permitted uses." .
+
+dp:hasLicenseGovernance a rdf:Property ;
+    rdfs:label "has license governance" ;
+    rdfs:domain dp:DataProductLicense ;
+    rdfs:range dp:LicenseGovernance ;
+    rdfs:comment "Links a data product license to its governance rules and policies." .
+
+dp:hasProductSupport a rdf:Property ;
+    rdfs:label "has product support" ;
+    rdfs:domain dp:ServiceLevelAgreement ;
+    rdfs:range dp:ProductSupport ;
+    rdfs:comment "Links a service level agreement to its support information." .
+
+dp:hasServiceLevelAgreementTerms a rdf:Property ;
+    rdfs:label "has service level agreement terms" ;
+    rdfs:domain dp:ServiceLevelAgreement ;
+    rdfs:range dp:ServiceLevelAgreementTerm ;
+    rdfs:comment "Links a service level agreement to its terms, which can be either executable or declarative." .
+
+dp:value a rdf:Property ;
+    rdfs:label "value" ;
+    rdfs:domain dp:DeclarativeTerm ;
+    rdfs:comment "The actual value of the term." .
+
+dp:objective a rdf:Property ;
+    rdfs:label "objective" ;
+    rdfs:domain dp:DeclarativeTerm ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "The target value that should be achieved for the term." .
+
+dp:unit a rdf:Property ;
+    rdfs:label "unit" ;
+    rdfs:domain dp:DeclarativeTerm ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The unit of measurement for the term." .
+
+dp:monitoringSystemName a rdf:Property ;
+    rdfs:label "monitoring system name" ;
+    rdfs:domain dp:ExecutableTerm ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The name of the monitoring system used for this SLA term." .
+
+dp:monitoringSystemReference a rdf:Property ;
+    rdfs:label "monitoring system reference" ;
+    rdfs:domain dp:ExecutableTerm ;
+    rdfs:range xsd:anyURI ;
+    rdfs:comment "A reference URL to the monitoring system documentation." .
+
+dp:monitoringSystemTermSpecification a rdf:Property ;
+    rdfs:label "monitoring system term specification" ;
+    rdfs:domain dp:ExecutableTerm ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The specification of how this SLA term is monitored in the monitoring system." .
+
+# Product Support Properties
+dp:phoneNumber a rdf:Property ;
+    rdfs:label "phone number" ;
+    rdfs:domain dp:ProductSupport ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The support phone number. Use E.164" .
+
+dp:phoneServiceHours a rdf:Property ;
+    rdfs:label "phone service hours" ;
+    rdfs:domain dp:ProductSupport ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Describes the service hours company provides. Contains information often in week level eg Mon-Fri at 8am - 4pm." .
+
+dp:email a rdf:Property ;
+    rdfs:label "email" ;
+    rdfs:domain dp:ProductSupport ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Email information for support requests. Use RFC2822" .
+
+dp:emailServiceHours a rdf:Property ;
+    rdfs:label "email service hours" ;
+    rdfs:domain dp:ProductSupport ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Describes the email service hours company provides. Contains information often in week level eg Mon-Fri at 8am - 4pm." .
+
+dp:documentationURL a rdf:Property ;
+    rdfs:label "documentation URL" ;
+    rdfs:domain dp:ProductSupport ;
+    rdfs:range xsd:anyURI ;
+    rdfs:comment "URL to documentation" .
+
+dp:serviceLevelAgreementDimension a rdf:Property ;
+    rdfs:label "service level agreement dimension" ;
+    rdfs:domain dp:ServiceLevelAgreementTerm ;
+    rdfs:range dp:ServiceLevelAgreementDimension ;
+    rdfs:comment "Links a service level agreement term to its dimension." .
+
+# SLA Dimensions (instances)
+dp:LatencyDimension a dp:ServiceLevelAgreementDimension ;
+    rdfs:label "Latency" ;
+    rdfs:comment "The minimal amount of time before getting any response." .
+
+dp:UptimeDimension a dp:ServiceLevelAgreementDimension ;
+    rdfs:label "Uptime" ;
+    rdfs:comment "The system reliability as a percentage of time the machine has been working and available." .
+
+dp:ResponseTimeDimension a dp:ServiceLevelAgreementDimension ;
+    rdfs:label "Response Time" ;
+    rdfs:comment "The amount of time to process external request." .
+
+dp:ErrorRateDimension a dp:ServiceLevelAgreementDimension ;
+    rdfs:label "Error Rate" ;
+    rdfs:comment "The maximum tolerated errors in data, as a percentage." .
+
+dp:EndOfSupportDimension a dp:ServiceLevelAgreementDimension ;
+    rdfs:label "End of Support" ;
+    rdfs:comment "The date at which the product will not have support anymore." .
+
+dp:EndOfLifeDimension a dp:ServiceLevelAgreementDimension ;
+    rdfs:label "End of Life" ;
+    rdfs:comment "The date at which the product will not be available anymore." .
+
+dp:TimeToDetectDimension a dp:ServiceLevelAgreementDimension ;
+    rdfs:label "Time to Detect" ;
+    rdfs:comment "How fast a problem can be detected." .
+
+dp:TimeToNotifyDimension a dp:ServiceLevelAgreementDimension ;
+    rdfs:label "Time to Notify" ;
+    rdfs:comment "How much time is needed to notify users after seeing a problem." .
+
+dp:TimeToRepairDimension a dp:ServiceLevelAgreementDimension ;
+    rdfs:label "Time to Repair" ;
+    rdfs:comment "How long it takes to fix an issue once detected." .
+
+dp:EmailResponseTimeDimension a dp:ServiceLevelAgreementDimension ;
+    rdfs:label "Email Response Time" ;
+    rdfs:comment "How long it takes to respond to email support requests." .
+
+# Data Quality Dimensions (instances)
+dp:AccuracyDimension a dp:DataQualityDimension ;
+    rdfs:label "Accuracy" ;
+    rdfs:comment "The degree to which data correctly describes the real-world object or event being described." .
+
+dp:CompletenessDimension a dp:DataQualityDimension ;
+    rdfs:label "Completeness" ;
+    rdfs:comment "The degree to which all required data is present in the dataset." .
+
+dp:ConsistencyDimension a dp:DataQualityDimension ;
+    rdfs:label "Consistency" ;
+    rdfs:comment "The degree to which data is consistent across different sources or systems." .
+
+dp:TimelinessDimension a dp:DataQualityDimension ;
+    rdfs:label "Timeliness" ;
+    rdfs:comment "The degree to which data is up-to-date and available when needed." .
+
+dp:ValidityDimension a dp:DataQualityDimension ;
+    rdfs:label "Validity" ;
+    rdfs:comment "The degree to which data conforms to the defined business rules and constraints." .
+
+dp:UniquenessDimension a dp:DataQualityDimension ;
+    rdfs:label "Uniqueness" ;
+    rdfs:comment "The degree to which data is free from duplicates." .
+
+dp:IntegrityDimension a dp:DataQualityDimension ;
+    rdfs:label "Integrity" ;
+    rdfs:comment "The degree to which data maintains its accuracy and consistency over its lifecycle." .
+
+dp:PrecisionDimension a dp:DataQualityDimension ;
+    rdfs:label "Precision" ;
+    rdfs:comment "The degree of exactness with which data is measured or recorded." .
+
+dp:RelevanceDimension a dp:DataQualityDimension ;
+    rdfs:label "Relevance" ;
+    rdfs:comment "The degree to which data is relevant and useful for the intended purpose." .
+
+dp:ReliabilityDimension a dp:DataQualityDimension ;
+    rdfs:label "Reliability" ;
+    rdfs:comment "The degree to which data can be depended upon to be accurate and consistent." .
+
+dp:AccessibilityDimension a dp:DataQualityDimension ;
+    rdfs:label "Accessibility" ;
+    rdfs:comment "The degree to which data is available and can be accessed when needed." .
+
+dp:ConfidentialityDimension a dp:DataQualityDimension ;
+    rdfs:label "Confidentiality" ;
+    rdfs:comment "The degree to which data is protected from unauthorized access." .
+
+dp:EfficiencyDimension a dp:DataQualityDimension ;
+    rdfs:label "Efficiency" ;
+    rdfs:comment "The degree to which data can be processed and used efficiently." .
+
+dp:FlexibilityDimension a dp:DataQualityDimension ;
+    rdfs:label "Flexibility" ;
+    rdfs:comment "The degree to which data can be adapted to different uses and requirements." .
+
+dp:InterpretabilityDimension a dp:DataQualityDimension ;
+    rdfs:label "Interpretability" ;
+    rdfs:comment "The degree to which data is clear and can be understood by its users." .
+
+dp:PortabilityDimension a dp:DataQualityDimension ;
+    rdfs:label "Portability" ;
+    rdfs:comment "The degree to which data can be moved and used across different systems and platforms." .
+
+dp:RecoverabilityDimension a dp:DataQualityDimension ;
+    rdfs:label "Recoverability" ;
+    rdfs:comment "The degree to which data can be recovered in case of loss or corruption." .
+
+dp:TraceabilityDimension a dp:DataQualityDimension ;
+    rdfs:label "Traceability" ;
+    rdfs:comment "The degree to which data can be traced back to its source and history." .
+
+dp:UsabilityDimension a dp:DataQualityDimension ;
+    rdfs:label "Usability" ;
+    rdfs:comment "The degree to which data is easy to use and understand for its intended purpose." .
+
+dp:dataQualityDimension a rdf:Property ;
+    rdfs:label "data quality dimension" ;
+    rdfs:domain dp:DataQualityTerm ;
+    rdfs:range dp:DataQualityDimension ;
+    rdfs:comment "Links a data quality term to its dimension." .
+
+dp:hasDataQualityTerm a rdf:Property ;
+    rdfs:label "has data quality term" ;
+    rdfs:domain dp:DataQuality ;
+    rdfs:range dp:DataQualityTerm ;
+    rdfs:comment "Links a data quality specification to its terms." .
+
+dp:priceCurrency a rdf:Property ;
+    rdfs:label "price currency" ;
+    rdfs:domain dp:DeclarativePricingPlan ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The primary currency used in pricing. Platforms are assumed to use this as primary currency if currency conversions are used to display product pricing in different locations for various currencies. If the unit is revenue-sharing, then this attribute value MUST be percentage." .
+
+dp:price a rdf:Property ;
+    rdfs:label "price" ;
+    rdfs:domain dp:DeclarativePricingPlan ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The offer price of a product, or of a price component, or revenue-sharing percentage. If the unit of pricing is revenue-sharing, then this price attribute value is percentage value. Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator. Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols. With data-volume the price is for each 1GB of data." .
+
+dp:billingDuration a rdf:Property ;
+    rdfs:label "billing duration" ;
+    rdfs:domain dp:DeclarativePricingPlan ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Specifies for how long this price (or price component) will be billed. Can be used, for example, to model the contractual duration of a subscription or payment plan." .
+
+dp:maxTransactionQuantity a rdf:Property ;
+    rdfs:label "max transaction quantity" ;
+    rdfs:domain dp:DeclarativePricingPlan ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "The maximum transaction quantity for the given billing duration. Use this to define for example monthly (or any other period) request limit to the data product. Note! If you want to set unlimited use, value must be 0 (zero)." .
+
+dp:offering a rdf:Property ;
+    rdfs:label "offering" ;
+    rdfs:domain dp:DeclarativePricingPlan ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The element that contains pricing plan content as array of strings. Think of this as the list of what is included in the pricing plan and what you offer in return to the price asked. Use the language defined in the plan" .
+
+dp:minPrice a rdf:Property ;
+    rdfs:label "min price" ;
+    rdfs:domain dp:DeclarativePricingPlan ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The lowest price if the price is a range. If dynamic pricing is used with this product, this is the lowest price allowed. In dynamic pricing businesses are able to change prices based on algorithms that take into account competitor pricing, supply and demand, and other external factors in the market." .
+
+dp:maxPrice a rdf:Property ;
+    rdfs:label "max price" ;
+    rdfs:domain dp:DeclarativePricingPlan ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The highest price if the price is a range. If dynamic pricing is used with this product, this is the highest price allowed." .
+
+dp:valueAddedTaxIncluded a rdf:Property ;
+    rdfs:label "value added tax included" ;
+    rdfs:domain dp:DeclarativePricingPlan ;
+    rdfs:range xsd:boolean ;
+    rdfs:comment "Specifies whether the applicable value-added tax (VAT) is included in the price specification or not." .
+
+dp:valueAddedTaxPercentage a rdf:Property ;
+    rdfs:label "value added tax percentage" ;
+    rdfs:domain dp:DeclarativePricingPlan ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "Number percentage value, range 0-100" .
+
+dp:validFrom a rdf:Property ;
+    rdfs:label "valid from" ;
+    rdfs:domain dp:DeclarativePricingPlan ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "The date when the item becomes valid." .
+
+dp:validTo a rdf:Property ;
+    rdfs:label "valid to" ;
+    rdfs:domain dp:DeclarativePricingPlan ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "The date after when the item is not valid." .
+
+dp:additionalPrice a rdf:Property ;
+    rdfs:label "additional price" ;
+    rdfs:domain dp:DeclarativePricingPlan ;
+    rdfs:range xsd:string ;
+    rdfs:comment "This is used to define fees for usage which exceeds the defined max transaction quantity. This value is for each additional transaction." .
+
+dp:maxDataQuantity a rdf:Property ;
+    rdfs:label "max data quantity" ;
+    rdfs:domain dp:DeclarativePricingPlan ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "The maximum amount of data transferred during the billing duration. Unit is GB." .
+
+dp:valueSimulator a rdf:Property ;
+    rdfs:label "value simulator" ;
+    rdfs:domain dp:DeclarativePricingPlan ;
+    rdfs:range xsd:anyURI ;
+    rdfs:comment "Intended to be used with value-based pricing plan. Provide url to value simulator in which customer can see the value in various cases. In the simulator customer might be able to input own variables to match their exact case and see the gained value." .
+
+dp:noticePeriod a rdf:Property ;
+    rdfs:label "notice period" ;
+    rdfs:domain dp:TerminationCondition ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "The notice period is a particular time that an data product provider or consumer must give before ending the contract. This time window allows both sides to make the necessary preparations, guaranteeing an unhindered transfer." .
+
+dp:terminationConditions a rdf:Property ;
+    rdfs:label "termination conditions" ;
+    rdfs:domain dp:TerminationCondition ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Cancellation conditions of the license." .
+
+dp:continuityConditions a rdf:Property ;
+    rdfs:label "continuity conditions" ;
+    rdfs:domain dp:TerminationCondition ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Continuity conditions of the license." .
+
+dp:definition a rdf:Property ;
+    rdfs:label "definition" ;
+    rdfs:domain dp:LicenseScope ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Background and purpose of the license." .
+
+dp:restrictions a rdf:Property ;
+    rdfs:label "restrictions" ;
+    rdfs:domain dp:LicenseScope ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Restrictions of the license." .
+
+dp:geographicalArea a rdf:Property ;
+    rdfs:label "geographical area" ;
+    rdfs:domain dp:LicenseScope ;
+    rdfs:range xsd:string ;
+    rdfs:comment "License right restricted to the geographical area." .
+
+dp:permanent a rdf:Property ;
+    rdfs:label "permanent" ;
+    rdfs:domain dp:LicenseScope ;
+    rdfs:range xsd:boolean ;
+    rdfs:comment "License with no expiration date." .
+
+dp:exclusive a rdf:Property ;
+    rdfs:label "exclusive" ;
+    rdfs:domain dp:LicenseScope ;
+    rdfs:range xsd:boolean ;
+    rdfs:comment "The exclusive license holder is given complete control over the use of the data product, and no other person or organization is allowed to use it during the term of the license agreement." .
+
+dp:rights a rdf:Property ;
+    rdfs:label "rights" ;
+    rdfs:domain dp:LicenseScope ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Rights granted by the licence. The texts in brackets and italic are intended to describe rights." .
+
+dp:ownership a rdf:Property ;
+    rdfs:label "ownership" ;
+    rdfs:domain dp:LicenseGovernance ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Data product licensing ownership." .
+
+dp:audit a rdf:Property ;
+    rdfs:label "audit" ;
+    rdfs:domain dp:LicenseGovernance ;
+    rdfs:range xsd:string ;
+    rdfs:comment "License auditing terms." .
+
+dp:warranties a rdf:Property ;
+    rdfs:label "warranties" ;
+    rdfs:domain dp:LicenseGovernance ;
+    rdfs:range xsd:string ;
+    rdfs:comment "License warranties." .
+
+dp:damages a rdf:Property ;
+    rdfs:label "damages" ;
+    rdfs:domain dp:LicenseGovernance ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Damages refers to the sum of money (i.e. indemnifications) for a breach of some duty or violation of license right." .
+
+dp:confidentiality a rdf:Property ;
+    rdfs:label "confidentiality" ;
+    rdfs:domain dp:LicenseGovernance ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Restrictions and requirements imposed on the Data User regarding e.g. the use and disclosure of the Data Holder's confidential information." .
+
+dp:applicableLaws a rdf:Property ;
+    rdfs:label "applicable laws" ;
+    rdfs:domain dp:LicenseGovernance ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Applicable laws, i.e local acts, degrees or law." .
+
+dp:forceMajeure a rdf:Property ;
+    rdfs:label "force majeure" ;
+    rdfs:domain dp:LicenseGovernance ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Force majeure is a clause that is included in contracts to remove liability for unforeseeable and unavoidable catastrophes that interrupt the expected course of events and prevent participants from fulfilling obligations. These clauses generally cover both natural disasters and catastrophes created by humans." .
+
+dp:hasDataHolder a rdf:Property ;
+    rdfs:label "has data holder" ;
+    rdfs:domain dp:DataProduct ;
+    rdfs:range dp:DataHolder ;
+    rdfs:comment "Links a data product to its data holder." .
+
+dp:legalName a rdf:Property ;
+    rdfs:label "legal name" ;
+    rdfs:domain dp:DataHolder ;
+    rdfs:range xsd:string ;
+    rdfs:comment "REQUIRED The official name of the organization, e.g. the registered company name." .
+
+dp:businessID a rdf:Property ;
+    rdfs:label "business ID" ;
+    rdfs:domain dp:DataHolder ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The business identifier code of the company. Often this is given to the company by authorized public sector organization managing register of businesses." .
+
+dp:contactName a rdf:Property ;
+    rdfs:label "contact name" ;
+    rdfs:domain dp:DataHolder ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Contact person name" .
+
+dp:email a rdf:Property ;
+    rdfs:label "email" ;
+    rdfs:domain dp:DataHolder ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Email to be used in contacting the organization." .
+
+dp:taxID a rdf:Property ;
+    rdfs:label "tax ID" ;
+    rdfs:domain dp:DataHolder ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The Tax / Fiscal ID of the organization or person, e.g. the TIN in the US or the CIF/NIF in Spain." .
+
+dp:vatID a rdf:Property ;
+    rdfs:label "VAT ID" ;
+    rdfs:domain dp:DataHolder ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The Value-added Tax ID of the organization or person." .
+
+dp:businessDomain a rdf:Property ;
+    rdfs:label "business domain" ;
+    rdfs:domain dp:DataHolder ;
+    rdfs:range xsd:string ;
+    rdfs:comment "In a data mesh architecture, data (or data product) ownership and management are distributed across self-contained business domains." .
+
+dp:logoURL a rdf:Property ;
+    rdfs:label "logo URL" ;
+    rdfs:domain dp:DataHolder ;
+    rdfs:range xsd:anyURI ;
+    rdfs:comment "The URL pointing to organisation logo." .
+
+dp:description a rdf:Property ;
+    rdfs:label "description" ;
+    rdfs:domain dp:DataHolder ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The introduction to the organization. Often contains information of what the organisation does and focuses on." .
+
+dp:URL a rdf:Property ;
+    rdfs:label "URL" ;
+    rdfs:domain dp:DataHolder ;
+    rdfs:range xsd:anyURI ;
+    rdfs:comment "The URL of the organization's website." .
+
+dp:telephone a rdf:Property ;
+    rdfs:label "telephone" ;
+    rdfs:domain dp:DataHolder ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The telephone number. Use E.164 standard." .
+
+dp:streetAddress a rdf:Property ;
+    rdfs:label "street address" ;
+    rdfs:domain dp:DataHolder ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The street address. For example, 1600 Amphitheatre Pkwy." .
+
+dp:postalCode a rdf:Property ;
+    rdfs:label "postal code" ;
+    rdfs:domain dp:DataHolder ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The postal code. For example, 94043." .
+
+dp:addressRegion a rdf:Property ;
+    rdfs:label "address region" ;
+    rdfs:domain dp:DataHolder ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The region in which the locality is, and which is in the country. For example, California or another appropriate first-level Administrative division" .
+
+dp:addressLocality a rdf:Property ;
+    rdfs:label "address locality" ;
+    rdfs:domain dp:DataHolder ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The locality in which the street address is, and which is in the region. For example, Mountain View." .
+
+dp:addressCountry a rdf:Property ;
+    rdfs:label "address country" ;
+    rdfs:domain dp:DataHolder ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The country." .
+
+dp:aggregateRating a rdf:Property ;
+    rdfs:label "aggregate rating" ;
+    rdfs:domain dp:DataHolder ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The average rating based on multiple ratings or reviews." .
+
+dp:ratingCount a rdf:Property ;
+    rdfs:label "rating count" ;
+    rdfs:domain dp:DataHolder ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "The amount of ratings and reviews used in calculating the aggregateRating." .
+
+dp:slogan a rdf:Property ;
+    rdfs:label "slogan" ;
+    rdfs:domain dp:DataHolder ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The slogan of the organization. This is often related to showing the brand" .
+
+dp:parentOrganization a rdf:Property ;
+    rdfs:label "parent organization" ;
+    rdfs:domain dp:DataHolder ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The larger organization that this organization is a subOrganization of, if any." .
+
+# Payment Processor Properties
+dp:stripeAccountId a rdf:Property ;
+    rdfs:label "Stripe Account ID" ;
+    rdfs:domain dp:StripeBasedPricingPlan ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The unique identifier for a Stripe account." .
+
+dp:stripeApiKey a rdf:Property ;
+    rdfs:label "Stripe API Key" ;
+    rdfs:domain dp:StripeBasedPricingPlan ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The API key used to authenticate with Stripe's services." .
+
+dp:checkoutPublicKey a rdf:Property ;
+    rdfs:label "Checkout Public Key" ;
+    rdfs:domain dp:CheckoutBasedPricingPlan ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The public key used for Checkout.com integration." .
+
+dp:checkoutSecretKey a rdf:Property ;
+    rdfs:label "Checkout Secret Key" ;
+    rdfs:domain dp:CheckoutBasedPricingPlan ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The secret key used for Checkout.com integration." .
+
+dp:squareApplicationId a rdf:Property ;
+    rdfs:label "Square Application ID" ;
+    rdfs:domain dp:SquareBasedPricingPlan ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The unique identifier for a Square application." .
+
+dp:squareAccessToken a rdf:Property ;
+    rdfs:label "Square Access Token" ;
+    rdfs:domain dp:SquareBasedPricingPlan ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The access token used to authenticate with Square's services." .
+
+dp:paypalClientId a rdf:Property ;
+    rdfs:label "PayPal Client ID" ;
+    rdfs:domain dp:PaypalBasedPricingPlan ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The client ID used for PayPal integration." .
+
+dp:paypalSecret a rdf:Property ;
+    rdfs:label "PayPal Secret" ;
+    rdfs:domain dp:PaypalBasedPricingPlan ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The secret key used for PayPal integration." .
+
+# Executable Pricing Plan Properties
+dp:version a rdf:Property ;
+    rdfs:label "version" ;
+    rdfs:domain dp:ExecutablePricingPlan ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The version of the payment gateway tool used." .
+
+dp:reference a rdf:Property ;
+    rdfs:label "reference" ;
+    rdfs:domain dp:ExecutablePricingPlan ;
+    rdfs:range xsd:anyURI ;
+    rdfs:comment "Provide URL pointing to the reference documentation" .
+
+dp:action a rdf:Property ;
+    rdfs:label "action" ;
+    rdfs:domain dp:ExecutablePricingPlan ;
+    rdfs:range dp:PricingPlansAsCodeAction ;
+    rdfs:comment "The action to be performed on the pricing plan." .
+
+# Pricing Plans As Code Action Properties
+dp:specs a rdf:Property ;
+    rdfs:label "specs" ;
+    rdfs:domain dp:PricingPlansAsCodeAction ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The specifications for the pricing plan action." .
+dp:providesResource a rdf:Property ;
+    rdfs:label "provides resource" ;
+    rdfs:domain dp:DataProduct ;
+    rdfs:range dcat:Resource ;
+    rdfs:comment "Links a data product to its DCAT resource representation." .
+
+dp:hasPolicy a rdf:Property ;
+    rdfs:label "has policy" ;
+    rdfs:domain dp:ExecutableLicense ;
+    rdfs:range odrl:Policy ;
+    rdfs:comment "Links an executable license to its ODRL policy representation." .
+ 
