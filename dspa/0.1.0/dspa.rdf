@@ -183,14 +183,14 @@
     
 
 
-    <!-- https://knowledge.c-innovationhub.com/dspa#hasDataset -->
+    <!-- https://knowledge.c-innovationhub.com/dspa#hasExecutableLicense -->
 
 
-    <owl:ObjectProperty rdf:about="https://knowledge.c-innovationhub.com/dspa#hasDataset">
-        <rdfs:domain rdf:resource="https://knowledge.c-innovationhub.com/dspa#DataProduct"/>
-        <rdfs:range rdf:resource="https://knowledge.c-innovationhub.com/dspa#Dataset"/>
-        <rdfs:comment>Links a data product to its underlying dataset.</rdfs:comment>
-        <rdfs:label>has dataset</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://knowledge.c-innovationhub.com/dspa#hasExecutableLicense">
+        <rdfs:domain rdf:resource="https://knowledge.c-innovationhub.com/dspa#DataProductLicense"/>
+        <rdfs:range rdf:resource="https://knowledge.c-innovationhub.com/dspa#ExecutableLicense"/>
+        <rdfs:comment>Links a data product license to its executable representation.</rdfs:comment>
+        <rdfs:label>has executable license</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -215,6 +215,18 @@
         <rdfs:range rdf:resource="https://knowledge.c-innovationhub.com/dspa#LicenseScope"/>
         <rdfs:comment>Links a data product license to its scope and permitted uses.</rdfs:comment>
         <rdfs:label>has license scope</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/dspa#hasPolicy -->
+
+
+    <owl:ObjectProperty rdf:about="https://knowledge.c-innovationhub.com/dspa#hasPolicy">
+        <rdfs:domain rdf:resource="https://knowledge.c-innovationhub.com/dspa#ExecutableLicense"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/odrl/2/Policy"/>
+        <rdfs:comment>Links an executable license to its ODRL policy representation.</rdfs:comment>
+        <rdfs:label>has policy</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -275,6 +287,18 @@
         <rdfs:range rdf:resource="https://knowledge.c-innovationhub.com/dspa#TerminationCondition"/>
         <rdfs:comment>Links a data product license to its termination conditions.</rdfs:comment>
         <rdfs:label>has termination condition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/dspa#providesResource -->
+
+
+    <owl:ObjectProperty rdf:about="https://knowledge.c-innovationhub.com/dspa#providesResource">
+        <rdfs:domain rdf:resource="https://knowledge.c-innovationhub.com/dspa#DataProduct"/>
+        <rdfs:range rdf:resource="https://www.w3.org/ns/dcat#Resource"/>
+        <rdfs:comment>Links a data product to its DCAT resource representation.</rdfs:comment>
+        <rdfs:label>provides resource</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -503,18 +527,6 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Damages refers to the sum of money (i.e. indemnifications) for a breach of some duty or violation of license right.</rdfs:comment>
         <rdfs:label>damages</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://knowledge.c-innovationhub.com/dspa#dataFormat -->
-
-
-    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/dspa#dataFormat">
-        <rdfs:domain rdf:resource="https://knowledge.c-innovationhub.com/dspa#Dataset"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>The format in which the data is provided.</rdfs:comment>
-        <rdfs:label>data format</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1061,18 +1073,6 @@
     
 
 
-    <!-- https://knowledge.c-innovationhub.com/dspa#updateFrequency -->
-
-
-    <owl:DatatypeProperty rdf:about="https://knowledge.c-innovationhub.com/dspa#updateFrequency">
-        <rdfs:domain rdf:resource="https://knowledge.c-innovationhub.com/dspa#Dataset"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment>How frequently the dataset is updated.</rdfs:comment>
-        <rdfs:label>update frequency</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://knowledge.c-innovationhub.com/dspa#validFrom -->
 
 
@@ -1181,6 +1181,24 @@
     
 
 
+    <!-- http://www.w3.org/ns/odrl/2/Policy -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/odrl/2/Policy"/>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/dspa#AccessLicense -->
+
+
+    <owl:Class rdf:about="https://knowledge.c-innovationhub.com/dspa#AccessLicense">
+        <rdfs:subClassOf rdf:resource="https://knowledge.c-innovationhub.com/dspa#ExecutableLicense"/>
+        <rdfs:comment>A license that governs access to a data product.</rdfs:comment>
+        <rdfs:label>Access License</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://knowledge.c-innovationhub.com/dspa#CheckoutBasedPricingPlan -->
 
 
@@ -1227,7 +1245,7 @@
 
 
     <owl:Class rdf:about="https://knowledge.c-innovationhub.com/dspa#DataProductLicense">
-        <rdfs:comment>The license governing the use, distribution, and modification of a data product.</rdfs:comment>
+        <rdfs:comment>A license that governs the use of a data product.</rdfs:comment>
         <rdfs:label>Data Product License</rdfs:label>
     </owl:Class>
     
@@ -1259,16 +1277,6 @@
     <owl:Class rdf:about="https://knowledge.c-innovationhub.com/dspa#DataQualityTerm">
         <rdfs:comment>A term that specifies a data quality requirement for a data product.</rdfs:comment>
         <rdfs:label>Data Quality Term</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://knowledge.c-innovationhub.com/dspa#Dataset -->
-
-
-    <owl:Class rdf:about="https://knowledge.c-innovationhub.com/dspa#Dataset">
-        <rdfs:comment>A collection of data that forms the core content of a data product.</rdfs:comment>
-        <rdfs:label>Dataset</rdfs:label>
     </owl:Class>
     
 
@@ -1326,6 +1334,16 @@
         <rdfs:subClassOf rdf:resource="https://knowledge.c-innovationhub.com/dspa#ExecutableTerm"/>
         <rdfs:comment>Data quality terms that are defined in an executable format for monitoring.</rdfs:comment>
         <rdfs:label>Executable Data Quality Term</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/dspa#ExecutableLicense -->
+
+
+    <owl:Class rdf:about="https://knowledge.c-innovationhub.com/dspa#ExecutableLicense">
+        <rdfs:comment>A license that can be executed programmatically.</rdfs:comment>
+        <rdfs:label>Executable License</rdfs:label>
     </owl:Class>
     
 
@@ -1516,6 +1534,24 @@
         <rdfs:comment>Action to update an existing pricing plan.</rdfs:comment>
         <rdfs:label>Update Action</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- https://knowledge.c-innovationhub.com/dspa#UsageLicense -->
+
+
+    <owl:Class rdf:about="https://knowledge.c-innovationhub.com/dspa#UsageLicense">
+        <rdfs:subClassOf rdf:resource="https://knowledge.c-innovationhub.com/dspa#ExecutableLicense"/>
+        <rdfs:comment>A license that governs the usage of a data product.</rdfs:comment>
+        <rdfs:label>Usage License</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/dcat#Resource -->
+
+
+    <owl:Class rdf:about="https://www.w3.org/ns/dcat#Resource"/>
     
 
 

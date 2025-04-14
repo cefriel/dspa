@@ -17,6 +17,9 @@
   "@id" : "http://purl.org/ontology/bibo/status",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://www.w3.org/ns/odrl/2/Policy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "https://knowledge.c-innovationhub.com/dspa",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/creator" : [ {
@@ -60,6 +63,18 @@
   } ],
   "https://schema.org/funding" : [ {
     "@id" : "https://doi.org/CORDIS_DOI"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/dspa#AccessLicense",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A license that governs access to a data product."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Access License"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/dspa#ExecutableLicense"
   } ]
 }, {
   "@id" : "https://knowledge.c-innovationhub.com/dspa#AccessibilityDimension",
@@ -167,7 +182,7 @@
   "@id" : "https://knowledge.c-innovationhub.com/dspa#DataProductLicense",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The license governing the use, distribution, and modification of a data product."
+    "@value" : "A license that governs the use of a data product."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Data Product License"
@@ -198,15 +213,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Data Quality Term"
-  } ]
-}, {
-  "@id" : "https://knowledge.c-innovationhub.com/dspa#Dataset",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A collection of data that forms the core content of a data product."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Dataset"
   } ]
 }, {
   "@id" : "https://knowledge.c-innovationhub.com/dspa#DeclarativeDataQualityTerm",
@@ -330,6 +336,15 @@
     "@id" : "https://knowledge.c-innovationhub.com/dspa#DataQualityTerm"
   }, {
     "@id" : "https://knowledge.c-innovationhub.com/dspa#ExecutableTerm"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/dspa#ExecutableLicense",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A license that can be executed programmatically."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Executable License"
   } ]
 }, {
   "@id" : "https://knowledge.c-innovationhub.com/dspa#ExecutablePricingPlan",
@@ -751,6 +766,18 @@
     "@value" : "Usability"
   } ]
 }, {
+  "@id" : "https://knowledge.c-innovationhub.com/dspa#UsageLicense",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A license that governs the usage of a data product."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Usage License"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/dspa#ExecutableLicense"
+  } ]
+}, {
   "@id" : "https://knowledge.c-innovationhub.com/dspa#ValidityDimension",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -1018,21 +1045,6 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://knowledge.c-innovationhub.com/dspa#dataFormat",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "The format in which the data is provided."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://knowledge.c-innovationhub.com/dspa#Dataset"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "data format"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
   "@id" : "https://knowledge.c-innovationhub.com/dspa#dataQualityDimension",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1232,19 +1244,19 @@
     "@id" : "https://knowledge.c-innovationhub.com/dspa#DataQualityTerm"
   } ]
 }, {
-  "@id" : "https://knowledge.c-innovationhub.com/dspa#hasDataset",
+  "@id" : "https://knowledge.c-innovationhub.com/dspa#hasExecutableLicense",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Links a data product to its underlying dataset."
+    "@value" : "Links a data product license to its executable representation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://knowledge.c-innovationhub.com/dspa#DataProduct"
+    "@id" : "https://knowledge.c-innovationhub.com/dspa#DataProductLicense"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has dataset"
+    "@value" : "has executable license"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://knowledge.c-innovationhub.com/dspa#Dataset"
+    "@id" : "https://knowledge.c-innovationhub.com/dspa#ExecutableLicense"
   } ]
 }, {
   "@id" : "https://knowledge.c-innovationhub.com/dspa#hasLicenseGovernance",
@@ -1275,6 +1287,21 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://knowledge.c-innovationhub.com/dspa#LicenseScope"
+  } ]
+}, {
+  "@id" : "https://knowledge.c-innovationhub.com/dspa#hasPolicy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Links an executable license to its ODRL policy representation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/dspa#ExecutableLicense"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has policy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/ns/odrl/2/Policy"
   } ]
 }, {
   "@id" : "https://knowledge.c-innovationhub.com/dspa#hasPricingPlan",
@@ -1682,6 +1709,21 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "https://knowledge.c-innovationhub.com/dspa#providesResource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Links a data product to its DCAT resource representation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://knowledge.c-innovationhub.com/dspa#DataProduct"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "provides resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.w3.org/ns/dcat#Resource"
+  } ]
+}, {
   "@id" : "https://knowledge.c-innovationhub.com/dspa#ratingCount",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1922,21 +1964,6 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://knowledge.c-innovationhub.com/dspa#updateFrequency",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "How frequently the dataset is updated."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://knowledge.c-innovationhub.com/dspa#Dataset"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "update frequency"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
   "@id" : "https://knowledge.c-innovationhub.com/dspa#validFrom",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2071,4 +2098,7 @@
 }, {
   "@id" : "https://schema.org/funding",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://www.w3.org/ns/dcat#Resource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 } ]

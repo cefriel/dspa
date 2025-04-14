@@ -111,12 +111,12 @@
                     rdfs:label "has data quality term" .
 
 
-###  https://knowledge.c-innovationhub.com/dspa#hasDataset
-:hasDataset rdf:type owl:ObjectProperty ;
-            rdfs:domain :DataProduct ;
-            rdfs:range :Dataset ;
-            rdfs:comment "Links a data product to its underlying dataset." ;
-            rdfs:label "has dataset" .
+###  https://knowledge.c-innovationhub.com/dspa#hasExecutableLicense
+:hasExecutableLicense rdf:type owl:ObjectProperty ;
+                      rdfs:domain :DataProductLicense ;
+                      rdfs:range :ExecutableLicense ;
+                      rdfs:comment "Links a data product license to its executable representation." ;
+                      rdfs:label "has executable license" .
 
 
 ###  https://knowledge.c-innovationhub.com/dspa#hasLicenseGovernance
@@ -133,6 +133,14 @@
                  rdfs:range :LicenseScope ;
                  rdfs:comment "Links a data product license to its scope and permitted uses." ;
                  rdfs:label "has license scope" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#hasPolicy
+:hasPolicy rdf:type owl:ObjectProperty ;
+           rdfs:domain :ExecutableLicense ;
+           rdfs:range <http://www.w3.org/ns/odrl/2/Policy> ;
+           rdfs:comment "Links an executable license to its ODRL policy representation." ;
+           rdfs:label "has policy" .
 
 
 ###  https://knowledge.c-innovationhub.com/dspa#hasPricingPlan
@@ -173,6 +181,14 @@
                          rdfs:range :TerminationCondition ;
                          rdfs:comment "Links a data product license to its termination conditions." ;
                          rdfs:label "has termination condition" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#providesResource
+:providesResource rdf:type owl:ObjectProperty ;
+                  rdfs:domain :DataProduct ;
+                  rdfs:range <https://www.w3.org/ns/dcat#Resource> ;
+                  rdfs:comment "Links a data product to its DCAT resource representation." ;
+                  rdfs:label "provides resource" .
 
 
 ###  https://knowledge.c-innovationhub.com/dspa#serviceLevelAgreementDimension
@@ -321,14 +337,6 @@
          rdfs:range xsd:string ;
          rdfs:comment "Damages refers to the sum of money (i.e. indemnifications) for a breach of some duty or violation of license right." ;
          rdfs:label "damages" .
-
-
-###  https://knowledge.c-innovationhub.com/dspa#dataFormat
-:dataFormat rdf:type owl:DatatypeProperty ;
-            rdfs:domain :Dataset ;
-            rdfs:range xsd:string ;
-            rdfs:comment "The format in which the data is provided." ;
-            rdfs:label "data format" .
 
 
 ###  https://knowledge.c-innovationhub.com/dspa#definition
@@ -693,14 +701,6 @@
       rdfs:label "unit" .
 
 
-###  https://knowledge.c-innovationhub.com/dspa#updateFrequency
-:updateFrequency rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :Dataset ;
-                 rdfs:range xsd:string ;
-                 rdfs:comment "How frequently the dataset is updated." ;
-                 rdfs:label "update frequency" .
-
-
 ###  https://knowledge.c-innovationhub.com/dspa#validFrom
 :validFrom rdf:type owl:DatatypeProperty ;
            rdfs:domain :DeclarativePricingPlan ;
@@ -769,6 +769,17 @@
 #    Classes
 #################################################################
 
+###  http://www.w3.org/ns/odrl/2/Policy
+<http://www.w3.org/ns/odrl/2/Policy> rdf:type owl:Class .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#AccessLicense
+:AccessLicense rdf:type owl:Class ;
+               rdfs:subClassOf :ExecutableLicense ;
+               rdfs:comment "A license that governs access to a data product." ;
+               rdfs:label "Access License" .
+
+
 ###  https://knowledge.c-innovationhub.com/dspa#CheckoutBasedPricingPlan
 :CheckoutBasedPricingPlan rdf:type owl:Class ;
                           rdfs:subClassOf :ExecutablePricingPlan ;
@@ -797,7 +808,7 @@
 
 ###  https://knowledge.c-innovationhub.com/dspa#DataProductLicense
 :DataProductLicense rdf:type owl:Class ;
-                    rdfs:comment "The license governing the use, distribution, and modification of a data product." ;
+                    rdfs:comment "A license that governs the use of a data product." ;
                     rdfs:label "Data Product License" .
 
 
@@ -817,12 +828,6 @@
 :DataQualityTerm rdf:type owl:Class ;
                  rdfs:comment "A term that specifies a data quality requirement for a data product." ;
                  rdfs:label "Data Quality Term" .
-
-
-###  https://knowledge.c-innovationhub.com/dspa#Dataset
-:Dataset rdf:type owl:Class ;
-         rdfs:comment "A collection of data that forms the core content of a data product." ;
-         rdfs:label "Dataset" .
 
 
 ###  https://knowledge.c-innovationhub.com/dspa#DeclarativeDataQualityTerm
@@ -860,6 +865,12 @@
                                            :ExecutableTerm ;
                            rdfs:comment "Data quality terms that are defined in an executable format for monitoring." ;
                            rdfs:label "Executable Data Quality Term" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#ExecutableLicense
+:ExecutableLicense rdf:type owl:Class ;
+                   rdfs:comment "A license that can be executed programmatically." ;
+                   rdfs:label "Executable License" .
 
 
 ###  https://knowledge.c-innovationhub.com/dspa#ExecutablePricingPlan
@@ -977,6 +988,17 @@
               rdfs:subClassOf :PricingPlansAsCodeAction ;
               rdfs:comment "Action to update an existing pricing plan." ;
               rdfs:label "Update Action" .
+
+
+###  https://knowledge.c-innovationhub.com/dspa#UsageLicense
+:UsageLicense rdf:type owl:Class ;
+              rdfs:subClassOf :ExecutableLicense ;
+              rdfs:comment "A license that governs the usage of a data product." ;
+              rdfs:label "Usage License" .
+
+
+###  https://www.w3.org/ns/dcat#Resource
+<https://www.w3.org/ns/dcat#Resource> rdf:type owl:Class .
 
 
 #################################################################

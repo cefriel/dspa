@@ -98,12 +98,12 @@
 <https://knowledge.c-innovationhub.com/dspa#hasDataQualityTerm> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a data quality specification to its terms." .
 <https://knowledge.c-innovationhub.com/dspa#hasDataQualityTerm> <http://www.w3.org/2000/01/rdf-schema#label> "has data quality term" .
 # 
-# https://knowledge.c-innovationhub.com/dspa#hasDataset
-<https://knowledge.c-innovationhub.com/dspa#hasDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://knowledge.c-innovationhub.com/dspa#hasDataset> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataProduct> .
-<https://knowledge.c-innovationhub.com/dspa#hasDataset> <http://www.w3.org/2000/01/rdf-schema#range> <https://knowledge.c-innovationhub.com/dspa#Dataset> .
-<https://knowledge.c-innovationhub.com/dspa#hasDataset> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a data product to its underlying dataset." .
-<https://knowledge.c-innovationhub.com/dspa#hasDataset> <http://www.w3.org/2000/01/rdf-schema#label> "has dataset" .
+# https://knowledge.c-innovationhub.com/dspa#hasExecutableLicense
+<https://knowledge.c-innovationhub.com/dspa#hasExecutableLicense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/dspa#hasExecutableLicense> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataProductLicense> .
+<https://knowledge.c-innovationhub.com/dspa#hasExecutableLicense> <http://www.w3.org/2000/01/rdf-schema#range> <https://knowledge.c-innovationhub.com/dspa#ExecutableLicense> .
+<https://knowledge.c-innovationhub.com/dspa#hasExecutableLicense> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a data product license to its executable representation." .
+<https://knowledge.c-innovationhub.com/dspa#hasExecutableLicense> <http://www.w3.org/2000/01/rdf-schema#label> "has executable license" .
 # 
 # https://knowledge.c-innovationhub.com/dspa#hasLicenseGovernance
 <https://knowledge.c-innovationhub.com/dspa#hasLicenseGovernance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -118,6 +118,14 @@
 <https://knowledge.c-innovationhub.com/dspa#hasLicenseScope> <http://www.w3.org/2000/01/rdf-schema#range> <https://knowledge.c-innovationhub.com/dspa#LicenseScope> .
 <https://knowledge.c-innovationhub.com/dspa#hasLicenseScope> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a data product license to its scope and permitted uses." .
 <https://knowledge.c-innovationhub.com/dspa#hasLicenseScope> <http://www.w3.org/2000/01/rdf-schema#label> "has license scope" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#hasPolicy
+<https://knowledge.c-innovationhub.com/dspa#hasPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/dspa#hasPolicy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#ExecutableLicense> .
+<https://knowledge.c-innovationhub.com/dspa#hasPolicy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/odrl/2/Policy> .
+<http://www.w3.org/ns/odrl/2/Policy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#hasPolicy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an executable license to its ODRL policy representation." .
+<https://knowledge.c-innovationhub.com/dspa#hasPolicy> <http://www.w3.org/2000/01/rdf-schema#label> "has policy" .
 # 
 # https://knowledge.c-innovationhub.com/dspa#hasPricingPlan
 <https://knowledge.c-innovationhub.com/dspa#hasPricingPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -153,6 +161,14 @@
 <https://knowledge.c-innovationhub.com/dspa#hasTerminationCondition> <http://www.w3.org/2000/01/rdf-schema#range> <https://knowledge.c-innovationhub.com/dspa#TerminationCondition> .
 <https://knowledge.c-innovationhub.com/dspa#hasTerminationCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a data product license to its termination conditions." .
 <https://knowledge.c-innovationhub.com/dspa#hasTerminationCondition> <http://www.w3.org/2000/01/rdf-schema#label> "has termination condition" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#providesResource
+<https://knowledge.c-innovationhub.com/dspa#providesResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://knowledge.c-innovationhub.com/dspa#providesResource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DataProduct> .
+<https://knowledge.c-innovationhub.com/dspa#providesResource> <http://www.w3.org/2000/01/rdf-schema#range> <https://www.w3.org/ns/dcat#Resource> .
+<https://www.w3.org/ns/dcat#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#providesResource> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a data product to its DCAT resource representation." .
+<https://knowledge.c-innovationhub.com/dspa#providesResource> <http://www.w3.org/2000/01/rdf-schema#label> "provides resource" .
 # 
 # https://knowledge.c-innovationhub.com/dspa#serviceLevelAgreementDimension
 <https://knowledge.c-innovationhub.com/dspa#serviceLevelAgreementDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -288,13 +304,6 @@
 <https://knowledge.c-innovationhub.com/dspa#damages> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://knowledge.c-innovationhub.com/dspa#damages> <http://www.w3.org/2000/01/rdf-schema#comment> "Damages refers to the sum of money (i.e. indemnifications) for a breach of some duty or violation of license right." .
 <https://knowledge.c-innovationhub.com/dspa#damages> <http://www.w3.org/2000/01/rdf-schema#label> "damages" .
-# 
-# https://knowledge.c-innovationhub.com/dspa#dataFormat
-<https://knowledge.c-innovationhub.com/dspa#dataFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://knowledge.c-innovationhub.com/dspa#dataFormat> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#Dataset> .
-<https://knowledge.c-innovationhub.com/dspa#dataFormat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://knowledge.c-innovationhub.com/dspa#dataFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "The format in which the data is provided." .
-<https://knowledge.c-innovationhub.com/dspa#dataFormat> <http://www.w3.org/2000/01/rdf-schema#label> "data format" .
 # 
 # https://knowledge.c-innovationhub.com/dspa#definition
 <https://knowledge.c-innovationhub.com/dspa#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -613,13 +622,6 @@
 <https://knowledge.c-innovationhub.com/dspa#unit> <http://www.w3.org/2000/01/rdf-schema#comment> "The unit of measurement for the term." .
 <https://knowledge.c-innovationhub.com/dspa#unit> <http://www.w3.org/2000/01/rdf-schema#label> "unit" .
 # 
-# https://knowledge.c-innovationhub.com/dspa#updateFrequency
-<https://knowledge.c-innovationhub.com/dspa#updateFrequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://knowledge.c-innovationhub.com/dspa#updateFrequency> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#Dataset> .
-<https://knowledge.c-innovationhub.com/dspa#updateFrequency> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://knowledge.c-innovationhub.com/dspa#updateFrequency> <http://www.w3.org/2000/01/rdf-schema#comment> "How frequently the dataset is updated." .
-<https://knowledge.c-innovationhub.com/dspa#updateFrequency> <http://www.w3.org/2000/01/rdf-schema#label> "update frequency" .
-# 
 # https://knowledge.c-innovationhub.com/dspa#validFrom
 <https://knowledge.c-innovationhub.com/dspa#validFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://knowledge.c-innovationhub.com/dspa#validFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <https://knowledge.c-innovationhub.com/dspa#DeclarativePricingPlan> .
@@ -685,6 +687,14 @@
 # #################################################################
 # 
 # 
+# http://www.w3.org/ns/odrl/2/Policy
+# 
+# https://knowledge.c-innovationhub.com/dspa#AccessLicense
+<https://knowledge.c-innovationhub.com/dspa#AccessLicense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#AccessLicense> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://knowledge.c-innovationhub.com/dspa#ExecutableLicense> .
+<https://knowledge.c-innovationhub.com/dspa#AccessLicense> <http://www.w3.org/2000/01/rdf-schema#comment> "A license that governs access to a data product." .
+<https://knowledge.c-innovationhub.com/dspa#AccessLicense> <http://www.w3.org/2000/01/rdf-schema#label> "Access License" .
+# 
 # https://knowledge.c-innovationhub.com/dspa#CheckoutBasedPricingPlan
 <https://knowledge.c-innovationhub.com/dspa#CheckoutBasedPricingPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://knowledge.c-innovationhub.com/dspa#CheckoutBasedPricingPlan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://knowledge.c-innovationhub.com/dspa#ExecutablePricingPlan> .
@@ -709,7 +719,7 @@
 # 
 # https://knowledge.c-innovationhub.com/dspa#DataProductLicense
 <https://knowledge.c-innovationhub.com/dspa#DataProductLicense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://knowledge.c-innovationhub.com/dspa#DataProductLicense> <http://www.w3.org/2000/01/rdf-schema#comment> "The license governing the use, distribution, and modification of a data product." .
+<https://knowledge.c-innovationhub.com/dspa#DataProductLicense> <http://www.w3.org/2000/01/rdf-schema#comment> "A license that governs the use of a data product." .
 <https://knowledge.c-innovationhub.com/dspa#DataProductLicense> <http://www.w3.org/2000/01/rdf-schema#label> "Data Product License" .
 # 
 # https://knowledge.c-innovationhub.com/dspa#DataQuality
@@ -726,11 +736,6 @@
 <https://knowledge.c-innovationhub.com/dspa#DataQualityTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://knowledge.c-innovationhub.com/dspa#DataQualityTerm> <http://www.w3.org/2000/01/rdf-schema#comment> "A term that specifies a data quality requirement for a data product." .
 <https://knowledge.c-innovationhub.com/dspa#DataQualityTerm> <http://www.w3.org/2000/01/rdf-schema#label> "Data Quality Term" .
-# 
-# https://knowledge.c-innovationhub.com/dspa#Dataset
-<https://knowledge.c-innovationhub.com/dspa#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://knowledge.c-innovationhub.com/dspa#Dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of data that forms the core content of a data product." .
-<https://knowledge.c-innovationhub.com/dspa#Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset" .
 # 
 # https://knowledge.c-innovationhub.com/dspa#DeclarativeDataQualityTerm
 <https://knowledge.c-innovationhub.com/dspa#DeclarativeDataQualityTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -763,6 +768,11 @@
 <https://knowledge.c-innovationhub.com/dspa#ExecutableDataQualityTerm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://knowledge.c-innovationhub.com/dspa#ExecutableTerm> .
 <https://knowledge.c-innovationhub.com/dspa#ExecutableDataQualityTerm> <http://www.w3.org/2000/01/rdf-schema#comment> "Data quality terms that are defined in an executable format for monitoring." .
 <https://knowledge.c-innovationhub.com/dspa#ExecutableDataQualityTerm> <http://www.w3.org/2000/01/rdf-schema#label> "Executable Data Quality Term" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#ExecutableLicense
+<https://knowledge.c-innovationhub.com/dspa#ExecutableLicense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#ExecutableLicense> <http://www.w3.org/2000/01/rdf-schema#comment> "A license that can be executed programmatically." .
+<https://knowledge.c-innovationhub.com/dspa#ExecutableLicense> <http://www.w3.org/2000/01/rdf-schema#label> "Executable License" .
 # 
 # https://knowledge.c-innovationhub.com/dspa#ExecutablePricingPlan
 <https://knowledge.c-innovationhub.com/dspa#ExecutablePricingPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -862,6 +872,14 @@
 <https://knowledge.c-innovationhub.com/dspa#UpdateAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://knowledge.c-innovationhub.com/dspa#PricingPlansAsCodeAction> .
 <https://knowledge.c-innovationhub.com/dspa#UpdateAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Action to update an existing pricing plan." .
 <https://knowledge.c-innovationhub.com/dspa#UpdateAction> <http://www.w3.org/2000/01/rdf-schema#label> "Update Action" .
+# 
+# https://knowledge.c-innovationhub.com/dspa#UsageLicense
+<https://knowledge.c-innovationhub.com/dspa#UsageLicense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://knowledge.c-innovationhub.com/dspa#UsageLicense> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://knowledge.c-innovationhub.com/dspa#ExecutableLicense> .
+<https://knowledge.c-innovationhub.com/dspa#UsageLicense> <http://www.w3.org/2000/01/rdf-schema#comment> "A license that governs the usage of a data product." .
+<https://knowledge.c-innovationhub.com/dspa#UsageLicense> <http://www.w3.org/2000/01/rdf-schema#label> "Usage License" .
+# 
+# https://www.w3.org/ns/dcat#Resource
 # 
 # 
 # 

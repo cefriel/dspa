@@ -3,6 +3,7 @@ This section provides details for each class and property defined by DSPA  Datas
 <div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
  <h3 id="classes-headline" class="list">Classes</h3>
  <ul class="hlist">
+  <li><a href="#AccessLicense" title="https://knowledge.c-innovationhub.com/dspa#AccessLicense">Access License</a></li>
   <li><a href="#CheckoutBasedPricingPlan" title="https://knowledge.c-innovationhub.com/dspa#CheckoutBasedPricingPlan">Checkout Based Pricing Plan</a></li>
   <li><a href="#CreateAction" title="https://knowledge.c-innovationhub.com/dspa#CreateAction">Create Action</a></li>
   <li><a href="#DataHolder" title="https://knowledge.c-innovationhub.com/dspa#DataHolder">Data Holder</a></li>
@@ -11,12 +12,12 @@ This section provides details for each class and property defined by DSPA  Datas
   <li><a href="#DataQuality" title="https://knowledge.c-innovationhub.com/dspa#DataQuality">Data Quality</a></li>
   <li><a href="#DataQualityDimension" title="https://knowledge.c-innovationhub.com/dspa#DataQualityDimension">Data Quality Dimension</a></li>
   <li><a href="#DataQualityTerm" title="https://knowledge.c-innovationhub.com/dspa#DataQualityTerm">Data Quality Term</a></li>
-  <li><a href="#Dataset" title="https://knowledge.c-innovationhub.com/dspa#Dataset">Dataset</a></li>
   <li><a href="#DeclarativeDataQualityTerm" title="https://knowledge.c-innovationhub.com/dspa#DeclarativeDataQualityTerm">Declarative Data Quality Term</a></li>
   <li><a href="#DeclarativePricingPlan" title="https://knowledge.c-innovationhub.com/dspa#DeclarativePricingPlan">Declarative Pricing Plan</a></li>
   <li><a href="#DeclarativeServiceLevelAgreementTerm" title="https://knowledge.c-innovationhub.com/dspa#DeclarativeServiceLevelAgreementTerm">Declarative Service Level Agreement Term</a></li>
   <li><a href="#DeclarativeTerm" title="https://knowledge.c-innovationhub.com/dspa#DeclarativeTerm">Declarative Term</a></li>
   <li><a href="#ExecutableDataQualityTerm" title="https://knowledge.c-innovationhub.com/dspa#ExecutableDataQualityTerm">Executable Data Quality Term</a></li>
+  <li><a href="#ExecutableLicense" title="https://knowledge.c-innovationhub.com/dspa#ExecutableLicense">Executable License</a></li>
   <li><a href="#ExecutablePricingPlan" title="https://knowledge.c-innovationhub.com/dspa#ExecutablePricingPlan">Executable Pricing Plan</a></li>
   <li><a href="#ExecutableServiceAgreementTerm" title="https://knowledge.c-innovationhub.com/dspa#ExecutableServiceAgreementTerm">Executable Service Agreement Term</a></li>
   <li><a href="#ExecutableTerm" title="https://knowledge.c-innovationhub.com/dspa#ExecutableTerm">Executable Term</a></li>
@@ -35,7 +36,23 @@ This section provides details for each class and property defined by DSPA  Datas
   <li><a href="#StripeBasedPricingPlan" title="https://knowledge.c-innovationhub.com/dspa#StripeBasedPricingPlan">Stripe Based Pricing Plan</a></li>
   <li><a href="#TerminationCondition" title="https://knowledge.c-innovationhub.com/dspa#TerminationCondition">Termination Condition</a></li>
   <li><a href="#UpdateAction" title="https://knowledge.c-innovationhub.com/dspa#UpdateAction">Update Action</a></li>
+  <li><a href="#UsageLicense" title="https://knowledge.c-innovationhub.com/dspa#UsageLicense">Usage License</a></li>
  </ul>
+ <div class="entity" id="AccessLicense">
+  <h3>Access License<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://knowledge.c-innovationhub.com/dspa#AccessLicense</p>
+  <div class="comment">
+   <span class="markdown">A license that governs access to a data product.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ExecutableLicense" title="https://knowledge.c-innovationhub.com/dspa#ExecutableLicense">Executable License</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="CheckoutBasedPricingPlan">
   <h3>Checkout Based Pricing Plan<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://knowledge.c-innovationhub.com/dspa#CheckoutBasedPricingPlan</p>
@@ -104,7 +121,7 @@ This section provides details for each class and property defined by DSPA  Datas
     is in domain of
    </dt>
    <dd>
-    <a href="#hasDataHolder" title="https://knowledge.c-innovationhub.com/dspa#hasDataHolder">has data holder</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasDataProductLicense" title="https://knowledge.c-innovationhub.com/dspa#hasDataProductLicense">has data product license</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasDataQuality" title="https://knowledge.c-innovationhub.com/dspa#hasDataQuality">has data quality</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasDataset" title="https://knowledge.c-innovationhub.com/dspa#hasDataset">has dataset</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasPricingPlan" title="https://knowledge.c-innovationhub.com/dspa#hasPricingPlan">has pricing plan</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasServiceLevelAgreement" title="https://knowledge.c-innovationhub.com/dspa#hasServiceLevelAgreement">has service level agreement</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasDataHolder" title="https://knowledge.c-innovationhub.com/dspa#hasDataHolder">has data holder</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasDataProductLicense" title="https://knowledge.c-innovationhub.com/dspa#hasDataProductLicense">has data product license</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasDataQuality" title="https://knowledge.c-innovationhub.com/dspa#hasDataQuality">has data quality</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasPricingPlan" title="https://knowledge.c-innovationhub.com/dspa#hasPricingPlan">has pricing plan</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasServiceLevelAgreement" title="https://knowledge.c-innovationhub.com/dspa#hasServiceLevelAgreement">has service level agreement</a> <sup class="type-op" title="object property">op</sup>, <a href="#providesResource" title="https://knowledge.c-innovationhub.com/dspa#providesResource">provides resource</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -112,14 +129,14 @@ This section provides details for each class and property defined by DSPA  Datas
   <h3>Data Product License<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://knowledge.c-innovationhub.com/dspa#DataProductLicense</p>
   <div class="comment">
-   <span class="markdown">The license governing the use, distribution, and modification of a data product.</span>
+   <span class="markdown">A license that governs the use of a data product.</span>
   </div>
   <dl class="description">
    <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#hasLicenseGovernance" title="https://knowledge.c-innovationhub.com/dspa#hasLicenseGovernance">has license governance</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasLicenseScope" title="https://knowledge.c-innovationhub.com/dspa#hasLicenseScope">has license scope</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTerminationCondition" title="https://knowledge.c-innovationhub.com/dspa#hasTerminationCondition">has termination condition</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#hasExecutableLicense" title="https://knowledge.c-innovationhub.com/dspa#hasExecutableLicense">has executable license</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasLicenseGovernance" title="https://knowledge.c-innovationhub.com/dspa#hasLicenseGovernance">has license governance</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasLicenseScope" title="https://knowledge.c-innovationhub.com/dspa#hasLicenseScope">has license scope</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasTerminationCondition" title="https://knowledge.c-innovationhub.com/dspa#hasTerminationCondition">has termination condition</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -195,27 +212,6 @@ This section provides details for each class and property defined by DSPA  Datas
    </dt>
    <dd>
     <a href="#hasDataQualityTerm" title="https://knowledge.c-innovationhub.com/dspa#hasDataQualityTerm">has data quality term</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="Dataset">
-  <h3>Dataset<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://knowledge.c-innovationhub.com/dspa#Dataset</p>
-  <div class="comment">
-   <span class="markdown">A collection of data that forms the core content of a data product.</span>
-  </div>
-  <dl class="description">
-   <dt>
-    is in domain of
-   </dt>
-   <dd>
-    <a href="#dataFormat" title="https://knowledge.c-innovationhub.com/dspa#dataFormat">data format</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#updateFrequency" title="https://knowledge.c-innovationhub.com/dspa#updateFrequency">update frequency</a> <sup class="type-dp" title="data property">dp</sup>
-   </dd>
-   <dt>
-    is in range of
-   </dt>
-   <dd>
-    <a href="#hasDataset" title="https://knowledge.c-innovationhub.com/dspa#hasDataset">has dataset</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -303,6 +299,33 @@ This section provides details for each class and property defined by DSPA  Datas
    </dt>
    <dd>
     <a href="#DataQualityTerm" title="https://knowledge.c-innovationhub.com/dspa#DataQualityTerm">Data Quality Term</a> <sup class="type-c" title="class">c</sup>, <a href="#ExecutableTerm" title="https://knowledge.c-innovationhub.com/dspa#ExecutableTerm">Executable Term</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ExecutableLicense">
+  <h3>Executable License<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://knowledge.c-innovationhub.com/dspa#ExecutableLicense</p>
+  <div class="comment">
+   <span class="markdown">A license that can be executed programmatically.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#AccessLicense" title="https://knowledge.c-innovationhub.com/dspa#AccessLicense">Access License</a> <sup class="type-c" title="class">c</sup>, <a href="#UsageLicense" title="https://knowledge.c-innovationhub.com/dspa#UsageLicense">Usage License</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasPolicy" title="https://knowledge.c-innovationhub.com/dspa#hasPolicy">has policy</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasExecutableLicense" title="https://knowledge.c-innovationhub.com/dspa#hasExecutableLicense">has executable license</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -678,6 +701,21 @@ This section provides details for each class and property defined by DSPA  Datas
    </dd>
   </dl>
  </div>
+ <div class="entity" id="UsageLicense">
+  <h3>Usage License<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://knowledge.c-innovationhub.com/dspa#UsageLicense</p>
+  <div class="comment">
+   <span class="markdown">A license that governs the usage of a data product.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#ExecutableLicense" title="https://knowledge.c-innovationhub.com/dspa#ExecutableLicense">Executable License</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
  <h3 id="properties" class="list">Object Properties</h3>
  <ul class="hlist">
@@ -687,14 +725,16 @@ This section provides details for each class and property defined by DSPA  Datas
   <li><a href="#hasDataProductLicense" title="https://knowledge.c-innovationhub.com/dspa#hasDataProductLicense">has data product license</a></li>
   <li><a href="#hasDataQuality" title="https://knowledge.c-innovationhub.com/dspa#hasDataQuality">has data quality</a></li>
   <li><a href="#hasDataQualityTerm" title="https://knowledge.c-innovationhub.com/dspa#hasDataQualityTerm">has data quality term</a></li>
-  <li><a href="#hasDataset" title="https://knowledge.c-innovationhub.com/dspa#hasDataset">has dataset</a></li>
+  <li><a href="#hasExecutableLicense" title="https://knowledge.c-innovationhub.com/dspa#hasExecutableLicense">has executable license</a></li>
   <li><a href="#hasLicenseGovernance" title="https://knowledge.c-innovationhub.com/dspa#hasLicenseGovernance">has license governance</a></li>
   <li><a href="#hasLicenseScope" title="https://knowledge.c-innovationhub.com/dspa#hasLicenseScope">has license scope</a></li>
+  <li><a href="#hasPolicy" title="https://knowledge.c-innovationhub.com/dspa#hasPolicy">has policy</a></li>
   <li><a href="#hasPricingPlan" title="https://knowledge.c-innovationhub.com/dspa#hasPricingPlan">has pricing plan</a></li>
   <li><a href="#hasProductSupport" title="https://knowledge.c-innovationhub.com/dspa#hasProductSupport">has product support</a></li>
   <li><a href="#hasServiceLevelAgreement" title="https://knowledge.c-innovationhub.com/dspa#hasServiceLevelAgreement">has service level agreement</a></li>
   <li><a href="#hasServiceLevelAgreementTerms" title="https://knowledge.c-innovationhub.com/dspa#hasServiceLevelAgreementTerms">has service level agreement terms</a></li>
   <li><a href="#hasTerminationCondition" title="https://knowledge.c-innovationhub.com/dspa#hasTerminationCondition">has termination condition</a></li>
+  <li><a href="#providesResource" title="https://knowledge.c-innovationhub.com/dspa#providesResource">provides resource</a></li>
   <li><a href="#serviceLevelAgreementDimension" title="https://knowledge.c-innovationhub.com/dspa#serviceLevelAgreementDimension">service level agreement dimension</a></li>
  </ul>
  <div class="entity" id="action">
@@ -835,11 +875,11 @@ This section provides details for each class and property defined by DSPA  Datas
    </dl>
   </div>
  </div>
- <div class="entity" id="hasDataset">
-  <h3>has dataset<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://knowledge.c-innovationhub.com/dspa#hasDataset</p>
+ <div class="entity" id="hasExecutableLicense">
+  <h3>has executable license<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://knowledge.c-innovationhub.com/dspa#hasExecutableLicense</p>
   <div class="comment">
-   <span class="markdown">Links a data product to its underlying dataset.</span>
+   <span class="markdown">Links a data product license to its executable representation.</span>
   </div>
   <div class="description">
    <dl>
@@ -847,13 +887,13 @@ This section provides details for each class and property defined by DSPA  Datas
      has domain
     </dt>
     <dd>
-     <a href="#DataProduct" title="https://knowledge.c-innovationhub.com/dspa#DataProduct">Data Product</a> <sup class="type-c" title="class">c</sup>
+     <a href="#DataProductLicense" title="https://knowledge.c-innovationhub.com/dspa#DataProductLicense">Data Product License</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
-     <a href="#Dataset" title="https://knowledge.c-innovationhub.com/dspa#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
+     <a href="#ExecutableLicense" title="https://knowledge.c-innovationhub.com/dspa#ExecutableLicense">Executable License</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -900,6 +940,29 @@ This section provides details for each class and property defined by DSPA  Datas
     </dt>
     <dd>
      <a href="#LicenseScope" title="https://knowledge.c-innovationhub.com/dspa#LicenseScope">License Scope</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasPolicy">
+  <h3>has policy<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://knowledge.c-innovationhub.com/dspa#hasPolicy</p>
+  <div class="comment">
+   <span class="markdown">Links an executable license to its ODRL policy representation.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ExecutableLicense" title="https://knowledge.c-innovationhub.com/dspa#ExecutableLicense">Executable License</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/ns/odrl/2/Policy" target="_blank" title="http://www.w3.org/ns/odrl/2/Policy">Policy</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1019,6 +1082,29 @@ This section provides details for each class and property defined by DSPA  Datas
    </dl>
   </div>
  </div>
+ <div class="entity" id="providesResource">
+  <h3>provides resource<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://knowledge.c-innovationhub.com/dspa#providesResource</p>
+  <div class="comment">
+   <span class="markdown">Links a data product to its DCAT resource representation.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#DataProduct" title="https://knowledge.c-innovationhub.com/dspa#DataProduct">Data Product</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://www.w3.org/ns/dcat#Resource" target="_blank" title="https://www.w3.org/ns/dcat#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="serviceLevelAgreementDimension">
   <h3>service level agreement dimension<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://knowledge.c-innovationhub.com/dspa#serviceLevelAgreementDimension</p>
@@ -1061,7 +1147,6 @@ This section provides details for each class and property defined by DSPA  Datas
   <li><a href="#contactName" title="https://knowledge.c-innovationhub.com/dspa#contactName">contact name</a></li>
   <li><a href="#continuityConditions" title="https://knowledge.c-innovationhub.com/dspa#continuityConditions">continuity conditions</a></li>
   <li><a href="#damages" title="https://knowledge.c-innovationhub.com/dspa#damages">damages</a></li>
-  <li><a href="#dataFormat" title="https://knowledge.c-innovationhub.com/dspa#dataFormat">data format</a></li>
   <li><a href="#definition" title="https://knowledge.c-innovationhub.com/dspa#definition">definition</a></li>
   <li><a href="#description" title="https://knowledge.c-innovationhub.com/dspa#description">description</a></li>
   <li><a href="#documentationURL" title="https://knowledge.c-innovationhub.com/dspa#documentationURL">documentation URL</a></li>
@@ -1107,7 +1192,6 @@ This section provides details for each class and property defined by DSPA  Datas
   <li><a href="#telephone" title="https://knowledge.c-innovationhub.com/dspa#telephone">telephone</a></li>
   <li><a href="#terminationConditions" title="https://knowledge.c-innovationhub.com/dspa#terminationConditions">termination conditions</a></li>
   <li><a href="#unit" title="https://knowledge.c-innovationhub.com/dspa#unit">unit</a></li>
-  <li><a href="#updateFrequency" title="https://knowledge.c-innovationhub.com/dspa#updateFrequency">update frequency</a></li>
   <li><a href="#URL" title="https://knowledge.c-innovationhub.com/dspa#URL">URL</a></li>
   <li><a href="#validFrom" title="https://knowledge.c-innovationhub.com/dspa#validFrom">valid from</a></li>
   <li><a href="#validTo" title="https://knowledge.c-innovationhub.com/dspa#validTo">valid to</a></li>
@@ -1476,29 +1560,6 @@ This section provides details for each class and property defined by DSPA  Datas
     </dt>
     <dd>
      <a href="#LicenseGovernance" title="https://knowledge.c-innovationhub.com/dspa#LicenseGovernance">License Governance</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="dataFormat">
-  <h3>data format<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://knowledge.c-innovationhub.com/dspa#dataFormat</p>
-  <div class="comment">
-   <span class="markdown">The format in which the data is provided.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#Dataset" title="https://knowledge.c-innovationhub.com/dspa#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -2537,29 +2598,6 @@ This section provides details for each class and property defined by DSPA  Datas
     </dt>
     <dd>
      <a href="#DeclarativeTerm" title="https://knowledge.c-innovationhub.com/dspa#DeclarativeTerm">Declarative Term</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="updateFrequency">
-  <h3>update frequency<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://knowledge.c-innovationhub.com/dspa#updateFrequency</p>
-  <div class="comment">
-   <span class="markdown">How frequently the dataset is updated.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#Dataset" title="https://knowledge.c-innovationhub.com/dspa#Dataset">Dataset</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
