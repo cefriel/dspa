@@ -1,14 +1,14 @@
 # DSPA - Dataspace vocabulary
 
-A metadata schema to represent Data Product Offerings in dataspaces, aligned with Open Data Product Specifications, DCAT-AP and EDC metadata schema.
+A metadata schema to represent Data Product Offerings in dataspaces, aligned with Open Data Product Specifications (v3.1), DCAT-AP and EDC metadata schema.
 
 | Prefix    | IRI |
 | -- | ------- |
-| my-prefix:  | [https://knowledge.c-innovationhub.com/dspa#](https://knowledge.c-innovationhub.com/dspa#)  |
+| dspa:  | [https://knowledge.c-innovationhub.com/dspa#](https://knowledge.c-innovationhub.com/dspa#)  |
 
 ## Main concept
 The main idea is to convert the metadata model of [Open Data Product Specifications](https://opendataproducts.org/v3.1) into an ontology and adapt it to link to a DCAT metadata model and to Eclipse Dataspace Connector policies model.
-The resulting model is roughly [this](./draft-ontology.png)
+The resulting model is roughly [this](./draft-ontology.png).
 
 ### `widoco`: RDF to HTML
 Download release JAR from [here](https://github.com/dgarijo/Widoco/releases) and rename it as `widoco.jar`. Documentation for the CLI tool is available [here](https://github.com/dgarijo/Widoco#how-to-use-widoco). The `run-onto.sh` script was tested with version `1.4.21`.
